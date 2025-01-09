@@ -1,0 +1,498 @@
+<!DOCTYPE html>
+<html lang="es">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>
+            Efficace Laboral: Transforma tu vida y carrera con nuestros
+            servicios
+        </title>
+        <meta
+            name="description"
+            content="Transforma tu vida y carrera con nuestros servicios especializados en desarrollo personal y profesional."
+        />
+        <meta
+            name="keywords"
+            content="empleabilidad, desarrollo profesional, marca personal, optimización de CV, training de entrevistas"
+        />
+        <meta name="robots" content="index,follow" />
+        <meta property="og:title" content="Efficace Laboral: Bienvenidos" />
+        <meta
+            property="og:description"
+            content="Transforma tu vida y carrera con nuestros servicios especializados en desarrollo personal y profesional"
+        />
+        <meta
+            property="og:image"
+            content="https://efficace-laboral.github.io/assets/img/logo-og-image.png"
+        />
+        <link
+            rel="apple-touch-icon"
+            sizes="180x180"
+            href="./assets/icons/apple-touch-icon-180x180.png"
+        />
+        <link
+            rel="shortcut icon"
+            href="./assets/icons/favicon.ico"
+            type="image/x-icon"
+        />
+        <link
+            rel="icon"
+            type="image/png"
+            sizes="32x32"
+            href="./assets/icons/favicon-32x32.png"
+        />
+        <link
+            rel="icon"
+            type="image/png"
+            sizes="16x16"
+            href="./assets/icons/favicon-32x32.png"
+        />
+        <link
+            rel="mask-icon"
+            href="./assets/icons/safari-pinned-tab.svg"
+            color="#5bbad5"
+        />
+        <meta name="msapplication-TileColor" content="#2b5797" />
+        <meta name="theme-color" content="#ffffff" />
+        <!-- Bootstrap CSS -->
+        <link
+            href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css"
+            rel="stylesheet"
+        />
+        <!-- Bootstrap Icons -->
+        <link
+            rel="stylesheet"
+            href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.0/font/bootstrap-icons.css"
+        />
+        <!-- Font awesome  -->
+        <!-- <link href="//netdna.bootstrapcdn.com/twitter-bootstrap/2.3.2/css/bootstrap-combined.no-icons.min.css" rel="stylesheet"> -->
+        <!-- <link
+            href="//netdna.bootstrapcdn.com/font-awesome/3.2.1/css/font-awesome.css"
+            rel="stylesheet"
+        /> -->
+        <link rel="stylesheet" href="./css/custom.css" />
+
+        <!-- Custom CSS -->
+        <style>
+            /* Custom fonts */
+            @import url("https://fonts.googleapis.com/css2?family=League+Spartan:wght@400;700&family=Poppins:wght@300;400;500;600&display=swap");
+
+            /* Hero Section */
+            .hero {
+                background: linear-gradient(
+                        rgba(255, 255, 255, 0.8),
+                        rgba(255, 255, 255, 0.8)
+                    ),
+                    url("assets/img/corporate_building.webp");
+                background-size: cover;
+                background-position: center;
+                padding: 8rem 0;
+                position: relative;
+            }
+
+            .hero-content {
+                background-color: rgba(255, 255, 255, 0.9);
+                padding: 3rem;
+                border-radius: 10px;
+            }
+
+            /* Services Section */
+            .service-card {
+                position: relative;
+                overflow: hidden;
+                border-radius: 10px;
+                margin-bottom: 2rem;
+            }
+
+            .service-card img {
+                transition: transform 0.3s ease;
+            }
+
+            .service-card:hover img {
+                transform: scale(1.05);
+            }
+
+            .service-overlay {
+                position: absolute;
+                bottom: 0;
+                left: 0;
+                background-color: rgba(6, 36, 174, 0.8);
+                color: white;
+                padding: 0.5rem;
+                width: 70%;
+            }
+
+            /* Quote Section */
+            .quote-section {
+                background-color: var(--primary-color);
+                color: var(--light-color);
+                padding: 4rem 0;
+            }
+
+            /* Resources Section */
+            .resource-icon {
+                font-size: 3rem;
+                color: var(--primary-color);
+                margin-bottom: 1rem;
+            }
+        </style>
+    </head>
+    <body>
+        <!-- Navbar -->
+        <nav class="navbar navbar-expand-lg navbar-light fixed-top shadow-sm">
+            <div class="container">
+                <a class="navbar-brand" href="#">
+                    <img
+                        src="assets/img/logo_desktop.png"
+                        alt="Efficace Laboral"
+                    />
+                </a>
+                <button
+                    class="navbar-toggler"
+                    type="button"
+                    data-bs-toggle="collapse"
+                    data-bs-target="#navbarNav"
+                >
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarNav">
+                    <ul class="navbar-nav ms-auto">
+                        <li class="nav-item">
+                            <a class="nav-link" href="#servicios">Servicios</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#somos"
+                                >¿Quiénes somos?</a
+                            >
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#contacto">Contacto</a>
+                        </li>
+                        <li class="nav-item">
+                            <!-- <a class="btn btn-primary-custom" href="#recursos"
+                                >Recursos gratis</a
+                            > -->
+                            <a class="btn btn-primary" href="#recursos">
+                                Recursos gratis
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+
+        <!-- Hero Section -->
+        <section class="hero">
+            <div class="container">
+                <div class="row justify-content-center">
+                    <div class="col-md-8 text-center">
+                        <div class="hero-content">
+                            <h1 class="display-4 mb-4 text-uppercase fw-bold">
+                                Impulsa tu talento y consigue el empleo ideal
+                                para ti
+                            </h1>
+                            <p class="lead mb-4">
+                                En Efficace Laboral te asesoramos para que
+                                encuentres el empleo que eleve tu trayectoria
+                                profesional.
+                            </p>
+                            <a
+                                href="https://linktr.ee/efficacelaboral"
+                                class="btn btn-primary btn-lg"
+                                >Quiero mejorar mi empleabilidad</a
+                            >
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="py-5 mt-5" id="we-do">
+            <div class="container text-center">
+                <h2 class="mb-5 fw-bold">
+                    Apoyamos tu crecimiento profesional mediante estrategias y
+                    mentoring personalizados
+                </h2>
+                <p class="mb-1">
+                    Más de 30 jóvenes pudieron impulsar su desarrollo gracias a
+                    nuestra metodología.
+                </p>
+            </div>
+        </section>
+
+        <!-- Services Section -->
+
+        <section class="py-5" id="servicios">
+            <div class="container">
+                <h2 class="text-center mb-5 fw-bold">Nuestros Servicios</h2>
+                <div class="row g-4">
+                    <div class="col-md-4">
+                        <div class="card border-0">
+                            <div class="card-body">
+                                <div class="service-card mb-3">
+                                    <img
+                                        src="./assets/img/empleabilidad_services.webp"
+                                        class="img-fluid"
+                                        alt="Optimización de CV"
+                                    />
+                                </div>
+                                <h4 class="card-title text-center fw-bold">
+                                    Mejoramiento de CV
+                                </h4>
+                                <p class="card-text text-center fs-6">
+                                    Haz que tu CV capture la atención de los
+                                    reclutadores y refleje tu verdadero
+                                    potencial
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-md-4">
+                        <div class="card border-0">
+                            <div class="card-body">
+                                <div class="service-card mb-3">
+                                    <img
+                                        src="./assets/img/coaching-services.webp"
+                                        class="img-fluid"
+                                        alt="Optimización de CV"
+                                    />
+                                </div>
+                                <h4 class="card-title text-center fw-bold">
+                                    Training de entrevistas
+                                </h4>
+                                <p class="card-text text-center fs-6">
+                                    Supera los nervios y destaca en tus
+                                    entrevistas laborales con técnicas probadas.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-md-4">
+                        <div class="card border-0">
+                            <div class="card-body">
+                                <div class="service-card mb-3">
+                                    <img
+                                        src="assets/img/empleabilidad_services.webp"
+                                        class="img-fluid"
+                                        alt="Optimización de CV"
+                                    />
+                                </div>
+                                <h4 class="card-title text-center fw-bold">
+                                    Marca personal y LinkedIn
+                                </h4>
+                                <p class="card-text text-center fs-6">
+                                    Construye una presencia profesional power
+                                    que te ayude a conectar con oportunidades.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Quote Section -->
+        <section class="quote-section">
+            <div class="container">
+                <div class="row justify-content-center">
+                    <div class="col-md-8 text-center">
+                        <blockquote class="blockquote">
+                            <p class="mb-0">
+                                "Apostamos por el potencial de los diferentes
+                                profesionales del país y trabajamos en impulsar
+                                sus talentos para convertirlos en agentes de
+                                cambio"
+                            </p>
+                        </blockquote>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Team Values Section -->
+        <section class="py-5">
+            <div class="container text-center">
+                <h2 class="mb-5 fw-bold">¿Por qué elegirnos?</h2>
+                <div class="row g-4">
+                    <div class="col-md-4 text-center">
+                        <i class="bi bi-person-check display-1 icon-blue"></i>
+                        <p class="fs-5 mt-4">
+                            Mentoring personalizado adaptado a tus objetivos.
+                        </p>
+                    </div>
+                    <div class="col-md-4 text-center">
+                        <i class="bi bi-clock-history display-1 icon-blue"></i>
+                        <p class="fs-5 mt-4">
+                            Acompañamiento continuo durante todo el proceso
+                        </p>
+                    </div>
+                    <div class="col-md-4 text-center">
+                        <i class="bi bi-star display-1 icon-blue"></i>
+                        <p class="fs-5 mt-4">
+                            Enfoque humano y resultados tangibles
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Resources Section -->
+        <section class="py-5" id="recursos">
+            <div class="container text-center">
+                <h2 class="mb-5 fw-bold">
+                    Recursos gratuitos que transformarán tu búsqueda laboral
+                </h2>
+                <p class="mb-5">
+                    Cada paso en tu desarrollo profesional cuenta. Por eso, te
+                    brindamos estos recursos que te ayudarán a destacar en el
+                    competitivo mundo laboral.
+                </p>
+                <div class="row text-center">
+                    <div class="col-md-3">
+                        <a
+                            href="plantillas-cv.html"
+                            class="text-decoration-none"
+                        >
+                            <i class="bi bi-file-text resource-icon"></i>
+                            <h3 class="h5 text-dark">Plantillas de CV</h3>
+                        </a>
+                    </div>
+                    <div class="col-md-3">
+                        <a
+                            href="podcast-empleabilidad.html"
+                            class="text-decoration-none"
+                        >
+                            <i class="bi bi-mic resource-icon"></i>
+                            <h3 class="h5 text-dark">
+                                Podcasts de empleabilidad
+                            </h3>
+                        </a>
+                    </div>
+                    <div class="col-md-3">
+                        <a
+                            href="libros-recomendados.html"
+                            class="text-decoration-none"
+                        >
+                            <i class="bi bi-book resource-icon"></i>
+                            <h3 class="h5 text-dark">Libros recomendados</h3>
+                        </a>
+                    </div>
+                    <div class="col-md-3">
+                        <a
+                            href="tendencia-laboral.html"
+                            class="text-decoration-none"
+                        >
+                            <i
+                                class="bi bi-file-earmark-easel resource-icon"
+                            ></i>
+                            <h3 class="h5 text-dark">Tendencias laborales</h3>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Contact Section -->
+        <section id="contacto" class="py-5">
+            <div class="container">
+                <div class="row align-items-center">
+                    <div class="col-lg-6">
+                        <img
+                            src="./assets/img/contacto.webp"
+                            class="img-fluid"
+                            alt="Contacto"
+                        />
+                    </div>
+                    <div class="col-lg-6">
+                        <h2 class="mb-4">Contáctanos</h2>
+                        <p>
+                            Si tienes alguna consulta o propuesta, puedes
+                            contactarnos mediante los siguientes medios:
+                        </p>
+
+                        <div class="mb-4">
+                            <div class="d-flex align-items-center mb-3">
+                                <i class="bi bi-envelope-at me-3 fs-4"></i>
+                                <a href="mailto:efficacelaboral@gmail.com"
+                                    >efficacelaboral@gmail.com</a
+                                >
+                            </div>
+
+                            <div class="d-flex align-items-center">
+                                <i class="bi bi-chat-right-heart me-3 fs-4"></i>
+                                <div>
+                                    <p class="mb-0">Nuestras redes sociales:</p>
+                                    <a
+                                        href="https://www.facebook.com/efficacelaboral"
+                                        target="_blank"
+                                        class="me-2"
+                                        >Facebook</a
+                                    >
+                                    <a
+                                        href="https://www.instagram.com/efficace_laboral/"
+                                        target="_blank"
+                                        class="me-2"
+                                        >Instagram</a
+                                    >
+                                    <a
+                                        href="https://www.linkedin.com/company/efficace-laboral"
+                                        target="_blank"
+                                        class="me-2"
+                                        >LinkedIn</a
+                                    >
+                                    <a
+                                        href="https://www.tiktok.com/@efficaceconsultoria/"
+                                        target="_blank"
+                                        >TikTok</a
+                                    >
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Footer -->
+        <footer class="footer">
+            <div class="container">
+                <div class="row align-items-center">
+                    <div class="col-md-6">
+                        <p class="mb-0">
+                            &copy; 2024 Efficace. Todos los derechos reservados.
+                        </p>
+                    </div>
+                    <div class="col-md-6 text-md-end">
+                        <div class="social-icons">
+                            <a
+                                href="https://www.facebook.com/efficacelaboral"
+                                target="_blank"
+                                ><i class="bi bi-facebook"></i
+                            ></a>
+                            <a
+                                href="https://www.instagram.com/efficace_laboral/"
+                                target="_blank"
+                                ><i class="bi bi-instagram"></i
+                            ></a>
+                            <a
+                                href="https://www.linkedin.com/company/efficace-laboral"
+                                target="_blank"
+                                ><i class="bi bi-linkedin"></i
+                            ></a>
+                            <a
+                                href="https://www.tiktok.com/@efficaceconsultoria"
+                                target="_blank"
+                                ><i class="bi bi-tiktok"></i
+                            ></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </footer>
+
+        <!-- Bootstrap Bundle with Popper -->
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    </body>
+</html>

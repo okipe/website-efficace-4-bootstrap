@@ -1,0 +1,151 @@
+// En este archivo deberán ir todas las reglas relacionadas con layout:
+
+// Se considera layout:
+// - grid
+// - contenedores
+
+@use 'base' as *;
+
+header {
+    display: flex;
+    justify-content: space-between;
+
+    .navbar {
+        // display: flex;
+
+        &__menu {
+            align-items: center;
+            display: flex;            
+        }
+    }
+
+}
+
+main {
+    display: flex;
+    flex-direction: column;
+    
+    // .hero {
+    //     display: flex;
+    //     flex-direction: row;
+    //     justify-content: space-around;
+    // }
+
+    .hero {
+        display: grid;
+        grid-template-columns: minmax(200px, 800px);
+        justify-content: center;
+        // border: 1px solid #000;
+
+    }
+
+    .services {
+        &__container {
+            display: grid;
+            grid-template-columns: repeat(3, minmax(75px, 600px));
+            grid-template-rows: 1fr;
+            // gap: 100px;
+
+            &__item {
+                display: flex;
+            }
+        }
+    }
+
+    .we-are {
+        display: grid;
+        grid-template-columns: 1fr;
+        gap: 50px;
+
+        &__text {
+            align-self: center;
+        }
+    }
+
+    .team {
+        display: grid;
+        grid-template-columns: 1fr;
+        // gap: 50px;
+
+        &__text {
+            align-self: center;
+        }
+
+        &__container {
+            display: grid;
+            grid-template-columns: repeat(2, minmax(125px, 600px));
+            grid-template-rows: 1fr;
+            // gap: 100px;
+
+            &__item {
+                display: flex;
+                // border: 1px solid #000;
+            }
+        }
+    }
+
+    .resources__grid {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 50px;
+    }
+
+/*     .contact {
+        display: grid;
+        grid-template-columns: repeat(2, minmax(200px, 600px));
+        gap: 50px;
+
+        &__title {
+            align-self: center;
+        }
+    } */
+
+    .books {
+        // display: grid;
+        // grid-template-columns: 1fr;
+
+        &__ranking .books__ranking__book-container {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 50px; 
+
+            .books__ranking__item {
+                display: grid;
+                // Ensures consistent image width while maintaining responsiveness
+                // 54% minimum prevents image column from becoming too narrow
+                // 300px maximum prevents image from becoming too wide
+                grid-template-columns: minmax(54%, 300px) 1fr;
+                // gap: 50px; // It increases the total height 
+            }
+        }
+    }
+
+    .cv-templates {
+        &__ranking .cv-templates__ranking__container {
+            display: grid;
+            grid-template-columns: 1fr 1fr 1fr;
+            gap: 3%;
+        }
+    }
+
+    .podcasts {
+        &__topic .podcasts__topic__container {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 50px;
+        }
+    }
+
+    .trends {
+        &__container {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 50px;
+        }
+    }
+}
+
+footer .footer__container {
+    display: flex;
+    justify-content: space-between;
+}

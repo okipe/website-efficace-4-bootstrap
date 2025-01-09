@@ -1,0 +1,93 @@
+:root {
+    --primary-color: #0624ae;
+    --secondary-color: #19c223;
+    --dark-color: #2c2c4c;
+    --text-color: #000000;
+    --light-color: #ffffff;
+    --paragraph-size: 1.25rem; /* 18px */
+    --heading-size: 2rem; /* 40px */
+}
+
+body {
+    font-family: "Poppins", sans-serif;
+}
+
+/* Tamaños base */
+h1,
+h2,
+h3,
+.hero-text {
+    font-family: "League Spartan", sans-serif;
+}
+
+p {
+    font-size: var(--paragraph-size);
+    line-height: 1.6;
+}
+
+/* Custom Navbar */
+.navbar {
+    background-color: var(--light-color);
+    padding: 1rem 0;
+}
+
+.navbar-brand img {
+    width: 200px;
+}
+
+/* Footer */
+.footer {
+    background-color: var(--primary-color);
+    color: var(--light-color);
+    padding: 2rem 0;
+}
+
+.social-icons a {
+    color: var(--light-color);
+    font-size: 1.5rem;
+    margin-right: 1rem;
+}
+
+/* Tamaños específicos */
+.hero h1 {
+    font-size: 3rem;
+    line-height: 1.1;
+}
+
+.hero p {
+    font-size: 1.25rem; /* 20px */
+}
+
+.service-description {
+    font-size: 1.125rem; /* 18px */
+}
+
+/* Custom Button */
+.btn-primary-custom {
+    /* Para borrar */
+    background-color: var(--primary-color);
+    color: var(--light-color);
+    border: none;
+    padding: 0.6rem 1.5rem;
+    border-radius: 20px;
+    transition: all 0.3s ease;
+}
+
+.btn-primary-custom:hover {
+    background-color: var(--dark-color);
+    transform: translateY(-2px);
+}
+
+.btn-primary {
+    background-color: var(--primary-color);
+    color: var(--light-color);
+    border: none;
+    padding: 0.6rem 1.5rem;
+    border-radius: 15px;
+    transition: all 0.3s ease;
+}
+
+/* Custom color */
+.icon-blue {
+    color: #0624ae;
+}
