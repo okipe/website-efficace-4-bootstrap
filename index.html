@@ -138,6 +138,24 @@
         </style>
     </head>
     <body>
+        <div
+            class="notification-bar alert alert-dismissible fade show m-0"
+            role="alert"
+        >
+            <div class="container">
+                <div class="d-flex justify-content-center align-items-center">
+                    <a href="#" class="text-decoration-none text-dark">
+                        🎉 Únete a nuestra Tribu Laboral en WhatsApp para recibir oportunidades, recursos y más 📲
+                    </a>
+                    <button
+                        type="button"
+                        class="btn-close ms-3"
+                        data-bs-dismiss="alert"
+                        aria-label="Close"
+                    ></button>
+                </div>
+            </div>
+        </div>
         <!-- Navbar -->
         <nav class="navbar navbar-expand-lg navbar-light fixed-top shadow-sm">
             <div class="container">
@@ -196,11 +214,30 @@
                                 encuentres el empleo que eleve tu trayectoria
                                 profesional.
                             </p>
-                            <a
+                            <!-- <a
                                 href="https://linktr.ee/efficacelaboral"
                                 class="btn btn-primary btn-lg"
                                 >Quiero mejorar mi empleabilidad</a
                             >
+                            <a
+                                href="https://linktr.ee/efficacelaboral"
+                                class="btn btn-primary btn-lg"
+                                >Quiero descubrir mi potencial</a
+                            > -->
+                            <div class="d-grid gap-3 col-lg-8 mx-auto">
+                                <a
+                                    href="https://linktr.ee/efficacelaboral"
+                                    class="btn btn-primary btn-lg"
+                                >
+                                    Quiero mejorar mi empleabilidad
+                                </a>
+                                <a
+                                    href="https://linktr.ee/efficacelaboral"
+                                    class="btn btn-success btn-lg text-dark"
+                                >
+                                    Quiero descubrir mi potencial
+                                </a>
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -317,19 +354,23 @@
                 <h2 class="mb-5 fw-bold">¿Por qué elegirnos?</h2>
                 <div class="row g-4">
                     <div class="col-md-4 text-center">
-                        <i class="bi bi-person-check display-1 icon-blue"></i>
+                        <i
+                            class="bi bi-person-check display-1 icon-primary"
+                        ></i>
                         <p class="fs-5 mt-4">
                             Mentoring personalizado adaptado a tus objetivos.
                         </p>
                     </div>
                     <div class="col-md-4 text-center">
-                        <i class="bi bi-clock-history display-1 icon-blue"></i>
+                        <i
+                            class="bi bi-clock-history display-1 icon-primary"
+                        ></i>
                         <p class="fs-5 mt-4">
                             Acompañamiento continuo durante todo el proceso
                         </p>
                     </div>
                     <div class="col-md-4 text-center">
-                        <i class="bi bi-star display-1 icon-blue"></i>
+                        <i class="bi bi-star display-1 icon-primary"></i>
                         <p class="fs-5 mt-4">
                             Enfoque humano y resultados tangibles
                         </p>
@@ -338,8 +379,132 @@
             </div>
         </section>
 
+        <!-- Testimonies section -->
+        <section class="testimonials py-5 bg-light">
+            <div class="container">
+                <h2 class="text-center mb-5 fw-bold">
+                    Lo que dicen nuestros clientes
+                </h2>
+
+                <div class="row g-4">
+                    <div class="col-md-4">
+                        <div
+                            class="card testimonial-card h-100 border-0 shadow-sm"
+                        >
+                            <div class="card-body">
+                                <div class="testimonial-quote mb-4">
+                                    <i
+                                        class="bi bi-quote fs-1 icon-secondary"
+                                    ></i>
+                                </div>
+                                <blockquote class="card-text mb-4">
+                                    "Oye, te cuento que pasé al programa de
+                                    prácticas de Belcorp 😊. Muchas gracias por
+                                    el apoyo del speech. Siento que fue clave
+                                    total para pasar. 🥹"
+                                </blockquote>
+                                <div class="d-flex align-items-center">
+                                    <!-- <img src="/api/placeholder/48/48" class="rounded-circle me-3" alt="Ana García"> -->
+                                    <div>
+                                        <h5 class="mb-1">Tan S.</h5>
+                                        <p class="small text-muted mb-0">
+                                            Practicante en Belcorp
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-md-4">
+                        <div
+                            class="card testimonial-card h-100 border-0 shadow-sm"
+                        >
+                            <div class="card-body">
+                                <div class="testimonial-quote mb-4">
+                                    <i
+                                        class="bi bi-quote fs-1 icon-secondary"
+                                    ></i>
+                                </div>
+                                <blockquote class="card-text mb-4">
+                                    "El CV que armamos fue clave. La semana
+                                    pasada me llamaron para varias entrevistas.
+                                    Ayer y hoy recibí dos propuestas, tengo para
+                                    elegir hoy. Cualquier cosa, te aviso"
+                                </blockquote>
+                                <div class="d-flex align-items-center">
+                                    <!-- <img src="/api/placeholder/48/48" class="rounded-circle me-3" alt="Carlos Mendoza"> -->
+                                    <div>
+                                        <h5 class="mb-1">Carlos Mendoza</h5>
+                                        <p class="small text-muted mb-0">
+                                            Practicante en BBVA
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-md-4">
+                        <div
+                            class="card testimonial-card h-100 border-0 shadow-sm"
+                        >
+                            <div class="card-body">
+                                <div class="testimonial-quote mb-4">
+                                    <i
+                                        class="bi bi-quote fs-1 icon-secondary"
+                                    ></i>
+                                </div>
+                                <blockquote class="card-text mb-4">
+                                    "Al fín lo logré!! Quería darte esta
+                                    noticia. En la mañana me escribieron y me
+                                    dijeron que la plaza es mía. Muchísimas
+                                    graciasss ❤️"
+                                </blockquote>
+                                <div class="d-flex align-items-center">
+                                    <!-- <img src="/api/placeholder/48/48" class="rounded-circle me-3" alt="María Torres"> -->
+                                    <div>
+                                        <h5 class="mb-1">María Torres</h5>
+                                        <p class="small text-muted mb-0">
+                                            Auxiliar en Colegios Trilce
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
         <!-- Resources Section -->
-        <section class="py-5" id="recursos">
+
+        <section class="cta-section text-white py-5">
+            <div class="container">
+                <div class="row align-items-center">
+                    <div class="col-lg-8">
+                        <h2 class="fw-bold">
+                            Recursos que transformarán tu búsqueda laboral ⚡
+                        </h2>
+                        <p class="lead mb-0">
+                            Cada paso en tu desarrollo profesional cuenta. Por
+                            eso, te brindamos estos recursos que te ayudarán a
+                            destacar en el competitivo mundo laboral: plantillas
+                            de CV, recursos, podcasts recomendados y más.
+                        </p>
+                    </div>
+                    <div class="col-lg-4 text-center mt-4 mt-lg-0">
+                        <a
+                            href="#recursos"
+                            class="btn btn-light btn-lg px-4 rounded-pill"
+                            >Ir a recursos gratuitos</a
+                        >
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- <section class="py-5" id="recursos">
             <div class="container text-center">
                 <h2 class="mb-5 fw-bold">
                     Recursos gratuitos que transformarán tu búsqueda laboral
@@ -389,6 +554,26 @@
                             ></i>
                             <h3 class="h5 text-dark">Tendencias laborales</h3>
                         </a>
+                    </div>
+                </div>
+            </div>
+        </section> -->
+
+        <section class="tribe-section py-5" style="background-color: #19c223">
+            <div class="container">
+                <div class="row align-items-center">
+                    <div class="col-lg-8 mb-lg-0">
+                        <h2 class="fw-bold text-dark">
+                            Únete a nuestra Tribu Laboral para que recibas
+                            oportunidades, recursos y más 📲😊
+                        </h2>
+                    </div>
+                    <div class="col-lg-4 text-center mt-4 mt-lg-0">
+                        <a
+                            href="#recursos"
+                            class="btn btn-light btn-lg px-4 rounded-pill"
+                            >Ir a recursos gratuitos</a
+                        >
                     </div>
                 </div>
             </div>
@@ -494,5 +679,31 @@
 
         <!-- Bootstrap Bundle with Popper -->
         <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+
+        <script>
+            document.addEventListener("DOMContentLoaded", function () {
+                const notification =
+                    document.querySelector(".notification-bar");
+                const navbar = document.querySelector(".navbar");
+                const closeButton = document.querySelector(".btn-close");
+
+                // // Check stored state
+                // if (localStorage.getItem("notificationDismissed") === "true") {
+                //     notification.classList.remove("show");
+                //     navbar.style.top = "0";
+                // }
+
+                // // Handle close click
+                // closeButton.addEventListener("click", function () {
+                //     localStorage.setItem("notificationDismissed", "true");
+                //     navbar.style.top = "0";
+                // });
+
+                // Solo maneja el cierre temporal
+                closeButton.addEventListener("click", function () {
+                    navbar.style.top = "0";
+                });
+            });
+        </script>
     </body>
 </html>

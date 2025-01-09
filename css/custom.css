@@ -10,6 +10,7 @@
 
 body {
     font-family: "Poppins", sans-serif;
+    padding-top: 56px; /* Height of navbar */
 }
 
 /* Tamaños base */
@@ -29,6 +30,13 @@ p {
 .navbar {
     background-color: var(--light-color);
     padding: 1rem 0;
+    top: 40px; /* Height of notification bar */
+    transition: top 0.3s ease;
+}
+
+.notification-bar.fade:not(.show) + .navbar {
+    top: 0;
+    transition: top 0.3s ease;
 }
 
 .navbar-brand img {
@@ -87,7 +95,65 @@ p {
     transition: all 0.3s ease;
 }
 
+.btn-success {
+    background-color: #19c223;
+    border-color: #19c223;
+    color: #000000;
+    transition: all 0.3s ease;
+}
+
+.btn-success:hover {
+    background-color: #16a91f;
+    border-color: #16a91f;
+    color: #000000;
+}
+
+.hero .d-grid {
+    margin-top: 2rem;
+}
+
 /* Custom color */
-.icon-blue {
-    color: #0624ae;
+.icon-primary {
+    color: var(--primary-color);
+}
+
+.icon-secondary {
+    color: var(--secondary-color);
+}
+
+.cta-section {
+    background-color: var(--primary-color);
+    padding: 1rem 0;
+}
+
+.cta-section .btn-light:hover {
+    background-color: #e2e6ea;
+    transform: translateY(-2px);
+    transition: all 0.3s ease;
+}
+
+@media (max-width: 991.98px) {
+    .cta-section .text-lg-end {
+        text-align: left !important;
+    }
+}
+
+.notification-bar {
+    background-color: #19c223;
+    padding: 0.75rem 0;
+    border: none;
+    border-radius: 0;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 1031; /* Higher than navbar */
+}
+
+.notification-bar a:hover {
+    text-decoration: underline !important;
+}
+
+.btn-close:focus {
+    box-shadow: none;
 }
