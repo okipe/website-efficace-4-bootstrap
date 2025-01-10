@@ -145,7 +145,8 @@
             <div class="container">
                 <div class="d-flex justify-content-center align-items-center">
                     <a href="#" class="text-decoration-none text-dark">
-                        🎉 Únete a nuestra Tribu Laboral en WhatsApp para recibir oportunidades, recursos y más 📲
+                        🎉 Únete a nuestra Tribu Laboral en WhatsApp para
+                        recibir oportunidades, recursos y más 📲
                     </a>
                     <button
                         type="button"
@@ -585,19 +586,102 @@
                 <div class="row align-items-center">
                     <div class="col-lg-6">
                         <img
-                            src="./assets/img/contacto.webp"
+                            src="./assets/img/woman_contacto.jpeg"
                             class="img-fluid"
                             alt="Contacto"
                         />
                     </div>
                     <div class="col-lg-6">
-                        <h2 class="mb-4">Contáctanos</h2>
+                        <h2 class="mb-4 fw-bold">Contáctanos</h2>
                         <p>
-                            Si tienes alguna consulta o propuesta, puedes
-                            contactarnos mediante los siguientes medios:
+                            ¿Deseas saber más detalles de nuestras actividades y
+                            servicios? Escríbenos 😊
                         </p>
 
-                        <div class="mb-4">
+                        <div class="row">
+                            <div class="col-lg-11">
+                                <form
+                                    id="contactForm"
+                                    onsubmit="handleSubmit(event)"
+                                >
+                                    <div class="row g-3">
+                                        <div class="col-md-6">
+                                            <input
+                                                type="text"
+                                                class="form-control"
+                                                id="nombre"
+                                                name="nombre"
+                                                placeholder="Nombre completo *"
+                                                required
+                                            />
+                                        </div>
+                                        <div class="col-md-6">
+                                            <input
+                                                type="email"
+                                                class="form-control"
+                                                id="email"
+                                                name="email"
+                                                placeholder="Correo electrónico *"
+                                                required
+                                            />
+                                        </div>
+                                        <div class="col-12">
+                                            <input
+                                                type="tel"
+                                                class="form-control"
+                                                id="celular"
+                                                name="celular"
+                                                placeholder="Número de celular"
+                                            />
+                                        </div>
+                                        <div class="col-12">
+                                            <select
+                                                class="form-select"
+                                                id="asunto"
+                                                name="asunto"
+                                                required
+                                            >
+                                                <option value="">
+                                                    Selecciona el asunto *
+                                                </option>
+                                                <option value="cv">
+                                                    Asesoría de CV
+                                                </option>
+                                                <option value="entrevista">
+                                                    Training de entrevista
+                                                </option>
+                                                <option value="linkedin">
+                                                    Optimización de LinkedIn
+                                                </option>
+                                                <option value="otro">
+                                                    Otro tema
+                                                </option>
+                                            </select>
+                                        </div>
+                                        <div class="col-12">
+                                            <textarea
+                                                class="form-control"
+                                                id="mensaje"
+                                                name="mensaje"
+                                                rows="4"
+                                                placeholder="Escribe tu mensaje aquí *"
+                                                required
+                                            ></textarea>
+                                        </div>
+                                        <div class="col-12">
+                                            <button
+                                                type="submit"
+                                                class="btn btn-primary px-4"
+                                            >
+                                                Enviar mensaje
+                                            </button>
+                                        </div>
+                                    </div>
+                                </form>
+                            </div>
+                        </div>
+
+                        <!-- <div class="mb-4">
                             <div class="d-flex align-items-center mb-3">
                                 <i class="bi bi-envelope-at me-3 fs-4"></i>
                                 <a href="mailto:efficacelaboral@gmail.com"
@@ -634,7 +718,7 @@
                                     >
                                 </div>
                             </div>
-                        </div>
+                        </div> -->
                     </div>
                 </div>
             </div>
