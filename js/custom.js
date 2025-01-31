@@ -1,27 +1,22 @@
+/* GENERAL */
+
 // Notification bar
 
 document.addEventListener("DOMContentLoaded", function () {
-  const notification =
-      document.querySelector(".notification-bar");
-  const navbar = document.querySelector(".navbar");
-  const closeButton = document.querySelector(".btn-close");
+    const notification = document.querySelector(".notification-bar");
+    const navbar = document.querySelector(".navbar");
+    const closeButton = notification.querySelector(".btn-close");
 
-  // // Check stored state
-  // if (localStorage.getItem("notificationDismissed") === "true") {
-  //     notification.classList.remove("show");
-  //     navbar.style.top = "0";
-  // }
+    closeButton.addEventListener("click", function () {
+        notification.classList.add("fade");
+        notification.classList.remove("show");
 
-  // // Handle close click
-  // closeButton.addEventListener("click", function () {
-  //     localStorage.setItem("notificationDismissed", "true");
-  //     navbar.style.top = "0";
-  // });
-
-  // Solo maneja el cierre temporal
-  closeButton.addEventListener("click", function () {
-      navbar.style.top = "0";
-  });
+        // Fix navbar position
+        navbar.style.position = "fixed";
+        navbar.style.top = "0";
+        navbar.style.width = "100%";
+        navbar.style.zIndex = "1030";
+    });
 });
 
 // WhatsApp widget
@@ -48,4 +43,51 @@ document.addEventListener("DOMContentLoaded", function () {
             whatsAppPopup.style.display = "none";
         }
     });
+});
+
+/* CV GALLERY */
+
+// Filtrado de templates
+document.addEventListener("DOMContentLoaded", function () {
+    const filterButtons = document.querySelectorAll(".filter-btn");
+    const templates = document.querySelectorAll(".template-item");
+
+    filterButtons.forEach((button) => {
+        button.addEventListener("click", () => {
+            // Actualizar estado activo de los botones
+            filterButtons.forEach((btn) => btn.classList.remove("active"));
+            button.classList.add("active");
+
+            // Filtrar templates
+            const filter = button.getAttribute("data-filter");
+
+            templates.forEach((template) => {
+                if (
+                    filter === "all" ||
+                    template.getAttribute("data-category") === filter
+                ) {
+                    template.style.display = "block";
+                    // Añadir animación
+                    template.style.animation = "fadeInUp 0.6s ease backwards";
+                } else {
+                    template.style.display = "none";
+                }
+            });
+        });
+    });
+});
+
+// Escuchar el evento de envío exitoso del formulario
+Cognito.on("afterSubmit", (event) => {
+    // Cerrar el modal
+    const modal = bootstrap.Modal.getInstance(
+        document.getElementById("downloadModal")
+    );
+    modal.hide();
+
+    // Iniciar la descarga
+    const guideUrl = event.entry.GuideURL; // Campo oculto en Cognito Form
+    if (guideUrl) {
+        window.open(guideUrl, "_blank");
+    }
 });
