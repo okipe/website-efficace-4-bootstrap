@@ -636,3 +636,36 @@ chat {
         margin: 0 auto;
     }
 }
+
+/* RECURSOS */
+.live-sessions .card {
+    border-radius: 1rem;
+    transition: transform 0.3s ease;
+}
+
+.live-sessions .card:hover {
+    transform: translateY(-5px);
+}
+
+.live-sessions .badge {
+    font-size: 0.9rem;
+    padding: 0.5em 1em;
+    border-radius: 2rem;
+}
+
+.live-sessions .session-details {
+    font-size: 0.95rem;
+    color: #6c757d;
+}
+
+@media (max-width: 767.98px) {
+    .live-sessions .card-body {
+        padding: 1.5rem;
+    }
+
+    .live-sessions img {
+        max-height: 200px;
+        width: 100%;
+        object-fit: cover;
+    }
+}
