@@ -31,6 +31,12 @@ chat {
     font-size: var(--chat-size);
 }
 
+/* Custom titles */
+
+.section-title {
+    text-transform: uppercase;
+}
+
 /* Custom Navbar */
 .navbar {
     background-color: var(--light-color);
@@ -317,4 +323,316 @@ chat {
 
 .form-check-label a:hover {
     text-decoration: underline;
+}
+
+/* SERVICES */
+
+.pain-point-card {
+    transition: transform 0.3s ease;
+    border: 1px solid rgba(0, 0, 0, 0.1);
+}
+
+.pain-point-card:hover {
+    transform: translateY(-5px);
+}
+
+.pain-point-image img {
+    width: 80px;
+    height: 80px;
+    object-fit: cover;
+    border-radius: 8px;
+}
+
+.pain-point-text {
+    color: var(--dark-color);
+    font-weight: 500;
+    font-size: 1.1rem;
+}
+
+@media (min-width: 768px) {
+    .pain-point-card .d-flex {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .pain-point-image {
+        margin-bottom: 1.5rem;
+        margin-right: 0 !important;
+    }
+
+    .pain-point-image img {
+        width: 200px;
+        height: 200px;
+    }
+
+    .pain-point-text {
+        font-size: 1.25rem;
+    }
+}
+
+.solutions {
+    background-color: var(--light-color);
+}
+
+.solution-card {
+    background-color: white;
+    border-radius: 16px;
+    padding: 2rem;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+}
+
+.solution-card:hover {
+    transform: translateY(-5px);
+}
+
+.solution-title {
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: var(--dark-color);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.solution-icon {
+    font-size: 1.75rem;
+}
+
+.solution-image {
+    border-radius: 12px;
+    overflow: hidden;
+    background-color: #f8f9fa;
+    aspect-ratio: 16/9;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.solution-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.solution-quote {
+    color: var(--primary-color);
+    font-size: 1.1rem;
+    text-align: center;
+}
+
+.features-title {
+    font-size: 1.1rem;
+    font-weight: 600;
+    color: var(--dark-color);
+}
+
+.features-list {
+    list-style: none;
+    padding-left: 0;
+    margin-bottom: 0;
+}
+
+.features-list li {
+    position: relative;
+    padding-left: 1.5rem;
+    margin-bottom: 0.75rem;
+    font-size: 1rem;
+}
+
+.features-list li:before {
+    content: "•";
+    color: var(--primary-color);
+    font-weight: bold;
+    position: absolute;
+    left: 0;
+}
+
+.features-list li:last-child {
+    margin-bottom: 0;
+}
+
+@media (max-width: 768px) {
+    .solution-card {
+        padding: 1.5rem;
+    }
+
+    .solution-title {
+        font-size: 1.25rem;
+    }
+
+    .solution-quote {
+        font-size: 1rem;
+    }
+}
+
+/* PROMOTIONAL BANNER */
+
+.promo-banner {
+    background-color: var(--secondary-color);
+    color: var(--dark-color);
+    padding: 1.5rem 0;
+}
+
+.promo-content {
+    max-width: 800px;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 2rem;
+}
+
+.promo-content h2 {
+    font-size: 1.5rem;
+    margin-bottom: 0;
+}
+
+.student-promo p {
+    font-size: 1.1rem;
+    margin-bottom: 0;
+}
+
+.promo-banner .btn-light {
+    font-weight: 600;
+    transition: transform 0.3s ease;
+    white-space: nowrap;
+}
+
+.promo-banner .btn-light:hover {
+    transform: translateY(-3px);
+}
+
+@media (max-width: 768px) {
+    .promo-content {
+        flex-direction: column;
+        gap: 1rem;
+        text-align: center;
+    }
+}
+
+/* SPECIALIST SECTION */
+
+.specialists {
+    background-color: var(--light-color);
+}
+
+.specialist-card {
+    transition: transform 0.3s ease;
+}
+
+.specialist-card:hover {
+    transform: translateY(-5px);
+}
+
+.specialist-name {
+    font-size: 1.75rem;
+    font-weight: 700;
+    color: var(--dark-color);
+}
+
+.tiktok-container {
+    position: relative;
+    width: 100%;
+    border-radius: 12px;
+    overflow: hidden;
+}
+
+.specialist-info {
+    list-style: none;
+    padding-left: 0;
+    margin-bottom: 0;
+}
+
+.specialist-info li {
+    position: relative;
+    padding-left: 1.5rem;
+    margin-bottom: 0.75rem;
+    font-size: 1rem;
+    line-height: 1.5;
+}
+
+.specialist-info li:before {
+    content: "•";
+    color: var(--primary-color);
+    font-weight: bold;
+    position: absolute;
+    left: 0;
+}
+
+@media (max-width: 768px) {
+    .specialist-card {
+        padding: 1.5rem !important;
+    }
+
+    .specialist-name {
+        font-size: 1.5rem;
+    }
+}
+
+/* TESTIMONIES */
+
+.testimonial-card {
+    transition: transform 0.3s ease;
+}
+
+.testimonial-card:hover {
+    transform: translateY(-5px);
+}
+
+.testimonial-image img {
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.card-text {
+    font-size: 1rem;
+    line-height: 1.6;
+    color: var(--dark-color);
+}
+
+.client-info {
+    border-top: 1px solid rgba(0, 0, 0, 0.1);
+    padding-top: 1rem;
+}
+
+/* FAQ SECTION */
+
+.accordion-item {
+    background-color: #f8f9fa;
+    border-radius: 12px;
+    overflow: hidden;
+}
+
+.accordion-button {
+    background-color: #f8f9fa;
+    font-weight: 600;
+    padding: 1.25rem;
+    box-shadow: none !important;
+    font-size: 1.3rem;
+}
+
+.accordion-button:not(.collapsed) {
+    background-color: var(--primary-color);
+    color: white;
+}
+
+.accordion-button::after {
+    filter: opacity(0.5);
+}
+
+.accordion-button:not(.collapsed)::after {
+    filter: brightness(0) invert(1);
+}
+
+.accordion-body {
+    padding: 1.5rem;
+    font-size: 1rem;
+    line-height: 1.6;
+}
+
+@media (min-width: 768px) {
+    .accordion {
+        max-width: 800px;
+        margin: 0 auto;
+    }
 }
