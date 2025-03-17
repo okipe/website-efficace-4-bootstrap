@@ -11,7 +11,10 @@
 
 body {
     font-family: "Poppins", sans-serif;
-    padding-top: 56px; /* Height of navbar */
+    /*padding-top: 96px; Height of navbar */
+    padding-top: calc(
+        56px + min(40px, max(48px, auto))
+    ); /* navbar + notification */
 }
 
 /* Tamaños base */
@@ -41,10 +44,13 @@ chat {
 .navbar {
     background-color: var(--light-color);
     padding: 1rem 0;
-    top: 40px; /* Height of notification bar */
+    top: var(--notification-height, 48px); /* Height of notification bar */
+    left: 0;
+    right: 0;
     transition: top 0.3s ease;
     position: fixed;
-    width: 100%;
+    /* width: 100%; adjusted 13-feb*/
+    height: 56px;
     z-index: 1030;
 }
 
@@ -58,10 +64,19 @@ chat {
     pointer-events: none;
 }
 
-/* .notification-bar.fade:not(.show) + .navbar {
+/* Handle navbar position when notification is closed */
+.notification-bar.fade:not(.show) + .navbar {
     top: 0;
-    transition: top 0.3s ease;
-} */
+    /* transition: top 0.3s ease; */
+}
+
+/* Close button positioning */
+.notification-bar .btn-close {
+    position: absolute;
+    right: 1rem;
+    top: 50%;
+    transform: translateY(-50%);
+}
 
 .navbar-brand img {
     width: 200px;
@@ -163,7 +178,7 @@ chat {
 }
 
 .notification-bar {
-    background-color: #19c223;
+    background-color: var(--secondary-color);
     padding: 0.75rem 0;
     border: none;
     border-radius: 0;
@@ -172,7 +187,25 @@ chat {
     left: 0;
     right: 0;
     z-index: 1031; /* Higher than navbar */
+    min-height: 48px; /* Minimum height for single line */
+    height: auto; /* Allow content to determine height */
     transition: opacity 0.3s ease;
+}
+
+/* Ensure notification content is centered and wrapped properly */
+.notification-bar .container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.notification-bar .d-flex {
+    flex-wrap: wrap;
+    justify-content: center;
+    text-align: center;
+    gap: 0.5rem;
+    width: 100%;
+    padding: 0 2rem; /* Space for close button */
 }
 
 .notification-bar a:hover {
@@ -467,6 +500,24 @@ chat {
 }
 
 @media (max-width: 768px) {
+    body {
+        padding-top: calc(
+            56px + min(48px, max(64px, auto))
+        ); /* Increased minimum for mobile */
+    }
+
+    .notification-bar {
+        min-height: 64px; /* Larger minimum height for mobile */
+    }
+
+    .notification-bar .d-flex {
+        padding: 0.25rem 2rem; /* Additional padding for wrapped text */
+    }
+
+    .navbar {
+        padding: 0.5rem 0;
+    }
+
     .solution-card {
         padding: 1.5rem;
     }
@@ -480,12 +531,26 @@ chat {
     }
 }
 
+/* Extra safety for very small screens */
+@media (max-width: 360px) {
+    .notification-bar {
+        min-height: 72px;
+    }
+}
+
 /* PROMOTIONAL BANNER */
 
 .promo-banner {
     background-color: var(--secondary-color);
     color: var(--dark-color);
     padding: 1.5rem 0;
+    border-top: 1px solid rgba(255, 255, 255, 0.3);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.3);
+}
+
+.promo-banner .icon-secondary {
+    color: var(--secondary-color);
+    font-size: 1.2rem;
 }
 
 .promo-content {
@@ -513,8 +578,16 @@ chat {
     white-space: nowrap;
 }
 
+.promo-banner .badge {
+    background-color: rgba(255, 255, 255, 0.25);
+    font-weight: 500;
+}
+
 .promo-banner .btn-light:hover {
+    background-color: #ffffff;
+    color: var(--primary-color);
     transform: translateY(-3px);
+    box-shadow: 0 5px 15px rgba(255, 255, 255, 0.3);
 }
 
 @media (max-width: 768px) {
