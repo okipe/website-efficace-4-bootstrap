@@ -26,9 +26,9 @@
 body {
     font-family: "Poppins", sans-serif;
     /*padding-top: 96px; Height of navbar */
-    padding-top: calc(
+    /* padding-top: calc(
         56px + min(40px, max(48px, auto))
-    ); /* navbar + notification */
+    ); navbar + notification */
 }
 
 /* Tamaños base */
@@ -125,7 +125,7 @@ chat {
     );
     box-shadow: 0 4px 12px rgba(65, 24, 202, 0.2);
     padding: 0 0;
-    top: var(--notification-height, 48px); /* Height of notification bar */
+    /* top: var(--notification-height, 48px); Height of notification bar */
     left: 0;
     right: 0;
     transition: top 0.3s ease;
@@ -186,6 +186,16 @@ chat {
     box-shadow: 0 6px 15px rgba(26, 231, 231, 0.3);
 }
 
+/* Make hamburger icon white */
+.navbar-toggler-icon {
+    background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30'%3e%3cpath stroke='rgba(255, 255, 255, 1)' stroke-linecap='round' stroke-miterlimit='10' stroke-width='2' d='M4 7h22M4 15h22M4 23h22'/%3e%3c/svg%3e") !important;
+}
+
+/* Optional: make the border white too */
+.navbar-toggler {
+    border-color: rgba(255, 255, 255, 0.5) !important;
+}
+
 .notification-bar.fade {
     opacity: 1;
     transition: opacity 0.15s linear;
@@ -210,7 +220,7 @@ chat {
         rgba(135, 100, 255, 0.1)
     );
     border-bottom: 4px solid var(--accent-color-1);
-    top: var(--notification-height, 48px); /* Height of notification bar */
+    /* top: var(--notification-height, 48px); Height of notification bar */
 }
 
 /* Close button positioning */
@@ -384,6 +394,23 @@ chat {
 }
 
 @media (max-width: 991.98px) {
+    /* Prevent vertical shifts on toggle */
+    .navbar {
+        height: 72px !important;
+        overflow: visible;
+    }
+
+    /* Ensure menu appears below the navbar */
+    .navbar-collapse {
+        margin-top: 0;
+        top: 72px;
+    }
+
+    /* Add a slight delay to make the animation smoother */
+    .navbar-collapse.collapsing {
+        transition-delay: 0.05s;
+    }
+
     .cta-section .text-lg-end {
         text-align: left !important;
     }
@@ -412,7 +439,7 @@ chat {
     left: 0;
     right: 0;
     z-index: 1030; /* Higher than navbar */
-    min-height: 48px; /* Minimum height for single line */
+    min-height: auto; /* Let content determine height */
     height: auto; /* Allow content to determine height */
     transition: opacity 0.3s ease;
 }
@@ -601,12 +628,85 @@ chat {
 }
 
 @media (max-width: 992px) {
-    .navbar {
-        top: var(--notification-height, 72px); /* Height of notification bar */
+    .navbar-collapse {
+        background-color: var(--primary-color);
+        border-radius: 0 0 10px 10px;
+        padding: 1rem;
+        box-shadow: 0 8px 16px rgba(0, 0, 0, 0.15);
+        /* margin-top: 0.5rem; */
+        animation: slideDown 0.3s ease forwards;
     }
 
-    .hero {
-        top: var(--notification-height, 72px); /* Height of notification bar */
+    .navbar {
+        border: none !important;
+        outline: none !important;
+        box-shadow: 0 4px 12px rgba(65, 24, 202, 0.2); /* Re-applying your existing shadow */
+    }
+
+    @keyframes slideDown {
+        from {
+            opacity: 0;
+            transform: translateY(-10px);
+        }
+        to {
+            opacity: 1;
+            transform: translateY(0);
+        }
+    }
+
+    /* Ensure text is clearly visible */
+    .navbar-collapse .nav-link {
+        color: white !important;
+        padding: 0.75rem 1rem;
+        border-radius: 8px;
+        transition: all 0.3s ease;
+    }
+
+    /* Add hover effect for better UX */
+    .navbar-collapse .nav-link:hover {
+        background-color: rgba(255, 255, 255, 0.1);
+        transform: translateX(5px);
+    }
+
+    /* Add some separation between items */
+    .navbar-nav .nav-item {
+        margin-bottom: 0.5rem;
+    }
+
+    /* Style the last item (likely your CTA button) */
+    .navbar-nav .nav-item:last-child {
+        margin-top: 0.5rem;
+    }
+
+    /* Ensure the button maintains its styling in mobile view */
+    .navbar-collapse .btn {
+        display: block;
+        text-align: center;
+        margin-left: 0 !important;
+    }
+
+    /* Fix for logo and toggle button shifting when menu expands */
+    .navbar-expand-lg .navbar-collapse {
+        position: absolute;
+        top: 100%;
+        left: 0;
+        right: 0;
+        z-index: 1000;
+    }
+
+    /* Ensure navbar container maintains proper height */
+    .navbar > .container {
+        min-height: 72px;
+        display: flex;
+        align-items: center;
+        position: relative;
+    }
+
+    /* Keep the logo and toggle button properly aligned */
+    .navbar-brand,
+    .navbar-toggler {
+        position: relative;
+        z-index: 1050;
     }
 
     #contacto__picture {
@@ -779,14 +879,14 @@ chat {
         padding: 0.25rem 2rem; /* Additional padding for wrapped text */
     }
 
-    .navbar {
+    /* .navbar {
         padding: 0.5rem 0;
-        top: var(--notification-height, 80px); /* Height of notification bar */
+        top: var(--notification-height, 80px); 
     }
 
     .hero {
-        top: var(--notification-height, 48px); /* Height of notification bar */
-    }
+        top: var(--notification-height, 48px); 
+    } */
 
     .solution-card {
         padding: 1.5rem;
@@ -798,27 +898,6 @@ chat {
 
     .solution-quote {
         font-size: 1rem;
-    }
-}
-
-/* Navbar and notification for very small screen */
-@media (max-width: 520px) {
-    .navbar {
-        top: var(--notification-height, 96px); /* Height of notification bar */
-    }
-
-    .hero {
-        top: var(--notification-height, 96px); /* Height of notification bar */
-    }
-}
-
-@media (max-width: 394px) {
-    .navbar {
-        top: var(--notification-height, 132px); /* Height of notification bar */
-    }
-
-    .hero {
-        top: var(--notification-height, 132px); /* Height of notification bar */
     }
 }
 

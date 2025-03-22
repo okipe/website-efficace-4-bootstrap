@@ -2,21 +2,69 @@
 
 // Notification bar
 
+// document.addEventListener("DOMContentLoaded", function () {
+//     const notification = document.querySelector(".notification-bar");
+//     const navbar = document.querySelector(".navbar");
+//     const closeButton = notification.querySelector(".btn-close");
+
+//     closeButton.addEventListener("click", function () {
+//         notification.classList.add("fade");
+//         notification.classList.remove("show");
+
+//         // Fix navbar position
+//         navbar.style.position = "fixed";
+//         navbar.style.top = "0";
+//         navbar.style.width = "100%";
+//         navbar.style.zIndex = "1030";
+//     });
+// });
+
 document.addEventListener("DOMContentLoaded", function () {
-    const notification = document.querySelector(".notification-bar");
+    const notificationBar = document.querySelector(".notification-bar");
     const navbar = document.querySelector(".navbar");
-    const closeButton = notification.querySelector(".btn-close");
+    const body = document.body;
 
-    closeButton.addEventListener("click", function () {
-        notification.classList.add("fade");
-        notification.classList.remove("show");
+    // Function to update navbar position and body padding
+    function updatePositions() {
+        const notificationHeight =
+            notificationBar && notificationBar.offsetHeight;
 
-        // Fix navbar position
-        navbar.style.position = "fixed";
-        navbar.style.top = "0";
-        navbar.style.width = "100%";
-        navbar.style.zIndex = "1030";
-    });
+        if (navbar && notificationBar) {
+            // Update navbar position based on notification height
+            navbar.style.top = notificationBar.classList.contains("show")
+                ? `${notificationHeight}px`
+                : "0";
+
+            // Update body padding to account for fixed elements
+            const totalHeight = notificationBar.classList.contains("show")
+                ? notificationHeight + navbar.offsetHeight
+                : navbar.offsetHeight;
+            body.style.paddingTop = `${totalHeight}px`;
+
+            // Store notification height as CSS variable for other elements to use
+            document.documentElement.style.setProperty(
+                "--notification-height",
+                notificationBar.classList.contains("show")
+                    ? `${notificationHeight}px`
+                    : "0px"
+            );
+        }
+    }
+
+    // Run on page load
+    updatePositions();
+
+    // Update when window is resized
+    window.addEventListener("resize", updatePositions);
+
+    // Update when notification is closed
+    const closeButton = notificationBar.querySelector(".btn-close");
+    if (closeButton) {
+        closeButton.addEventListener("click", function () {
+            // Allow time for the transition to complete
+            setTimeout(updatePositions, 300);
+        });
+    }
 });
 
 // WhatsApp widget
