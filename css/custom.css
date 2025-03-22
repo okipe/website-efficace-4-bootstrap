@@ -124,15 +124,15 @@ chat {
         var(--secondary-color-2)
     );
     box-shadow: 0 4px 12px rgba(65, 24, 202, 0.2);
-    padding: 0.75rem 0;
+    padding: 0 0;
     top: var(--notification-height, 48px); /* Height of notification bar */
     left: 0;
     right: 0;
     transition: top 0.3s ease;
     position: fixed;
     /* width: 100%; adjusted 13-feb*/
-    height: 56px;
-    z-index: 1030;
+    height: 72px;
+    z-index: 1020;
 }
 
 /* .navbar {
@@ -210,6 +210,7 @@ chat {
         rgba(135, 100, 255, 0.1)
     );
     border-bottom: 4px solid var(--accent-color-1);
+    top: var(--notification-height, 48px); /* Height of notification bar */
 }
 
 /* Close button positioning */
@@ -220,8 +221,20 @@ chat {
     transform: translateY(-50%);
 }
 
+.navbar-brand {
+    display: flex;
+    align-items: center;
+    height: 56px; /* Altura controlada */
+}
+
 .navbar-brand img {
-    width: 200px;
+    width: auto;
+    max-height: 60px;
+}
+
+.navbar-toggler {
+    margin-top: auto;
+    margin-bottom: auto;
 }
 
 /* Footer */
@@ -379,8 +392,8 @@ chat {
 .notification-bar {
     background: linear-gradient(
         90deg,
-        rgba(169, 248, 24, 0.9),
-        rgba(26, 231, 231, 0.9)
+        rgba(169, 248, 24, 1),
+        rgba(26, 231, 231, 1)
     );
     color: var(--dark-color);
     font-weight: 500;
@@ -398,7 +411,7 @@ chat {
     top: 0;
     left: 0;
     right: 0;
-    z-index: 1031; /* Higher than navbar */
+    z-index: 1030; /* Higher than navbar */
     min-height: 48px; /* Minimum height for single line */
     height: auto; /* Allow content to determine height */
     transition: opacity 0.3s ease;
@@ -587,7 +600,15 @@ chat {
     }
 }
 
-@media (max-width: 991px) {
+@media (max-width: 992px) {
+    .navbar {
+        top: var(--notification-height, 72px); /* Height of notification bar */
+    }
+
+    .hero {
+        top: var(--notification-height, 72px); /* Height of notification bar */
+    }
+
     #contacto__picture {
         margin-bottom: 4rem;
     }
@@ -760,6 +781,11 @@ chat {
 
     .navbar {
         padding: 0.5rem 0;
+        top: var(--notification-height, 80px); /* Height of notification bar */
+    }
+
+    .hero {
+        top: var(--notification-height, 48px); /* Height of notification bar */
     }
 
     .solution-card {
@@ -772,6 +798,27 @@ chat {
 
     .solution-quote {
         font-size: 1rem;
+    }
+}
+
+/* Navbar and notification for very small screen */
+@media (max-width: 520px) {
+    .navbar {
+        top: var(--notification-height, 96px); /* Height of notification bar */
+    }
+
+    .hero {
+        top: var(--notification-height, 96px); /* Height of notification bar */
+    }
+}
+
+@media (max-width: 394px) {
+    .navbar {
+        top: var(--notification-height, 132px); /* Height of notification bar */
+    }
+
+    .hero {
+        top: var(--notification-height, 132px); /* Height of notification bar */
     }
 }
 
