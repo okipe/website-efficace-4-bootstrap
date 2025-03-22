@@ -1,23 +1,13 @@
 :root {
-    /* Color principal - Púrpura dominante */
-    --primary-color: #4118ca; /* Púrpura profundo - color principal */
-
-    /* Colores secundarios complementarios */
-    --secondary-color-1: #8764ff; /* Púrpura más claro - para variación y contraste */
-    --secondary-color-2: #6030e8; /* Púrpura intermedio - para gradientes */
-
-    /* Acentos para detalles y elementos interactivos */
-    --accent-color-1: #1ae7e7; /* Turquesa - contraste vibrante */
-    --accent-color-2: #a9f818; /* Verde lima - para botones de acción */
-    --accent-color-3: #ffa11c; /* Naranja - para llamados a la acción urgentes */
-
-    /* Neutrales */
-    --dark-color: #2d1a6b; /* Púrpura oscuro - para fondos oscuros */
-    --text-color: #121212; /* Casi negro - texto principal */
-    --light-color: #ffffff; /* Blanco - para contraste */
-    --light-purple: #f5f2ff; /* Púrpura muy claro - fondos sutiles */
-
-    /* Tipografía - mantenemos Poppins */
+    --primary-color: #4118ca; /* Púrpura - color principal */
+    --secondary-color: #1ae7e7; /* Turquesa - nuevo secundario */
+    --accent-color-1: #2fbafc; /* Azul claro */
+    --accent-color-2: #8764ff; /* Púrpura claro */
+    --accent-color-3: #a9f818; /* Verde lima */
+    --accent-color-4: #ffa11c; /* Naranja */
+    --dark-color: #2c2c4c;
+    --text-color: #000000;
+    --light-color: #ffffff;
     --paragraph-size: 1.25rem;
     --heading-size: 2rem;
     --chat-size: 0.8rem;
@@ -52,79 +42,12 @@ chat {
 
 .section-title {
     text-transform: uppercase;
-    position: relative;
-    margin-bottom: 2.5rem;
-    color: var(--primary-color);
-}
-
-.section-title:after {
-    content: "";
-    position: absolute;
-    bottom: -12px;
-    left: 50%;
-    transform: translateX(-50%);
-    width: 80px;
-    height: 4px;
-    background: linear-gradient(
-        90deg,
-        var(--primary-color),
-        var(--secondary-color-1)
-    );
-    border-radius: 2px;
-}
-
-/* Efecto para tarjetas en hover */
-.hover-lift {
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
-}
-
-.hover-lift:hover {
-    transform: translateY(-6px);
-    box-shadow: 0 12px 30px rgba(65, 24, 202, 0.15);
-}
-
-/* Decoradores con microanimaciones */
-.pulse-dot {
-    position: relative;
-}
-
-.pulse-dot:before {
-    content: "";
-    position: absolute;
-    top: 50%;
-    left: -15px;
-    transform: translateY(-50%);
-    width: 8px;
-    height: 8px;
-    background-color: var(--accent-color-1);
-    border-radius: 50%;
-    animation: pulse 2s infinite;
-}
-
-@keyframes pulse {
-    0% {
-        transform: translateY(-50%) scale(1);
-        opacity: 1;
-    }
-    50% {
-        transform: translateY(-50%) scale(1.5);
-        opacity: 0.5;
-    }
-    100% {
-        transform: translateY(-50%) scale(1);
-        opacity: 1;
-    }
 }
 
 /* Custom Navbar */
 .navbar {
-    background: linear-gradient(
-        90deg,
-        var(--primary-color),
-        var(--secondary-color-2)
-    );
-    box-shadow: 0 4px 12px rgba(65, 24, 202, 0.2);
-    padding: 0.75rem 0;
+    background-color: var(--light-color);
+    padding: 1rem 0;
     top: var(--notification-height, 48px); /* Height of notification bar */
     left: 0;
     right: 0;
@@ -133,57 +56,6 @@ chat {
     /* width: 100%; adjusted 13-feb*/
     height: 56px;
     z-index: 1030;
-}
-
-/* .navbar {
-    background-color: var(--light-color);
-    box-shadow: 0 4px 12px rgba(65, 24, 202, 0.1);
-    padding: 1rem 0;
-    top: var(--notification-height, 48px);
-    left: 0;
-    right: 0;
-    transition: top 0.3s ease;
-    position: fixed;
-    height: 56px;
-    z-index: 1030;
-} */
-
-.navbar .nav-link {
-    color: var(--light-color);
-    font-weight: 500;
-    opacity: 0.9;
-    transition: all 0.3s ease;
-}
-
-/* .navbar .nav-link {
-    font-weight: 500;
-    color: var(--primary-color);
-    transition: all 0.3s ease;
-} */
-
-.navbar .nav-link:hover {
-    opacity: 1;
-    transform: translateY(-2px);
-}
-
-/* .navbar .nav-link:hover {
-    color: var(--secondary-color-1);
-} */
-
-.navbar .btn-primary {
-    background: linear-gradient(45deg, #17a5a5, #8764ff);
-    color: white;
-    font-weight: 600;
-    border: none;
-    padding: 0.6rem 1.8rem;
-    border-radius: 30px;
-    box-shadow: 0 4px 10px rgba(26, 231, 231, 0.2);
-    transition: all 0.3s ease;
-}
-
-.navbar .btn-primary:hover {
-    transform: translateY(-2px);
-    box-shadow: 0 6px 15px rgba(26, 231, 231, 0.3);
 }
 
 .notification-bar.fade {
@@ -202,16 +74,6 @@ chat {
     /* transition: top 0.3s ease; */
 }
 
-/* Hero color sólido */
-.hero {
-    background: linear-gradient(
-        135deg,
-        rgba(65, 24, 202, 0.05),
-        rgba(135, 100, 255, 0.1)
-    );
-    border-bottom: 4px solid var(--accent-color-1);
-}
-
 /* Close button positioning */
 .notification-bar .btn-close {
     position: absolute;
@@ -226,31 +88,15 @@ chat {
 
 /* Footer */
 .footer {
-    background-color: var(--dark-color);
+    background-color: var(--primary-color);
     color: var(--light-color);
-    padding: 3rem 0 2rem;
+    padding: 2rem 0;
 }
 
-.footer .social-icons a {
-    display: inline-flex;
-    align-items: center;
-    justify-content: center;
-    width: 38px;
-    height: 38px;
-    background: linear-gradient(
-        135deg,
-        var(--primary-color),
-        var(--secondary-color-1)
-    );
-    color: white;
-    border-radius: 50%;
-    margin-right: 0.75rem;
-    transition: all 0.3s ease;
-}
-
-.footer .social-icons a:hover {
-    transform: translateY(-3px) rotate(8deg);
-    box-shadow: 0 6px 15px rgba(65, 24, 202, 0.3);
+.social-icons a {
+    color: var(--light-color);
+    font-size: 1.5rem;
+    margin-right: 1rem;
 }
 
 /* Tamaños específicos */
@@ -268,14 +114,15 @@ chat {
 }
 
 /* Custom Button */
-/* .btn-primary-custom {
+.btn-primary-custom {
+    /* Para borrar */
     background-color: var(--primary-color);
     color: var(--light-color);
     border: none;
     padding: 0.6rem 1.5rem;
     border-radius: 20px;
     transition: all 0.3s ease;
-} */
+}
 
 .btn-primary-custom:hover {
     background-color: var(--accent-color-2);
@@ -283,71 +130,41 @@ chat {
     box-shadow: 0 4px 8px rgba(65, 24, 202, 0.25);
 }
 
-/* Botón principal - púrpura */
+.btn-primary:hover {
+    background-color: var(--accent-color-2);
+    transform: translateY(-2px);
+    box-shadow: 0 4px 8px rgba(65, 24, 202, 0.25);
+}
+
 .btn-primary {
-    background: linear-gradient(
-        135deg,
-        var(--primary-color),
-        var(--secondary-color-2)
-    );
+    background-color: var(--primary-color);
     color: var(--light-color);
     border: none;
-    padding: 0.7rem 1.8rem;
-    border-radius: 30px; /* Aumentados para un look más moderno */
-    font-weight: 600;
-    letter-spacing: 0.02em;
+    padding: 0.6rem 1.5rem;
+    border-radius: 20px; /* Aumentado de 15px a 20px para seguir tendencias actuales */
     transition: all 0.3s ease;
-    box-shadow: 0 4px 12px rgba(65, 24, 202, 0.2);
 }
 
-.btn-primary:hover {
-    transform: translateY(-3px);
-    box-shadow: 0 6px 15px rgba(65, 24, 202, 0.3);
-}
-
-/* Botón secundario - turquesa */
 .btn-success {
-    background-color: var(--accent-color-2);
-    border: none;
-    color: var(--dark-color);
-    font-weight: 600;
-    border-radius: 30px;
+    background-color: var(--accent-color-3);
+    border-color: var(--accent-color-3);
+    color: #000000;
     transition: all 0.3s ease;
 }
 
 .btn-success:hover {
-    background-color: #98e00a; /* Versión ligeramente más oscura */
-    transform: translateY(-3px);
-    box-shadow: 0 6px 15px rgba(169, 248, 24, 0.3);
+    background-color: #96e415; /* Versión ligeramente más oscura */
+    border-color: #96e415;
+    color: #000000;
 }
 
 .hero .d-grid {
     margin-top: 2rem;
 }
 
-/* Cards con bordes sutiles */
-.service-card {
-    border-radius: 16px;
-    border: 1px solid rgba(65, 24, 202, 0.1);
-    transition: all 0.3s ease;
-}
-
-.service-card:hover {
-    border-color: rgba(65, 24, 202, 0.3);
-    box-shadow: 0 15px 30px rgba(65, 24, 202, 0.08);
-}
-
-/* Iconos con estilo actualizado */
+/* Custom color */
 .icon-primary {
     color: var(--primary-color);
-    background: linear-gradient(
-        135deg,
-        var(--primary-color),
-        var(--secondary-color-1)
-    );
-    background-clip: text;
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
 }
 
 .icon-secondary {
@@ -355,13 +172,13 @@ chat {
 }
 
 .cta-section {
-    background: linear-gradient(
+    background-color: var(--primary-color);
+    background-image: linear-gradient(
         135deg,
         var(--primary-color),
-        var(--secondary-color-1)
+        var(--accent-color-2)
     );
-    padding: 2.5rem 0;
-    border-radius: 0;
+    padding: 1rem 0;
 }
 
 .cta-section .btn-light:hover {
@@ -377,20 +194,7 @@ chat {
 }
 
 .notification-bar {
-    background: linear-gradient(
-        90deg,
-        rgba(169, 248, 24, 0.9),
-        rgba(26, 231, 231, 0.9)
-    );
-    color: var(--dark-color);
-    font-weight: 500;
-    /*     background: linear-gradient(
-        90deg,
-        var(--accent-color-2),
-        var(--accent-color-1)
-    );
-    color: var(--dark-color);
-    font-weight: 500; */
+    background-color: var(--secondary-color);
     padding: 0.75rem 0;
     border: none;
     border-radius: 0;
@@ -545,35 +349,7 @@ chat {
 }
 
 .tribe-section {
-    background: linear-gradient(90deg, var(--accent-color-2), #c9ff7a);
-    border-radius: 0;
-}
-
-/* Nueva sección de testimonio con fondo púrpura */
-.testimonials {
-    background-color: var(--light-purple);
-    padding: 4rem 0;
-}
-
-.testimonial-card {
-    border-left: 4px solid var(--primary-color);
-    transition: transform 0.3s ease;
-}
-
-.testimonial-card:hover {
-    transform: translateY(-5px);
-    box-shadow: 0 10px 25px rgba(65, 24, 202, 0.15);
-}
-
-/* Bordes con gradientes para imágenes destacadas */
-.featured-image {
-    border-radius: 12px;
-    padding: 3px;
-    background: linear-gradient(
-        135deg,
-        var(--primary-color),
-        var(--accent-color-1)
-    );
+    background-color: var(--accent-color-3); /* #a9f818 - Verde lima */
 }
 
 /* Media queries para responsive design 🖥️ */
