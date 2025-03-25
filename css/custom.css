@@ -360,6 +360,15 @@ chat {
     box-shadow: 0 15px 30px rgba(65, 24, 202, 0.08);
 }
 
+/* Estilo para el subtítulo de servicio */
+.service-subtitle {
+    font-size: 0.95rem;
+    color: #6c757d;
+    margin-top: -5px;
+    margin-bottom: 20px;
+    /* font-style: italic; */
+}
+
 /* Iconos con estilo actualizado */
 .icon-primary {
     color: var(--primary-color);
@@ -392,6 +401,38 @@ chat {
     transform: translateY(-2px);
     transition: all 0.3s ease;
 }
+
+/* .backdrop-blur {
+    backdrop-filter: blur(6px);
+    -webkit-backdrop-filter: blur(6px);
+} */
+
+.parallax-container {
+    position: relative;
+    min-height: 400px; /* Altura fija más pequeña */
+    display: flex;
+    align-items: center;
+    overflow: hidden;
+    background-color: #4118ca; /* Color de respaldo */
+}
+
+.parallax-background {
+    position: absolute;
+    top: -200px; /* Posición inicial más arriba */
+    left: 0;
+    width: 100%;
+    height: 200%; /* Mayor altura para mostrar más imagen */
+    background-size: cover;
+    background-position: center 30%; /* Ajuste vertical para centrar mejor */
+    will-change: transform;
+    z-index: 0;
+}
+
+.backdrop-blur {
+    backdrop-filter: blur(6px);
+    -webkit-backdrop-filter: blur(6px);
+}
+/* Script para añadir al final del body */
 
 @media (max-width: 991.98px) {
     /* Prevent vertical shifts on toggle */
@@ -790,21 +831,30 @@ chat {
     background-color: white;
     border-radius: 16px;
     padding: 2rem;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-    transition: transform 0.3s ease;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
+    transition: all 0.3s ease;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
 }
 
 .solution-card:hover {
-    transform: translateY(-5px);
+    transform: translateY(-8px);
+    box-shadow: 0 8px 25px rgba(65, 24, 202, 0.15);
+}
+
+.solution-card:hover .solution-image img {
+    transform: scale(1.03);
 }
 
 .solution-title {
     font-size: 1.5rem;
     font-weight: 700;
-    color: var(--dark-color);
+    color: var(--primary-color);
     display: flex;
     align-items: center;
     justify-content: space-between;
+    margin-bottom: 0.5rem;
 }
 
 .solution-icon {
@@ -814,23 +864,26 @@ chat {
 .solution-image {
     border-radius: 12px;
     overflow: hidden;
-    background-color: #f8f9fa;
-    aspect-ratio: 16/9;
-    display: flex;
-    align-items: center;
-    justify-content: center;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
+    margin: 1.5rem 0;
 }
 
 .solution-image img {
     width: 100%;
-    height: 100%;
+    height: auto;
     object-fit: cover;
+    aspect-ratio: 16/9;
+    transition: transform 0.5s ease;
 }
 
 .solution-quote {
     color: var(--primary-color);
     font-size: 1.1rem;
     text-align: center;
+    /* border-left: 3px solid var(--primary-color);
+    padding-left: 15px;
+    margin: 1.5rem 0;
+    line-height: 1.4;*/
 }
 
 .features-title {
@@ -893,7 +946,11 @@ chat {
     }
 
     .solution-title {
-        font-size: 1.25rem;
+        font-size: 1.3rem;
+    }
+
+    .service-subtitle {
+        font-size: 0.9rem;
     }
 
     .solution-quote {
