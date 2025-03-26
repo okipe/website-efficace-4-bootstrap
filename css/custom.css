@@ -1257,7 +1257,7 @@ chat {
 .template-img-container {
     position: relative;
     overflow: hidden;
-    padding-top: 141%; /* Aspect ratio 1:1.41 (A4) */
+    padding-top: 135%; /* Aspect ratio 1:1.41 (A4) */
 }
 
 .template-img {
