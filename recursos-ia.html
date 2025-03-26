@@ -75,10 +75,12 @@
             /* Hero Section */
             .hero {
                 background: linear-gradient(
-                        rgba(255, 255, 255, 0.8),
-                        rgba(255, 255, 255, 0.8)
+                        rgba(65, 24, 202, 0.7),
+                        /* Color púrpura principal con 70% de opacidad */
+                            rgba(135, 100, 255, 0.5)
+                            /* Color púrpura secundario con 50% de opacidad */
                     ),
-                    url("./assets/img/recursos_efficace.webp");
+                    url("assets/img/recursos_efficace.webp");
                 background-size: cover;
                 background-position: center;
                 padding: 8rem 0;
@@ -89,46 +91,6 @@
                 background-color: rgba(255, 255, 255, 0.9);
                 padding: 3rem;
                 border-radius: 10px;
-            }
-
-            /* Services Section */
-            .service-card {
-                position: relative;
-                overflow: hidden;
-                border-radius: 10px;
-                margin-bottom: 2rem;
-            }
-
-            .service-card img {
-                transition: transform 0.3s ease;
-            }
-
-            .service-card:hover img {
-                transform: scale(1.05);
-            }
-
-            .service-overlay {
-                position: absolute;
-                bottom: 0;
-                left: 0;
-                background-color: rgba(6, 36, 174, 0.8);
-                color: white;
-                padding: 0.5rem;
-                width: 70%;
-            }
-
-            /* Quote Section */
-            .quote-section {
-                background-color: var(--primary-color);
-                color: var(--light-color);
-                padding: 4rem 0;
-            }
-
-            /* Resources Section */
-            .resource-icon {
-                font-size: 3rem;
-                color: var(--primary-color);
-                margin-bottom: 1rem;
             }
         </style>
     </head>
@@ -164,7 +126,7 @@
             <div class="container">
                 <a class="navbar-brand" href="./index.html">
                     <img
-                        src="assets/img/logo_efficace.png"
+                        src="./assets/img/logo_efficace.png"
                         alt="Efficace Laboral"
                     />
                 </a>
@@ -179,12 +141,31 @@
                 <div class="collapse navbar-collapse" id="navbarNav">
                     <ul class="navbar-nav ms-auto">
                         <li class="nav-item">
-                            <a class="nav-link" href="./servicios.html"
+                            <a class="nav-link" href="./index.html#nosotros"
+                                >Nosotros</a
+                            >
+                        </li>
+                        <li class="nav-item">
+                            <a
+                                class="nav-link"
+                                href="./index.html#nuestros-servicios"
                                 >Servicios</a
                             >
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="#somos">Recursos</a>
+                            <a class="nav-link" href="./ruta-empleable.html"
+                                >Ruta empleable</a
+                            >
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="./recursos-ia.html"
+                                >Recursos IA</a
+                            >
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="./portal-empleo.html"
+                                >Portal de empleo</a
+                            >
                         </li>
                         <!-- <li class="nav-item">
                             <a class="nav-link" href="#contacto">Contacto</a>
@@ -213,22 +194,16 @@
                                 necesitas
                             </h1>
                             <p class="lead mb-4">
-                                Recursos gratuitos y webinars diseñados para
-                                impulsar tu carrera.
+                                Recursos gratuitos para impulsar tu desarrollo
+                                personal y profesional
                             </p>
                             <div class="d-grid gap-3 col-lg-8 mx-auto">
                                 <a
-                                    href="#survival-kit"
+                                    href="./servicios.html"
                                     class="btn btn-primary btn-lg"
                                 >
-                                    ¡Empieza tu glow up ahora!
+                                    Empieza ahora
                                 </a>
-                                <!-- <a
-                                  href="https://linktr.ee/efficacelaboral"
-                                  class="btn btn-success btn-lg text-dark"
-                              >
-                                  Quiero descubrir mi potencial
-                              </a> -->
                             </div>
                         </div>
                     </div>
@@ -330,6 +305,247 @@
             </div>
         </section>
 
+        <!-- AI Tools Section -->
+        <section class="ai-tools py-5">
+            <div class="container">
+                <div class="row justify-content-center mb-5">
+                    <div class="col-lg-8 text-center">
+                        <h2 class="fw-bold section-title mb-3">
+                            Potencia tu búsqueda con IA 🤖
+                        </h2>
+                        <p class="lead text-muted">
+                            Utiliza estas herramientas de inteligencia
+                            artificial para destacar en los procesos de
+                            selección
+                        </p>
+                    </div>
+                </div>
+
+                <div class="row g-4">
+                    <!-- CV Optimization -->
+                    <div class="col-md-6 col-lg-3">
+                        <div class="ai-card h-100">
+                            <div class="ai-card-icon mb-4">
+                                <i class="bi bi-file-earmark-text"></i>
+                            </div>
+                            <h3 class="ai-card-title">Optimización de CV</h3>
+                            <div class="ai-prompt-container">
+                                <div class="ai-prompt">
+                                    <p>
+                                        "Reescribe mi CV en un tono más
+                                        profesional y persuasivo, destacando mis
+                                        logros en [área específica]."
+                                    </p>
+                                </div>
+                                <div class="ai-tips mt-3">
+                                    <p class="text-muted small">
+                                        ✨ Recuerda adjuntar también la
+                                        descripción del puesto para adaptar
+                                        mejor tu CV
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Interview Preparation -->
+                    <div class="col-md-6 col-lg-3">
+                        <div class="ai-card h-100">
+                            <div class="ai-card-icon mb-4">
+                                <i class="bi bi-chat-left-dots"></i>
+                            </div>
+                            <h3 class="ai-card-title">
+                                Preparación de entrevistas
+                            </h3>
+                            <div class="ai-prompt-container">
+                                <div class="ai-prompt">
+                                    <p>
+                                        "Simula una entrevista para un puesto de
+                                        [nombre del cargo] en [nombre de la
+                                        empresa] y dame feedback sobre mis
+                                        respuestas."
+                                    </p>
+                                </div>
+                                <div class="ai-tips mt-3">
+                                    <p class="text-muted small">
+                                        ✨ Practica preguntas técnicas
+                                        específicas de tu campo y situaciones
+                                        del método STAR
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- LinkedIn Profile -->
+                    <div class="col-md-6 col-lg-3">
+                        <div class="ai-card h-100">
+                            <div class="ai-card-icon mb-4">
+                                <i class="bi bi-linkedin"></i>
+                            </div>
+                            <h3 class="ai-card-title">Perfil de LinkedIn</h3>
+                            <div class="ai-prompt-container">
+                                <div class="ai-prompt">
+                                    <p>
+                                        "Escribe un 'Acerca de mí' llamativo
+                                        para un [profesión] con experiencia en
+                                        [industria] que busca prácticas."
+                                    </p>
+                                </div>
+                                <div class="ai-tips mt-3">
+                                    <p class="text-muted small">
+                                        ✨ Pide también ideas para headlines
+                                        impactantes que capturen atención
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Networking Messages -->
+                    <div class="col-md-6 col-lg-3">
+                        <div class="ai-card h-100">
+                            <div class="ai-card-icon mb-4">
+                                <i class="bi bi-people"></i>
+                            </div>
+                            <h3 class="ai-card-title">
+                                Networking estratégico
+                            </h3>
+                            <div class="ai-prompt-container">
+                                <div class="ai-prompt">
+                                    <p>
+                                        "Escribe un mensaje breve pero
+                                        impactante para conectar con un
+                                        reclutador en LinkedIn de [empresa
+                                        objetivo]."
+                                    </p>
+                                </div>
+                                <div class="ai-tips mt-3">
+                                    <p class="text-muted small">
+                                        ✨ Personaliza siempre mencionando algo
+                                        específico de la empresa o perfil
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Second Row of Cards -->
+                <div class="row g-4 mt-3">
+                    <!-- Skills Assessment -->
+                    <div class="col-md-6 col-lg-4">
+                        <div class="ai-card h-100">
+                            <div class="ai-card-icon mb-4">
+                                <i class="bi bi-bar-chart-line"></i>
+                            </div>
+                            <h3 class="ai-card-title">
+                                Análisis de competencias
+                            </h3>
+                            <div class="ai-prompt-container">
+                                <div class="ai-prompt">
+                                    <p>
+                                        "Analiza la descripción de este puesto
+                                        de [posición] e identifica las 5
+                                        habilidades más importantes que debo
+                                        destacar en mi aplicación."
+                                    </p>
+                                </div>
+                                <div class="ai-tips mt-3">
+                                    <p class="text-muted small">
+                                        ✨ Incluye la descripción completa del
+                                        puesto para un mejor análisis
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Cover Letter -->
+                    <div class="col-md-6 col-lg-4">
+                        <div class="ai-card h-100">
+                            <div class="ai-card-icon mb-4">
+                                <i class="bi bi-envelope-paper"></i>
+                            </div>
+                            <h3 class="ai-card-title">Carta de presentación</h3>
+                            <div class="ai-prompt-container">
+                                <div class="ai-prompt">
+                                    <p>
+                                        "Crea una carta de presentación
+                                        persuasiva para un puesto de prácticas
+                                        en [empresa], destacando mi experiencia
+                                        en [proyectos
+                                        universitarios/voluntariado]."
+                                    </p>
+                                </div>
+                                <div class="ai-tips mt-3">
+                                    <p class="text-muted small">
+                                        ✨ Enfatiza cómo puedes aportar valor
+                                        específico a la empresa
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Research Assistant -->
+                    <div class="col-md-6 col-lg-4">
+                        <div class="ai-card h-100">
+                            <div class="ai-card-icon mb-4">
+                                <i class="bi bi-search"></i>
+                            </div>
+                            <h3 class="ai-card-title">
+                                Investigación de empresas
+                            </h3>
+                            <div class="ai-prompt-container">
+                                <div class="ai-prompt">
+                                    <p>
+                                        "Prepárame 5 preguntas inteligentes para
+                                        hacer en una entrevista con [empresa]
+                                        basadas en sus valores, cultura y
+                                        últimos proyectos."
+                                    </p>
+                                </div>
+                                <div class="ai-tips mt-3">
+                                    <p class="text-muted small">
+                                        ✨ Usa estas preguntas para demostrar tu
+                                        interés genuino en la empresa
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- AI Tools Recommendation -->
+                <!-- AI Tools Recommendation -->
+                <div class="row mt-5">
+                    <div class="col-lg-10 offset-lg-1">
+                        <div class="ai-tools-banner p-4 rounded-4">
+                            <div class="row align-items-center">
+                                <div class="col-12">
+                                    <h3 class="mb-3">
+                                        ¿Qué herramientas de IA puedes utilizar?
+                                        🛠️
+                                    </h3>
+                                    <p class="mb-0">
+                                        Existen diversas herramientas de IA que
+                                        pueden ayudarte en tu proceso de
+                                        búsqueda de prácticas. Las más populares
+                                        son ChatGPT, Claude, Copilot, Gemini,
+                                        DeepSeek y Perplexity. ¡Experimenta con
+                                        diferentes prompts para obtener los
+                                        mejores resultados!
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <link rel="stylesheet" href="./css/ai-tools.css" />
         <!-- Kit de Supervivencia Section -->
 
         <section class="survival-kit py-5 bg-light" id="survival-kit">
@@ -503,8 +719,6 @@
         </section>
 
         <!-- Contact Section -->
-
-        <!-- Contact Section -->
         <section id="contacto" class="py-5">
             <div class="container">
                 <div class="row align-items-center">
@@ -538,6 +752,8 @@
                 </div>
             </div>
         </section>
+
+        <script src="./js/form.js"></script>
 
         <!-- Botón de WhatsApp -->
         <div class="whatsapp-float" id="whatsAppWidget">

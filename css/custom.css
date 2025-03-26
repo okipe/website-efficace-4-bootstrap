@@ -214,11 +214,11 @@ chat {
 
 /* Hero color sólido */
 .hero {
-    background: linear-gradient(
+    /* background: linear-gradient(
         135deg,
         rgba(65, 24, 202, 0.05),
         rgba(135, 100, 255, 0.1)
-    );
+    ); */
     border-bottom: 4px solid var(--accent-color-1);
     /* top: var(--notification-height, 48px); Height of notification bar */
 }
@@ -968,7 +968,7 @@ chat {
 /* PROMOTIONAL BANNER */
 
 .promo-banner {
-    background-color: var(--secondary-color);
+    background: linear-gradient(135deg, var(--accent-color-1), #0bbaba);
     color: var(--dark-color);
     padding: 1.5rem 0;
     border-top: 1px solid rgba(255, 255, 255, 0.3);
