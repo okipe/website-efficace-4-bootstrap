@@ -1,0 +1,20 @@
+:root {
+    /* Color principal - Púrpura dominante */
+    --primary-color: #4118ca; /* Púrpura profundo - color principal */
+
+    /* Colores secundarios complementarios */
+    --secondary-color-1: #8764ff; /* Púrpura más claro - para variación y contraste */
+    --secondary-color-2: #6030e8; /* Púrpura intermedio - para gradientes */
+
+    /* Acentos para detalles y elementos interactivos */
+    --accent-color-1: #1ae7e7; /* Turquesa - contraste vibrante */
+    --accent-color-2: #a9f818; /* Verde lima - para botones de acción */
+    --accent-color-3: #ffa11c; /* Naranja - para llamados a la acción urgentes */
+
+    /* Neutrales */
+    --dark-color: #2d1a6b; /* Púrpura oscuro - para fondos oscuros */
+    --text-color: #121212; /* Casi negro - texto principal */
+    --light-color: #ffffff; /* Blanco - para contraste */
+    --light-purple: #f5f2ff; /* Púrpura muy claro - fondos sutiles */
+
+}

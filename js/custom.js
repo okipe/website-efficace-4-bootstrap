@@ -20,6 +20,56 @@
 // });
 
 document.addEventListener("DOMContentLoaded", function () {
+    // Check if notification is visible and add a class to body
+    function updateNotificationState() {
+        const notificationBar = document.querySelector(".notification-bar");
+        if (
+            notificationBar &&
+            window.getComputedStyle(notificationBar).display !== "none"
+        ) {
+            document.body.classList.add("notification-visible");
+        } else {
+            document.body.classList.remove("notification-visible");
+        }
+    }
+
+    // Run on page load
+    updateNotificationState();
+
+    // Add smooth scrolling to anchor links
+    document.querySelectorAll('a[href^="#"]').forEach((anchor) => {
+        anchor.addEventListener("click", function (e) {
+            e.preventDefault();
+
+            const targetId = this.getAttribute("href");
+            // Skip if it's just '#'
+            if (targetId === "#") return;
+
+            const targetElement = document.querySelector(targetId);
+
+            if (targetElement) {
+                targetElement.scrollIntoView({
+                    behavior: "smooth",
+                });
+            }
+        });
+    });
+
+    // Update notification state when it changes
+    const notificationCloseBtn = document.querySelector(
+        ".notification-bar .btn-close"
+    );
+    if (notificationCloseBtn) {
+        notificationCloseBtn.addEventListener("click", function () {
+            // Wait for animation to complete
+            setTimeout(updateNotificationState, 300);
+        });
+    }
+});
+
+// Notification bar
+
+document.addEventListener("DOMContentLoaded", function () {
     const notificationBar = document.querySelector(".notification-bar");
     const navbar = document.querySelector(".navbar");
     const body = document.body;
@@ -66,6 +116,54 @@ document.addEventListener("DOMContentLoaded", function () {
         });
     }
 });
+
+// Menu click outside the menu
+
+document.addEventListener("DOMContentLoaded", function () {
+    // Get references to the navbar and toggle button
+    const navbar = document.querySelector(".navbar-collapse");
+    const navbarToggler = document.querySelector(".navbar-toggler");
+
+    // Function to close the navbar
+    function closeNavbar() {
+        if (navbar.classList.contains("show")) {
+            const bsCollapse = new bootstrap.Collapse(navbar);
+            bsCollapse.hide();
+        }
+    }
+
+    // Handle clicks on document
+    document.addEventListener("click", function (event) {
+        if (
+            navbar.classList.contains("show") &&
+            !navbar.contains(event.target) &&
+            !navbarToggler.contains(event.target)
+        ) {
+            closeNavbar();
+        }
+    });
+
+    // Also handle touch events for mobile
+    document.addEventListener("touchstart", function (event) {
+        if (
+            navbar.classList.contains("show") &&
+            !navbar.contains(event.target) &&
+            !navbarToggler.contains(event.target)
+        ) {
+            closeNavbar();
+        }
+    });
+
+    // Close navbar when a nav link is clicked
+    const navLinks = document.querySelectorAll(".navbar-nav .nav-link");
+    navLinks.forEach((link) => {
+        link.addEventListener("click", () => {
+            closeNavbar();
+        });
+    });
+});
+
+// Parallax section
 
 document.addEventListener("DOMContentLoaded", function () {
     window.addEventListener("scroll", function () {

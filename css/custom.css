@@ -1,48 +1,25 @@
+@import "./base/variables.css";
+@import "./base/tipography.css";
+
 :root {
-    /* Color principal - Púrpura dominante */
-    --primary-color: #4118ca; /* Púrpura profundo - color principal */
-
-    /* Colores secundarios complementarios */
-    --secondary-color-1: #8764ff; /* Púrpura más claro - para variación y contraste */
-    --secondary-color-2: #6030e8; /* Púrpura intermedio - para gradientes */
-
-    /* Acentos para detalles y elementos interactivos */
-    --accent-color-1: #1ae7e7; /* Turquesa - contraste vibrante */
-    --accent-color-2: #a9f818; /* Verde lima - para botones de acción */
-    --accent-color-3: #ffa11c; /* Naranja - para llamados a la acción urgentes */
-
-    /* Neutrales */
-    --dark-color: #2d1a6b; /* Púrpura oscuro - para fondos oscuros */
-    --text-color: #121212; /* Casi negro - texto principal */
-    --light-color: #ffffff; /* Blanco - para contraste */
-    --light-purple: #f5f2ff; /* Púrpura muy claro - fondos sutiles */
-
-    /* Tipografía - mantenemos Poppins */
-    --paragraph-size: 1.25rem;
-    --heading-size: 2rem;
-    --chat-size: 0.8rem;
+    --navbar-height: 96px;
+    --navbar-mobile-height: 96px;
+    --notification-height: 48px;
 }
 
-body {
-    font-family: "Poppins", sans-serif;
-    /*padding-top: 96px; Height of navbar */
-    /* padding-top: calc(
-        56px + min(40px, max(48px, auto))
-    ); navbar + notification */
+html {
+    /* Default scroll padding when notification bar is hidden */
+    scroll-padding-top: var(--navbar-height); /* Your navbar height */
+}
+
+body.notification-visible html {
+    /* Adjusted scroll padding when notification bar is visible */
+    scroll-padding-top: calc(
+        var(--navbar-height) + var(--notification-height)
+    ); /* Navbar + notification bar height */
 }
 
 /* Tamaños base */
-h1,
-h2,
-h3,
-.hero-text {
-    font-family: "League Spartan", sans-serif;
-}
-
-p {
-    font-size: var(--paragraph-size);
-    line-height: 1.6;
-}
 
 chat {
     font-size: var(--chat-size);
@@ -435,6 +412,11 @@ chat {
 /* Script para añadir al final del body */
 
 @media (max-width: 991.98px) {
+    :root {
+        /* Default scroll padding when notification bar is hidden */
+        --navbar-height: 140px; /* Your navbar height */
+    }
+
     /* Prevent vertical shifts on toggle */
     .navbar {
         height: 72px !important;
@@ -1023,6 +1005,16 @@ chat {
         gap: 1rem;
         text-align: center;
     }
+
+    .footer .social-icons {
+        display: flex;
+        justify-content: center;
+        padding-top: 20px;
+    }
+
+    .footer .copyright {
+        text-align: center;
+    }
 }
 
 /* SPECIALIST SECTION */
@@ -1345,6 +1337,13 @@ chat {
 
     .filter-btn {
         margin-bottom: 0.5rem;
+    }
+}
+
+@media (max-width: 394px) {
+    :root {
+        /* Default scroll padding when notification bar is hidden */
+        --navbar-height: 160px; /* Your navbar height */
     }
 }
 

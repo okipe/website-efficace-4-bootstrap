@@ -1,0 +1,26 @@
+:root {
+    /* Tipografía - mantenemos Poppins */
+    --paragraph-size: 1.25rem;
+    --heading-size: 2rem;
+    --chat-size: 0.8rem;
+}
+
+body {
+    font-family: "Poppins", sans-serif;
+    /*padding-top: 96px; Height of navbar */
+    /* padding-top: calc(
+      56px + min(40px, max(48px, auto))
+  ); navbar + notification */
+}
+
+h1,
+h2,
+h3,
+.hero-text {
+    font-family: "League Spartan", sans-serif;
+}
+
+p {
+    font-size: var(--paragraph-size);
+    line-height: 1.6;
+}
