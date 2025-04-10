@@ -1,0 +1,63 @@
+/* forms.css
+
+- Input fields
+- Checkboxes and radios
+- Form layouts
+- Validation styles
+*/
+
+/* Custom form*/
+
+#contacto {
+    padding: 5rem 0;
+}
+
+#contacto .container {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+/* Ajustes para la imagen */
+#contacto__picture {
+    margin-bottom: 3rem;
+}
+
+#contacto__picture img {
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+/* Ajustes para el formulario */
+#contacto__form {
+    padding-left: 2rem;
+}
+
+/* Modal customization */
+.modal-content {
+    border-radius: 16px;
+    border: none;
+}
+
+/* Media queries para responsive design 🖥️ */
+@media (min-width: 992px) {
+    #contacto__picture {
+        margin-bottom: 0;
+    }
+
+    #contacto__form {
+        padding-left: 4rem;
+    }
+}
+
+@media (max-width: 992px) {
+    #contacto__picture {
+        margin-bottom: 4rem;
+    }
+
+    #contacto__form {
+        padding-left: 1rem;
+        padding-right: 1rem;
+    }
+}

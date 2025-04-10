@@ -1,0 +1,25 @@
+/* CONTENIDO INSPIRADOR */
+
+.content-card {
+    background: #fff;
+    border-radius: 16px;
+    padding: 1.5rem;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+}
+
+.content-card:hover {
+    transform: translateY(-5px);
+}
+
+.content-description {
+    font-size: 0.95rem;
+    color: #6c757d;
+    margin: 0;
+}
+
+@media (max-width: 768px) {
+    .content-card {
+        padding: 1rem;
+    }
+}

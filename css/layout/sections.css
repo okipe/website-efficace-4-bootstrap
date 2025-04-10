@@ -1,0 +1,210 @@
+/* sections.css
+
+- Reusable section layouts
+- Hero sections
+- CTA sections
+- Common section patterns
+*/
+
+/* Hero color sólido */
+.hero {
+    /* background: linear-gradient(
+      135deg,
+      rgba(65, 24, 202, 0.05),
+      rgba(135, 100, 255, 0.1)
+  ); */
+    border-bottom: 4px solid var(--accent-color-1);
+    /* top: var(--notification-height, 48px); Height of notification bar */
+}
+
+/* Tamaños específicos */
+.hero h1 {
+    font-size: 3rem;
+    line-height: 1.1;
+}
+
+.hero p {
+    font-size: 1.25rem; /* 20px */
+}
+
+.hero .d-grid {
+    margin-top: 2rem;
+}
+
+.cta-section {
+    background: linear-gradient(
+        135deg,
+        var(--primary-color),
+        var(--secondary-color-1)
+    );
+    padding: 2.5rem 0;
+    border-radius: 0;
+}
+
+.cta-section .btn-light:hover {
+    background-color: #e2e6ea;
+    transform: translateY(-2px);
+    transition: all 0.3s ease;
+}
+
+.parallax-container {
+    position: relative;
+    min-height: 400px; /* Altura fija más pequeña */
+    display: flex;
+    align-items: center;
+    overflow: hidden;
+    background-color: #4118ca; /* Color de respaldo */
+}
+
+.parallax-background {
+    position: absolute;
+    top: -200px; /* Posición inicial más arriba */
+    left: 0;
+    width: 100%;
+    height: 200%; /* Mayor altura para mostrar más imagen */
+    background-size: cover;
+    background-position: center 30%; /* Ajuste vertical para centrar mejor */
+    will-change: transform;
+    z-index: 0;
+}
+
+.backdrop-blur {
+    backdrop-filter: blur(6px);
+    -webkit-backdrop-filter: blur(6px);
+}
+
+.tribe-section {
+    background: linear-gradient(90deg, var(--accent-color-2), #c9ff7a);
+    border-radius: 0;
+}
+
+/* Nueva sección de testimonio con fondo púrpura */
+.testimonials {
+    background-color: var(--light-purple);
+    padding: 4rem 0;
+}
+
+.testimonial-card {
+    border-left: 4px solid var(--primary-color);
+    transition: transform 0.3s ease;
+}
+
+.testimonial-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 25px rgba(65, 24, 202, 0.15);
+}
+
+/* PROMOTIONAL BANNER */
+
+.promo-banner {
+    background: linear-gradient(135deg, var(--accent-color-1), #0bbaba);
+    color: var(--dark-color);
+    padding: 1.5rem 0;
+    border-top: 1px solid rgba(255, 255, 255, 0.3);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.3);
+}
+
+.promo-banner .icon-secondary {
+    color: var(--secondary-color);
+    font-size: 1.2rem;
+}
+
+.promo-content {
+    max-width: 800px;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 2rem;
+}
+
+.promo-content h2 {
+    font-size: 1.5rem;
+    margin-bottom: 0;
+}
+
+.student-promo p {
+    font-size: 1.1rem;
+    margin-bottom: 0;
+}
+
+.promo-banner .btn-light {
+    font-weight: 600;
+    transition: transform 0.3s ease;
+    white-space: nowrap;
+}
+
+.promo-banner .badge {
+    background-color: rgba(255, 255, 255, 0.25);
+    font-weight: 500;
+}
+
+.promo-banner .btn-light:hover {
+    background-color: #ffffff;
+    color: var(--primary-color);
+    transform: translateY(-3px);
+    box-shadow: 0 5px 15px rgba(255, 255, 255, 0.3);
+}
+
+/* TESTIMONIES */
+
+.testimonial-card {
+    transition: transform 0.3s ease;
+}
+
+.testimonial-card:hover {
+    transform: translateY(-5px);
+}
+
+.testimonial-image img {
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.card-text {
+    font-size: 1rem;
+    line-height: 1.6;
+    color: var(--dark-color);
+}
+
+.client-info {
+    border-top: 1px solid rgba(0, 0, 0, 0.1);
+    padding-top: 1rem;
+}
+
+.templates-header {
+    background-color: #f8f9fa;
+    padding: 8rem 0 3rem;
+    margin-bottom: 2rem;
+    margin-top: 40px; /* Height of notification bar */
+}
+
+/* Script para añadir al final del body */
+@media (max-width: 991.98px) {
+    .cta-section .text-lg-end {
+        text-align: left !important;
+    }
+}
+
+@media (max-width: 768px) {
+    body {
+        padding-top: calc(
+            56px + min(48px, max(64px, auto))
+        ); /* Increased minimum for mobile */
+    }
+    .promo-content {
+        flex-direction: column;
+        gap: 1rem;
+        text-align: center;
+    }
+}
+
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}

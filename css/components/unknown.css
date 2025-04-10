@@ -1,0 +1,160 @@
+/* Decoradores con microanimaciones */
+/* .pulse-dot {
+    position: relative;
+}
+
+.pulse-dot:before {
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: -15px;
+    transform: translateY(-50%);
+    width: 8px;
+    height: 8px;
+    background-color: var(--accent-color-1);
+    border-radius: 50%;
+    animation: pulse 2s infinite;
+} */
+
+/* @keyframes pulse {
+    0% {
+        transform: translateY(-50%) scale(1);
+        opacity: 1;
+    }
+    50% {
+        transform: translateY(-50%) scale(1.5);
+        opacity: 0.5;
+    }
+    100% {
+        transform: translateY(-50%) scale(1);
+        opacity: 1;
+    }
+} */
+
+/* .service-description {
+    font-size: 1.125rem; 
+} */
+
+/* NO ERA USADO */
+/* Efecto para tarjetas en hover */
+/* .hover-lift {
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.hover-lift:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 12px 30px rgba(65, 24, 202, 0.15);
+} */
+
+/* .icon-secondary {
+    color: var(--secondary-color);
+} */
+
+/* .backdrop-blur {
+    backdrop-filter: blur(6px);
+    -webkit-backdrop-filter: blur(6px);
+} */
+
+/* Bordes con gradientes para imágenes destacadas */
+/* .featured-image {
+    border-radius: 12px;
+    padding: 3px;
+    background: linear-gradient(
+        135deg,
+        var(--primary-color),
+        var(--accent-color-1)
+    );
+} */
+
+/* .form-check {
+    margin: 1rem 0;
+}
+
+.form-check-label {
+    font-size: 0.9rem;
+    color: #666;
+}
+
+.form-check-label a {
+    color: var(--primary-color);
+    text-decoration: none;
+}
+
+.form-check-label a:hover {
+    text-decoration: underline;
+} */
+
+
+/* SERVICES */
+
+/* .pain-point-card {
+    transition: transform 0.3s ease;
+    border: 1px solid rgba(0, 0, 0, 0.1);
+}
+
+.pain-point-card:hover {
+    transform: translateY(-5px);
+}
+
+.pain-point-image img {
+    width: 80px;
+    height: 80px;
+    object-fit: cover;
+    border-radius: 8px;
+}
+
+.pain-point-text {
+    color: var(--dark-color);
+    font-weight: 500;
+    font-size: 1.1rem;
+} */
+ 
+/* 
+.social-media-container {
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.linkedin-embed {
+    position: relative;
+    padding-bottom: 120%; 
+    height: 0;
+    overflow: hidden;
+}
+
+.linkedin-iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border: none;
+}
+
+@media (min-width: 768px) {
+    .linkedin-embed {
+        padding-bottom: 80%;
+    }
+} */
+
+/* 
+@media (min-width: 768px) {
+    .pain-point-card .d-flex {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .pain-point-image {
+        margin-bottom: 1.5rem;
+        margin-right: 0 !important;
+    }
+
+    .pain-point-image img {
+        width: 200px;
+        height: 200px;
+    }
+
+    .pain-point-text {
+        font-size: 1.25rem;
+    }
+} */

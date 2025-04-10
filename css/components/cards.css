@@ -1,0 +1,69 @@
+/* cards.css
+
+Card containers
+Card headers/footers
+Card variations
+Card animations/interactions
+*/
+
+/* Cards con bordes sutiles */
+.service-card {
+    border-radius: 16px;
+    border: 1px solid rgba(65, 24, 202, 0.1);
+    transition: all 0.3s ease;
+}
+
+.service-card:hover {
+    border-color: rgba(65, 24, 202, 0.3);
+    box-shadow: 0 15px 30px rgba(65, 24, 202, 0.08);
+}
+
+/* Iconos con estilo actualizado */
+.icon-primary {
+    color: var(--primary-color);
+    background: linear-gradient(
+        135deg,
+        var(--primary-color),
+        var(--secondary-color-1)
+    );
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.template-card {
+    border-radius: 15px;
+    overflow: hidden;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    margin-bottom: 2rem;
+    transition: transform 0.3s ease;
+}
+
+.template-card:hover {
+    transform: translateY(-5px);
+}
+
+.template-img-container {
+    position: relative;
+    overflow: hidden;
+    padding-top: 135%; /* Aspect ratio 1:1.41 (A4) */
+}
+
+.template-img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.3s ease;
+}
+
+.template-card:hover .template-img {
+    transform: scale(1.05);
+}
+
+/* Animaciones */
+.template-card {
+    animation: fadeInUp 0.6s ease backwards;
+}

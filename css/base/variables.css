@@ -1,3 +1,10 @@
+/* variables.css
+
+- Custom CSS variables that extend Bootstrap's system
+- Project-specific colors not in Bootstrap's palette
+- Custom spacing or breakpoint values
+*/
+
 :root {
     /* Color principal - Púrpura dominante */
     --primary-color: #4118ca; /* Púrpura profundo - color principal */

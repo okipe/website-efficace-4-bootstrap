@@ -1,0 +1,120 @@
+/* Estilo para el subtítulo de servicio */
+.service-subtitle {
+    font-size: 0.95rem;
+    color: #6c757d;
+    margin-top: -5px;
+    margin-bottom: 20px;
+    /* font-style: italic; */
+}
+
+.solutions {
+    background-color: var(--light-color);
+}
+
+.solution-card {
+    background-color: white;
+    border-radius: 16px;
+    padding: 2rem;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
+    transition: all 0.3s ease;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+.solution-card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 8px 25px rgba(65, 24, 202, 0.15);
+}
+
+.solution-card:hover .solution-image img {
+    transform: scale(1.03);
+}
+
+.solution-title {
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: var(--primary-color);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 0.5rem;
+}
+
+.solution-icon {
+    font-size: 1.75rem;
+}
+
+.solution-image {
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
+    margin: 1.5rem 0;
+}
+
+.solution-image img {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+    aspect-ratio: 16/9;
+    transition: transform 0.5s ease;
+}
+
+.solution-quote {
+    color: var(--primary-color);
+    font-size: 1.1rem;
+    text-align: center;
+    /* border-left: 3px solid var(--primary-color);
+  padding-left: 15px;
+  margin: 1.5rem 0;
+  line-height: 1.4;*/
+}
+
+.features-title {
+    font-size: 1.1rem;
+    font-weight: 600;
+    color: var(--dark-color);
+}
+
+.features-list {
+    list-style: none;
+    padding-left: 0;
+    margin-bottom: 0;
+}
+
+.features-list li {
+    position: relative;
+    padding-left: 1.5rem;
+    margin-bottom: 0.75rem;
+    font-size: 1rem;
+}
+
+.features-list li:before {
+    content: "•";
+    color: var(--primary-color);
+    font-weight: bold;
+    position: absolute;
+    left: 0;
+}
+
+.features-list li:last-child {
+    margin-bottom: 0;
+}
+
+@media (max-width: 768px) {
+    .solution-card {
+        padding: 1.5rem;
+    }
+
+    .solution-title {
+        font-size: 1.3rem;
+    }
+
+    .service-subtitle {
+        font-size: 0.9rem;
+    }
+
+    .solution-quote {
+        font-size: 1rem;
+    }
+}

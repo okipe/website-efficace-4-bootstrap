@@ -1,0 +1,48 @@
+/* footer.css
+
+- Footer container
+- Footer columns
+- Social icons
+- Copyright section
+*/
+
+/* Footer */
+.footer {
+    background-color: var(--dark-color);
+    color: var(--light-color);
+    padding: 3rem 0 2rem;
+}
+
+.footer .social-icons a {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 38px;
+    height: 38px;
+    background: linear-gradient(
+        135deg,
+        var(--primary-color),
+        var(--secondary-color-1)
+    );
+    color: white;
+    border-radius: 50%;
+    margin-right: 0.75rem;
+    transition: all 0.3s ease;
+}
+
+.footer .social-icons a:hover {
+    transform: translateY(-3px) rotate(8deg);
+    box-shadow: 0 6px 15px rgba(65, 24, 202, 0.3);
+}
+
+@media (max-width: 768px) {
+    .footer .social-icons {
+        display: flex;
+        justify-content: center;
+        padding-top: 20px;
+    }
+
+    .footer .copyright {
+        text-align: center;
+    }
+}

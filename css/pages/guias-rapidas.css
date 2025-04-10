@@ -1,0 +1,72 @@
+/* GUIAS RÁPIDAS */
+
+/* Quick Guides Section */
+.quick-guides {
+    background-color: var(--light-color);
+}
+
+.guide-card {
+    background: white;
+    border-radius: 16px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+    overflow: hidden;
+}
+
+.guide-card:hover {
+    transform: translateY(-5px);
+}
+
+.guide-image {
+    position: relative;
+    overflow: hidden;
+}
+
+.guide-image img {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+    transition: transform 0.3s ease;
+}
+
+.guide-card:hover .guide-image img {
+    transform: scale(1.05);
+}
+
+.guide-badge {
+    position: absolute;
+    top: 1rem;
+    right: 1rem;
+    background: rgba(255, 255, 255, 0.95);
+    padding: 0.5rem 1rem;
+    border-radius: 20px;
+    font-weight: 500;
+    font-size: 0.9rem;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.guide-title {
+    font-weight: 600;
+    line-height: 1.4;
+}
+
+.guide-description {
+    color: #6c757d;
+    font-size: 0.95rem;
+    line-height: 1.6;
+}
+
+.guide-meta {
+    font-size: 0.85rem;
+    color: #6c757d;
+}
+
+@media (max-width: 768px) {
+    .guide-image img {
+        height: 200px;
+    }
+
+    .guide-content {
+        padding: 1.25rem !important;
+    }
+}

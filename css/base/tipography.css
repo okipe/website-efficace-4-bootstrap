@@ -1,3 +1,10 @@
+/* typography.css
+
+- Font family overrides
+- Custom text sizes beyond Bootstrap
+- Brand-specific heading styles
+*/
+
 :root {
     /* Tipografía - mantenemos Poppins */
     --paragraph-size: 1.25rem;
