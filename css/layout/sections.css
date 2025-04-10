@@ -10,11 +10,19 @@
 .hero {
     /* background: linear-gradient(
       135deg,
-      rgba(65, 24, 202, 0.05),
-      rgba(135, 100, 255, 0.1)
-  ); */
+      ); */
     border-bottom: 4px solid var(--accent-color-1);
     /* top: var(--notification-height, 48px); Height of notification bar */
+    background-size: cover;
+    background-position: center top;
+    padding: 8rem 0;
+    position: relative;
+}
+
+.hero-content {
+    background-color: rgba(255, 255, 255, 0.9);
+    padding: 3rem;
+    border-radius: 10px;
 }
 
 /* Tamaños específicos */

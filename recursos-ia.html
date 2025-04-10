@@ -66,33 +66,7 @@
             href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css"
         />
         <link rel="stylesheet" href="./css/custom.css" />
-
-        <!-- Custom CSS -->
-        <style>
-            /* Custom fonts */
-            @import url("https://fonts.googleapis.com/css2?family=League+Spartan:wght@400;700&family=Poppins:wght@300;400;500;600&display=swap");
-
-            /* Hero Section */
-            .hero {
-                background: linear-gradient(
-                        rgba(65, 24, 202, 0.7),
-                        /* Color púrpura principal con 70% de opacidad */
-                            rgba(135, 100, 255, 0.5)
-                            /* Color púrpura secundario con 50% de opacidad */
-                    ),
-                    url("assets/img/recursos_efficace.webp");
-                background-size: cover;
-                background-position: center;
-                padding: 8rem 0;
-                position: relative;
-            }
-
-            .hero-content {
-                background-color: rgba(255, 255, 255, 0.9);
-                padding: 3rem;
-                border-radius: 10px;
-            }
-        </style>
+        <link rel="stylesheet" href="./css/pages/recursos-ia.css" />
     </head>
     <body>
         <!-- Notification bar -->
@@ -184,7 +158,7 @@
         </nav>
 
         <!-- Hero Section -->
-        <section class="hero">
+        <section class="hero" data-page="recursos-ia">
             <div class="container">
                 <div class="row justify-content-center">
                     <div class="col-md-8 text-center">
@@ -545,7 +519,6 @@
             </div>
         </section>
 
-        <link rel="stylesheet" href="./css/ai-tools.css" />
         <!-- Kit de Supervivencia Section -->
 
         <section class="survival-kit py-5 bg-light" id="survival-kit">
