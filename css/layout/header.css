@@ -55,6 +55,11 @@ body.notification-visible html {
     z-index: 1030;
 } */
 
+/* Aumentar tamaño de fuente en navbar a 20px */
+.navbar-collapse .nav-link {
+    font-size: 18px !important;
+}
+
 .navbar .nav-link {
     color: var(--light-color);
     font-weight: 500;
@@ -325,5 +330,9 @@ body.notification-visible html {
     :root {
         /* Default scroll padding when notification bar is hidden */
         --navbar-height: 160px; /* Your navbar height */
+    }
+
+    .navbar-collapse .nav-link {
+        font-size: 16px !important;
     }
 }
