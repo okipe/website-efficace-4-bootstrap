@@ -20,9 +20,11 @@
 }
 
 .hero-content {
-    background-color: rgba(255, 255, 255, 0.9);
+    background-color: rgba(255, 255, 255, 0.7);
     padding: 3rem;
     border-radius: 10px;
+    backdrop-filter: blur(6px);
+    -webkit-backdrop-filter: blur(6px);
 }
 
 /* Tamaños específicos */

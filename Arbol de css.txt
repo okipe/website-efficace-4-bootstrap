@@ -1,0 +1,25 @@
+css
+├── base
+│   ├── tipography.css
+│   └── variables.css
+├── components
+│   ├── buttons.css
+│   ├── cards.css
+│   ├── form.css
+│   ├── titles.css
+│   ├── unknown.css
+│   └── whatsapp-widget.css
+├── layout
+│   ├── footer.css
+│   ├── header.css
+│   └── sections.css
+├── pages
+│   ├── contenido-inspiración.css
+│   ├── galeria-cv.css
+│   ├── guias-rapidas.css
+│   ├── index.css
+│   ├── portal-empleo.css
+│   ├── recursos-ia.css
+│   └── ruta-empleable.css
+├── custom.css
+
