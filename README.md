@@ -2,6 +2,8 @@
 
 ![Efficace Logo](./readme-files/logo_efficace.png)
 
+**Demo**: https://preeminent-buttercream-7d8880.netlify.app/
+
 ## 📋 Description
 
 Efficace Laboral is the corporate website of an employability consultancy focused on young professionals in their final years of university and recent graduates. Efficace Laboral's goal is to transform the professional development of young people through a human and personalized approach, helping them discover their value proposition and boost their employability with modern and effective tools.
@@ -79,10 +81,10 @@ The site is designed for young professionals like Carolina (22 years old), a fin
 
 ## Team:
 
-**Web developer**: Oscar Román Quispe.
-**Brand designer**: Diana Torres.
-**Content creator**: Oscar Román, Lesly Suárez.
-**Marketing research**: Janeth Guillén, Laura Merino, Melody Soto.
+- **Web developer**: Oscar Román Quispe.
+- **Brand designer**: Diana Torres.
+- **Content creator**: Oscar Román, Lesly Suárez.
+- **Marketing research**: Janeth Guillén, Laura Merino, Melody Soto.
 
 Developed with ❤️ in Lima - Peru | © 2025 Efficace Laboral
 
