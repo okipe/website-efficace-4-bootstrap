@@ -81,10 +81,10 @@ The site is designed for young professionals like Carolina (22 years old), a fin
 
 ## Team:
 
-- **Web developer**: Oscar Román Quispe.
-- **Brand designer**: Diana Torres.
-- **Content creator**: Oscar Román, Lesly Suárez.
-- **Marketing research**: Janeth Guillén, Laura Merino, Melody Soto.
+-   **Web development**: Oscar Román.
+-   **Brand design**: Diana Torres.
+-   **Content creation**: Oscar Román, Lesly Suárez.
+-   **Marketing research**: Janeth Guillén, Laura Merino, Melody Soto.
 
 Developed with ❤️ in Lima - Peru | © 2025 Efficace Laboral
 
@@ -94,13 +94,9 @@ Developed with ❤️ in Lima - Peru | © 2025 Efficace Laboral
 
 ### Desktop version
 
-Home page:
+Home page
 
 ![Home Page](./readme-files/efficace_index_desktop.webp)
-
-Ruta empleable
-
-![Employable Path](./readme-files/efficace_ruta-empleable_desktop.webp)
 
 Recursos IA
 
@@ -108,6 +104,10 @@ Recursos IA
 
 ### Mobile version
 
+Home page
+
 ![Home Page](./readme-files/efficace_index_mobile.webp)
-![Employable Path](./readme-files/efficace_ruta-empleable_mobile.webp)
-![AI Resources](./readme-files/efficace_ruta-empleable_mobile.webp)
+
+Recursos IA
+
+![AI Resources](./readme-files/efficace_recursos-ia_mobile.webp)
