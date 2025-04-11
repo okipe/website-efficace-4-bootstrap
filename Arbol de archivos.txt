@@ -22,4 +22,15 @@ css
 │   ├── recursos-ia.css
 │   └── ruta-empleable.css
 ├── custom.css
-
+js
+├── custom.js
+├── form.js
+└── jobs.js
+Arbol de archivos.txt
+contenido-inspiracion.html
+galeria-cv.html
+guias-rapidas.html
+index.html
+portal-empleo.html
+recursos-ia.html
+ruta-empleable.html
