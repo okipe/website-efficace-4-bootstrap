@@ -61,7 +61,7 @@
     padding: 3px;
     background: linear-gradient(
         135deg,
-        var(--primary-color),
+        var(--primary-color-1),
         var(--accent-color-1)
     );
 } */
@@ -76,7 +76,7 @@
 }
 
 .form-check-label a {
-    color: var(--primary-color);
+    color: var(--primary-color-1);
     text-decoration: none;
 }
 

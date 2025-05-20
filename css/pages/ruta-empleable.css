@@ -9,9 +9,9 @@ Timeline components
 /* Hero Section */
 .hero[data-page="ruta-empleable"] {
     background: linear-gradient(
-            rgba(65, 24, 202, 0.7),
+            var(--primary-color-1-alpha1),
             /* Color púrpura principal con 70% de opacidad */
-                rgba(135, 100, 255, 0.5)
+                var(--primary-color-1-alpha2)
                 /* Color púrpura secundario con 50% de opacidad */
         ),
         url("./../../assets/img/male-female-computer.webp");
@@ -64,7 +64,7 @@ Timeline components
 
 .specialist-info li:before {
     content: "•";
-    color: var(--primary-color);
+    color: var(--primary-color-1);
     font-weight: bold;
     position: absolute;
     left: 0;
@@ -87,7 +87,7 @@ Timeline components
 }
 
 .accordion-button:not(.collapsed) {
-    background-color: var(--primary-color);
+    background-color: var(--primary-color-1);
     color: white;
 }
 
@@ -122,6 +122,394 @@ Timeline components
     }
 }
 
+/* Estilos del infográfico */
+.infografico-ruta {
+    font-family: "Poppins", sans-serif;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+.infografico-header {
+    text-align: center;
+    margin-bottom: 60px;
+}
+
+.infografico-header h2 {
+    font-family: "League Spartan", sans-serif;
+    text-transform: uppercase;
+    font-weight: 700;
+    color: #0624ae;
+    position: relative;
+    margin-bottom: 1.5rem;
+}
+
+.infografico-header h2:after {
+    content: "";
+    position: absolute;
+    bottom: -12px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 80px;
+    height: 4px;
+    background: linear-gradient(90deg, #0624ae, #19c223);
+    border-radius: 2px;
+}
+
+.infografico-header p {
+    max-width: 800px;
+    margin: 0 auto;
+    font-size: 1.1rem;
+}
+
+/* Contenedor del flujo */
+.ruta-flow {
+    position: relative;
+    margin-top: 50px;
+    --timeline-height: calc(
+        100% - 265px
+    ); /* Añadimos variable CSS para la altura dinámica */
+}
+
+/* Línea de conexión para escritorio */
+.ruta-flow::before {
+    content: "";
+    position: absolute;
+    top: 40px;
+    left: 110px;
+    width: 6px;
+    height: var(
+        --timeline-height
+    ); /* Usamos la variable en lugar del cálculo fijo */
+    background: linear-gradient(180deg, #0624ae, #0d8d14);
+    transform: translateX(-50%);
+    z-index: 1;
+    border-radius: 3px;
+    /* margin-top: 30px; */
+}
+
+/* Tarjetas de etapas */
+.ruta-step {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 80px;
+    position: relative;
+    z-index: 2;
+}
+
+.ruta-step-card {
+    width: calc(100% - 220px);
+    /* max-width: 900px; */
+    background: white;
+    border-radius: 20px;
+    box-shadow: 0 10px 25px rgba(6, 36, 174, 0.15);
+    overflow: hidden;
+    transition: all 0.3s ease;
+    animation: fadeInUp 0.6s ease backwards;
+    margin-left: 70px;
+}
+
+.ruta-step-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 15px 35px rgba(6, 36, 174, 0.25);
+}
+
+.ruta-step:nth-child(1) .ruta-step-card {
+    animation-delay: 0.1s;
+}
+.ruta-step:nth-child(2) .ruta-step-card {
+    animation-delay: 0.2s;
+}
+.ruta-step:nth-child(3) .ruta-step-card {
+    animation-delay: 0.3s;
+}
+.ruta-step:nth-child(4) .ruta-step-card {
+    animation-delay: 0.4s;
+}
+
+/* Tarjetas flotantes del infográfico */
+.modal-body.text-start h4 {
+    font-size: 1.1rem;
+    color: #0624ae;
+    margin-bottom: 15px;
+    font-weight: 600;
+}
+
+.modal-body.text-start p {
+    font-size: 1rem;
+}
+
+/* Botón X de la ventana flotante */
+.btn-close.btn-close-white {
+    margin-top: -75px;
+}
+
+/* Tarjetas con orientación alternante para pantallas grandes */
+/* @media (min-width: 992px) {
+    .ruta-flow::before {
+        left: 50%;
+        width: 6px;
+        height: calc(100% - 200px);
+        top: 100px;
+    }
+
+    .ruta-step {
+        margin-bottom: 100px;
+    }
+} */
+
+/* Encabezado de tarjeta */
+.ruta-card-header {
+    background: linear-gradient(135deg, #0624ae, #19c223);
+    color: white;
+    padding: 20px 25px;
+    position: relative;
+    display: flex;
+    align-items: center;
+    flex-direction: row;
+}
+
+.ruta-numero {
+    background: #17a5a5;
+    color: white;
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: 700;
+    font-size: 1.8rem;
+    margin-right: 20px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+.ruta-header-content h3 {
+    font-weight: 700;
+    font-size: 1.5rem;
+    margin-bottom: 0.25rem;
+}
+
+.ruta-header-content p {
+    font-style: italic;
+    margin-bottom: 0;
+    font-size: 1rem;
+    opacity: 0.9;
+}
+
+/* Contenido de tarjeta */
+.ruta-card-body {
+    padding: 25px;
+}
+
+.ruta-card-body p {
+    margin-bottom: 20px;
+    font-size: 1rem;
+    line-height: 1.6;
+}
+
+.ruta-key-points {
+    margin-bottom: 25px;
+}
+
+.ruta-key-points h4 {
+    font-size: 1.1rem;
+    color: #0624ae;
+    margin-bottom: 15px;
+    font-weight: 600;
+}
+
+.ruta-key-list {
+    list-style: none;
+    padding-left: 0;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 10px;
+}
+
+.ruta-key-list li {
+    position: relative;
+    padding-left: 0px;
+    font-size: 0.95rem;
+    line-height: 1.4;
+}
+
+.ruta-key-list li:before {
+    content: "";
+    position: absolute;
+    left: 0;
+    color: #0624ae;
+}
+
+/* Nodos indicadores */
+.ruta-node {
+    width: 30px;
+    height: 30px;
+    background: white;
+    border: 4px solid #0624ae;
+    border-radius: 50%;
+    position: absolute;
+    left: 110px;
+    transform: translateX(-50%);
+    z-index: 3;
+    animation: pulse 2s infinite;
+    margin-top: 30px;
+}
+
+/* Boton */
+.btn-ver-mas {
+    background: linear-gradient(135deg, #0624ae, #0d8d14);
+    color: white;
+    font-weight: 600;
+    border-radius: 30px;
+    padding: 10px 25px;
+    transition: all 0.3s ease;
+    border: none;
+    display: inline-block;
+    box-shadow: 0 4px 12px rgba(6, 36, 174, 0.2);
+    text-decoration: none;
+    font-size: 0.95rem;
+}
+
+.btn-ver-mas:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 6px 15px rgba(6, 36, 174, 0.3);
+    color: white;
+}
+
+/* CTA Final */
+.ruta-cta-final {
+    text-align: center;
+    margin-top: 40px;
+    padding: 40px 20px;
+    background: linear-gradient(
+        135deg,
+        rgba(6, 36, 174, 0.05),
+        rgba(25, 194, 35, 0.05)
+    );
+    border-radius: 20px;
+}
+
+.ruta-cta-final h3 {
+    font-weight: 700;
+    margin-bottom: 20px;
+    color: #0624ae;
+}
+
+.btn-ruta-completa {
+    background: linear-gradient(135deg, #0624ae, #19c223);
+    padding: 12px 30px;
+    font-size: 1.1rem;
+}
+
+/* Animaciones */
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes pulse {
+    0% {
+        transform: translateX(-50%) scale(1);
+        box-shadow: 0 0 0 0 rgba(6, 36, 174, 0.7);
+    }
+
+    70% {
+        transform: translateX(-50%) scale(1.1);
+        box-shadow: 0 0 0 10px rgba(6, 36, 174, 0);
+    }
+
+    100% {
+        transform: translateX(-50%) scale(1);
+        box-shadow: 0 0 0 0 rgba(6, 36, 174, 0);
+    }
+}
+/* @media (max-width: 996px) {
+    .ruta-flow::before {
+        height: calc(100% - 420px);
+    }
+} */
+
+/* Responsive */
+@media (max-width: 991px) {
+    .ruta-flow::before {
+        left: 35px;
+        /* height: calc(100% - 400px); */
+        top: 40px;
+    }
+
+    .ruta-step-card {
+        width: calc(100% - 70px);
+        margin-left: 70px;
+    }
+
+    .ruta-node {
+        left: 35px;
+    }
+
+    .ruta-card-header {
+        flex-direction: row;
+    }
+
+    .ruta-numero {
+        width: 50px;
+        height: 50px;
+        font-size: 1.5rem;
+        position: absolute;
+        left: -85px;
+    }
+
+    .ruta-header-content {
+        width: 100%;
+    }
+
+    .ruta-key-list {
+        grid-template-columns: 1fr;
+    }
+}
+
+@media (max-width: 576px) {
+    .ruta-flow::before {
+        left: 25px;
+    }
+
+    .ruta-step-card {
+        width: calc(100% - 50px);
+        margin-left: 50px;
+    }
+
+    .ruta-node {
+        left: 25px;
+        width: 24px;
+        height: 24px;
+    }
+
+    .ruta-numero {
+        width: 40px;
+        height: 40px;
+        font-size: 1.3rem;
+        left: -65px;
+    }
+
+    .ruta-card-header {
+        padding: 15px;
+    }
+
+    .ruta-card-body {
+        padding: 15px;
+    }
+
+    .ruta-header-content h3 {
+        font-size: 1.3rem;
+    }
+}
+
 /* INFOGRAPHICS */
 
 /* html,
@@ -132,7 +520,7 @@ body {
 } */
 
 /* Estilos para la ruta */
-.ruta-section {
+/* .ruta-section {
     padding: 4rem 0;
     background-color: var(--light-purple);
     position: relative;
@@ -141,7 +529,7 @@ body {
 .ruta-title {
     text-transform: uppercase;
     font-weight: 700;
-    color: var(--primary-color);
+    color: var(--primary-color-1);
     margin-bottom: 3rem;
     position: relative;
 }
@@ -156,7 +544,7 @@ body {
     height: 4px;
     background: linear-gradient(
         90deg,
-        var(--primary-color),
+        var(--primary-color-1),
         var(--secondary-color-1)
     );
     border-radius: 2px;
@@ -172,7 +560,7 @@ body {
     height: 100%;
     position: relative;
     z-index: 2;
-    border-left: 5px solid var(--primary-color);
+    border-left: 5px solid var(--primary-color-1);
 }
 
 .ruta-card:hover {
@@ -183,7 +571,7 @@ body {
 .ruta-card-header {
     background: linear-gradient(
         135deg,
-        var(--primary-color),
+        var(--primary-color-1),
         var(--secondary-color-1)
     );
     color: white;
@@ -229,7 +617,7 @@ body {
 }
 
 .ruta-section-title {
-    color: var(--primary-color);
+    color: var(--primary-color-1);
     font-size: 1.2rem;
     font-weight: 600;
     margin: 1.5rem 0 1rem;
@@ -252,7 +640,7 @@ body {
     content: "✨";
     position: absolute;
     left: 0;
-    color: var(--primary-color);
+    color: var(--primary-color-1);
 }
 
 .ruta-details {
@@ -266,7 +654,7 @@ body {
     font-weight: 600;
     margin-bottom: 1rem;
     font-size: 1.1rem;
-    color: var(--primary-color);
+    color: var(--primary-color-1);
 }
 
 .ruta-details-item {
@@ -298,7 +686,7 @@ body {
 .btn-ruta {
     background: linear-gradient(
         135deg,
-        var(--primary-color),
+        var(--primary-color-1),
         var(--secondary-color-2)
     );
     color: white;
@@ -315,10 +703,10 @@ body {
     transform: translateY(-3px);
     box-shadow: 0 6px 15px rgba(65, 24, 202, 0.3);
     color: white;
-}
+} */
 
 /* Ruta visual */
-.ruta-path {
+/* .ruta-path {
     position: absolute;
     left: 50%;
     top: 200px;
@@ -326,7 +714,7 @@ body {
     width: 8px;
     background: linear-gradient(
         180deg,
-        var(--primary-color),
+        var(--primary-color-1),
         var(--accent-color-1)
     );
     transform: translateX(-50%);
@@ -341,7 +729,7 @@ body {
     width: 40px;
     height: 40px;
     background: white;
-    border: 4px solid var(--primary-color);
+    border: 4px solid var(--primary-color-1);
     border-radius: 50%;
     z-index: 1;
     display: none;
@@ -366,20 +754,20 @@ body {
 
 .ruta-node-4 {
     top: 2100px;
-}
+} */
 
 /* Responsive - mostrar línea de ruta en pantallas medianas y grandes */
 /* @media (min-width: 992px) {
 } */
 
-@media (max-width: 1200px) {
+/* @media (max-width: 1200px) {
     .ruta-path {
         bottom: 400px;
     }
-}
+} */
 
 /* Animaciones */
-@keyframes fadeInUp {
+/* @keyframes fadeInUp {
     from {
         opacity: 0;
         transform: translateY(20px);
@@ -408,10 +796,10 @@ body {
 
 .ruta-card:nth-child(4) {
     animation-delay: 0.7s;
-}
+} */
 
 /* Pulse effect para los nodos */
-@keyframes pulse {
+/* @keyframes pulse {
     0% {
         transform: translateX(-50%) scale(1);
         opacity: 1;
@@ -428,4 +816,4 @@ body {
 
 .ruta-node {
     animation: pulse 2s infinite;
-}
+} */

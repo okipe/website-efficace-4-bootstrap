@@ -27,8 +27,8 @@ body.notification-visible html {
 .navbar {
     background: linear-gradient(
         90deg,
-        var(--primary-color),
-        var(--secondary-color-2)
+        var(--primary-color-1),
+        var(--primary-color-2)
     );
     box-shadow: 0 4px 12px rgba(65, 24, 202, 0.2);
     padding: 0 0;
@@ -69,7 +69,7 @@ body.notification-visible html {
 
 /* .navbar .nav-link {
     font-weight: 500;
-    color: var(--primary-color);
+    color: var(--primary-color-1);
     transition: all 0.3s ease;
 } */
 
@@ -83,7 +83,7 @@ body.notification-visible html {
 } */
 
 .navbar .btn-primary {
-    background: linear-gradient(45deg, #17a5a5, #8764ff);
+    background: var(--secondary-color-1);
     color: white;
     font-weight: 600;
     border: none;
@@ -111,8 +111,8 @@ body.notification-visible html {
 .notification-bar {
     background: linear-gradient(
         90deg,
-        rgba(169, 248, 24, 1),
-        rgba(26, 231, 231, 1)
+        var(--secondary-color-1),
+        var(--secondary-color-1)
     );
     color: var(--dark-color);
     font-weight: 500;
@@ -223,7 +223,7 @@ body.notification-visible html {
 
 @media (max-width: 992px) {
     .navbar-collapse {
-        background-color: var(--primary-color);
+        background-color: var(--primary-color-1);
         border-radius: 0 0 10px 10px;
         padding: 1rem;
         box-shadow: 0 8px 16px rgba(0, 0, 0, 0.15);

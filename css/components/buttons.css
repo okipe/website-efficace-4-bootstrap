@@ -13,11 +13,7 @@
 
 /* Botón principal - púrpura */
 .btn-primary {
-    background: linear-gradient(
-        135deg,
-        var(--primary-color),
-        var(--secondary-color-2)
-    );
+    background: var(--primary-color-1);
     color: var(--light-color);
     border: none;
     padding: 0.7rem 1.8rem;
@@ -35,7 +31,7 @@
 
 /* Botón secundario - turquesa */
 .btn-success {
-    background-color: var(--accent-color-2);
+    background-color: var(--secondary-color-1);
     border: none;
     color: var(--dark-color);
     font-weight: 600;
@@ -44,9 +40,9 @@
 }
 
 .btn-success:hover {
-    background-color: #98e00a; /* Versión ligeramente más oscura */
+    background-color: #98e00a; /* Versión ligeramente más clara */
     transform: translateY(-3px);
-    box-shadow: 0 6px 15px rgba(169, 248, 24, 0.3);
+    box-shadow: 0 6px 15px rgba(169, 248, 24, 0.8);
 }
 
 .btn-close:focus {
@@ -55,7 +51,7 @@
 
 /* Custom Button */
 /* .btn-primary-custom {
-    background-color: var(--primary-color);
+    background-color: var(--primary-color-1);
     color: var(--light-color);
     border: none;
     padding: 0.6rem 1.5rem;

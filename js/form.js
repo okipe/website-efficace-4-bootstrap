@@ -2,139 +2,180 @@ const quizData = {
     questions: [
         {
             id: 1,
-            text: "¿Cuál es tu nivel de experiencia laboral?",
+            text: "¿Puedes describir tu perfil profesional?",
             options: [
                 {
-                    text: "Aún no tengo experiencia laboral",
+                    text: "No tengo claridad aún sobre mi perfil.",
                     score: 1,
                 },
                 {
-                    text: "Tengo experiencia en prácticas pre-profesionales",
-                    score: 2,
-                },
-                {
-                    text: "Tengo experiencia laboral profesional",
+                    text: "Tengo algunas ideas, pero me cuesta definirlo con seguridad.",
                     score: 3,
                 },
+                {
+                    text: "Tengo claridad sobre mi perfil, sé mis fortalezas y hacia dónde quiero ir.",
+                    score: 6,
+                },
             ],
-            weight: 1.5,
+            weight: 1,
         },
         {
             id: 2,
-            text: "¿Cómo calificarías tu presencia en LinkedIn?",
+            text: "¿Cuál es tu nivel de experiencia laboral?",
             options: [
-                { text: "No tengo perfil de LinkedIn", score: 1 },
-                { text: "Tengo un perfil básico", score: 2 },
+                { text: "No tengo experiencia laboral aún.", score: 1 },
                 {
-                    text: "Mi perfil está optimizado y actualizado regularmente",
+                    text: "He realizado prácticas pre-profesionales o voluntariados.",
                     score: 3,
                 },
+                {
+                    text: "Tengo experiencia laboral formal o empleo a tiempo completo.",
+                    score: 6,
+                },
             ],
-            weight: 1.2,
+            weight: 1,
         },
         {
             id: 3,
-            text: "¿Cuántas entrevistas laborales has tenido en los últimos 6 meses?",
+            text: "¿Qué tan actualizado y estratégico está tu CV?",
             options: [
-                { text: "Ninguna", score: 1 },
-                { text: "1-3 entrevistas", score: 2 },
-                { text: "Más de 3 entrevistas", score: 3 },
+                { text: "No tengo un CV actualizado.", score: 1 },
+                {
+                    text: "Tengo un CV básico, sin muchos logros o diferenciadores.",
+                    score: 3,
+                },
+                {
+                    text: "Tengo un CV adaptado, enfocado en logros y con una buena presentación.",
+                    score: 6,
+                },
             ],
-            weight: 1.0,
+            weight: 1,
         },
         {
             id: 4,
-            text: "¿Cómo describes tu CV actual?",
+            text: "¿Tu perfil de LinkedIn refleja bien quién eres como profesional?",
             options: [
                 {
-                    text: "Necesito actualizarlo/No tengo CV",
+                    text: "No tengo perfil de LinkedIn.",
                     score: 1,
                 },
                 {
-                    text: "Está actualizado pero podría mejorarse",
-                    score: 2,
-                },
-                {
-                    text: "Está optimizado y personalizado para cada postulación",
+                    text: "Tengo un perfil, pero no lo uso ni lo he optimizado.",
                     score: 3,
                 },
+                {
+                    text: "Mi perfil está completo, activo y con publicaciones o recomendaciones.",
+                    score: 6,
+                },
             ],
-            weight: 1.3,
+            weight: 1,
         },
         {
             id: 5,
+            text: "¿Transmites tu propuesta de valor en las entrevistas laborales?",
+            options: [
+                {
+                    text: "No sé qué es una propuesta de valor. Me pongo muy nervioso/a y no sé qué decir.",
+                    score: 1,
+                },
+                {
+                    text: "Tengo algunas ideas, pero no sé cómo comunicarlo. Me falta estructurar mejor mis respuestas.",
+                    score: 3,
+                },
+                {
+                    text: "Me siento seguro/a, tengo ejemplos preparados y entiendo qué buscan.",
+                    score: 6,
+                },
+            ],
+            weight: 1,
+        },
+        {
+            id: 6,
+            text: "¿Cuántas entrevistas laborales has tenido últimamente?",
+            options: [
+                { text: "Ninguna.", score: 1 },
+                { text: "1-3 entrevistas", score: 3 },
+                { text: "Más de 3 entrevistas", score: 6 },
+            ],
+            weight: 1,
+        },
+        {
+            id: 7,
             text: "¿Cuánto tiempo dedicas semanalmente a tu desarrollo profesional?",
             options: [
                 { text: "Menos de 1 hora", score: 1 },
-                { text: "Entre 1-3 horas", score: 2 },
-                { text: "Más de 3 horas", score: 3 },
+                { text: "Entre 1-3 horas", score: 3 },
+                { text: "Más de 3 horas", score: 6 },
             ],
-            weight: 1.1,
+            weight: 1,
         },
     ],
 
     profiles: {
         beginner: {
-            range: [0, 60],
-            title: "Profesional en Desarrollo 🌱",
+            range: [0, 13],
+            title: "Perfil Inicial – Estoy comenzando 🌱",
             description:
-                "Estás comenzando tu camino profesional. Es el momento perfecto para construir bases sólidas.",
+                "Estás iniciando tu camino profesional. Es el momento perfecto para construir bases sólidas y descubrir tu verdadero potencial.",
             recommendations: [
-                "Crea un perfil de LinkedIn optimizado",
-                "Desarrolla un CV profesional",
-                "Practica técnicas de entrevista",
+                "IN SIGHT SESSION: Descubre tu potencial desde adentro",
+                "CV DE IMPACTO: Convierte tu CV en una herramienta de éxito",
+                "SÚPER IN-TERVIEW: Destaca y domina las entrevistas laborales",
+                "LINKEDIN PRO: Lidera tu marca personal con LinkedIn",
             ],
             services: [
                 {
-                    name: "Optimización de CV",
-                    description: "Crea un CV que destaque tu potencial",
+                    name: "IN SIGHT SESSION",
+                    description: "Descubre tu potencial desde adentro",
                 },
                 {
-                    name: "LinkedIn Power",
-                    description: "Construye tu marca personal desde cero",
+                    name: "CV DE IMPACTO",
+                    description: "Convierte tu CV en una herramienta de éxito",
                 },
             ],
         },
         intermediate: {
-            range: [61, 80],
-            title: "Profesional Emergente 🚀",
+            range: [14, 25],
+            title: "Perfil Intermedio – Estoy en proceso de mejorar 🚀",
             description:
-                "Tienes buenos fundamentos. Es momento de destacar entre la competencia.",
+                "Tienes buenos fundamentos. Ahora es momento de enfocarte en destacar y llevar tu carrera al siguiente nivel.",
             recommendations: [
-                "Optimiza tu presencia digital",
-                "Desarrolla habilidades de networking",
-                "Mejora tus técnicas de entrevista",
+                "IN SIGHT SESSION: Descubre tu potencial desde adentro",
+                "CV DE IMPACTO: Convierte tu CV en una herramienta de éxito",
+                "SÚPER IN-TERVIEW: Destaca y domina las entrevistas laborales",
+                "LINKEDIN PRO: Lidera tu marca personal con LinkedIn",
             ],
             services: [
                 {
-                    name: "Training de Entrevistas",
-                    description: "Domina el arte de las entrevistas laborales",
+                    name: "SÚPER IN-TERVIEW",
+                    description: "Destaca y domina las entrevistas laborales",
                 },
                 {
-                    name: "LinkedIn Advanced",
-                    description: "Lleva tu perfil al siguiente nivel",
+                    name: "LINKEDIN PRO",
+                    description: "Lidera tu marca personal con LinkedIn",
                 },
             ],
         },
         advanced: {
-            range: [81, 100],
-            title: "Profesional Destacado ⭐",
+            range: [26, 42],
+            title: "Perfil Avanzado – Estoy listo/a para destacar⭐",
             description:
-                "¡Felicitaciones! Tienes una base sólida. Enfócate en especializarte y destacar aún más.",
+                "¡Felicitaciones! Tienes una base sólida. Es momento de potenciar tu liderazgo y destacarte en el mercado laboral.",
             recommendations: [
-                "Desarrolla tu liderazgo",
-                "Crea contenido profesional",
-                "Amplía tu red de contactos",
+                "Servicio exclusivo de outplacement y recolocación laboral",
+                "Taller de coaching ejecutivo",
+                "Estrategia de networking y liderazgo profesional",
             ],
             services: [
                 {
-                    name: "Personal Branding",
-                    description: "Construye una marca personal poderosa",
+                    name: "Outplacement y Recolocación",
+                    description:
+                        "Encuentra oportunidades alineadas a tu perfil",
                 },
                 {
-                    name: "Mentoring Profesional",
+                    name: "Coaching Ejecutivo",
                     description:
-                        "Recibe guía personalizada para tu crecimiento",
+                        "Potencia tu liderazgo y posicionamiento profesional",
                 },
             ],
         },
@@ -205,14 +246,23 @@ function calculateScore() {
         return sum + answer.score * answer.weight;
     }, 0);
 
-    const maxPossibleScore = 3 * totalWeight; // 3 is max score per question
+    const maxPossibleScore = 6 * totalWeight; // 6 es max score por pregunta
     return (weightedScore / maxPossibleScore) * 100;
 }
 
 function getProfile(score) {
-    return Object.values(quizData.profiles).find(
-        (profile) => score >= profile.range[0] && score <= profile.range[1]
-    );
+    const totalRawScore = userAnswers.reduce((sum, answer) => {
+        return sum + answer.score;
+    }, 0);
+
+    // Determinar el perfil basado en la puntuación total (sin ponderación de porcentaje)
+    if (totalRawScore <= 13) {
+        return quizData.profiles.beginner;
+    } else if (totalRawScore <= 25) {
+        return quizData.profiles.intermediate;
+    } else {
+        return quizData.profiles.advanced;
+    }
 }
 
 function showResults() {
@@ -239,7 +289,7 @@ function showResults() {
           <h3 class="card-title">${profile.title}</h3>
           <p class="card-text">${profile.description}</p>
           
-          <h4 class="mt-4">Recomendaciones principales:</h4>
+          <h4 class="mt-4">Recomendaciones Efficace:</h4>
           <ul class="list-group list-group-flush">
               ${profile.recommendations
                   .map(
@@ -250,7 +300,7 @@ function showResults() {
                   .join("")}
           </ul>
           
-          <h4 class="mt-4">Servicios recomendados:</h4>
+          <!--<h4 class="mt-4">Servicios recomendados:</h4>
           <div class="row">
               ${profile.services
                   .map(
@@ -266,15 +316,15 @@ function showResults() {
               `
                   )
                   .join("")}
-          </div>
+          </div> -->
       </div>
   </div>
 `;
 }
 
 function showContactForm() {
-    // Aquí puedes redirigir al formulario de contacto o mostrar un modal
-    window.location.href = "#contacto";
+    // Redirigir a la ruta empleable
+    window.location.href = "./ruta-empleable.html";
     $("#quizModal").modal("hide");
 }
 

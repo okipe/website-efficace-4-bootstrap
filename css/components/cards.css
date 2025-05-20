@@ -20,11 +20,11 @@ Card animations/interactions
 
 /* Iconos con estilo actualizado */
 .icon-primary {
-    color: var(--primary-color);
+    color: var(--primary-color-1);
     background: linear-gradient(
         135deg,
-        var(--primary-color),
-        var(--secondary-color-1)
+        var(--primary-color-1),
+        var(--primary-color-2)
     );
     background-clip: text;
     -webkit-background-clip: text;

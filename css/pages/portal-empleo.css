@@ -5,7 +5,7 @@
 }
 
 .subscription-form .form-control:focus {
-    border-color: var(--primary-color);
+    border-color: var(--primary-color-1);
     box-shadow: 0 0 0 0.25rem rgba(6, 36, 174, 0.25);
 }
 
@@ -28,7 +28,7 @@
 .job-card-header {
     background: linear-gradient(
         135deg,
-        var(--primary-color),
+        var(--primary-color-1),
         var(--secondary-color-1)
     );
     color: white;
@@ -52,7 +52,7 @@
 .job-type-badge {
     display: inline-block;
     background-color: var(--light-purple);
-    color: var(--primary-color);
+    color: var(--primary-color-1);
     padding: 0.25rem 0.75rem;
     border-radius: 20px;
     font-size: 0.85rem;
@@ -66,7 +66,7 @@
     justify-content: center;
     background: linear-gradient(
         135deg,
-        var(--primary-color),
+        var(--primary-color-1),
         var(--secondary-color-2)
     );
     color: white;
@@ -100,7 +100,7 @@
 
 .job-info i {
     margin-right: 0.5rem;
-    color: var(--primary-color);
+    color: var(--primary-color-1);
 }
 
 .job-filter-container {
@@ -118,7 +118,7 @@
 }
 
 .job-filter.active {
-    background-color: var(--primary-color);
+    background-color: var(--primary-color-1);
     color: white;
 }
 
@@ -138,7 +138,7 @@
 
 .search-container input:focus {
     outline: none;
-    border-color: var(--primary-color);
+    border-color: var(--primary-color-1);
     box-shadow: 0 0 0 0.2rem rgba(65, 24, 202, 0.1);
 }
 
@@ -147,7 +147,7 @@
     left: 1rem;
     top: 50%;
     transform: translateY(-50%);
-    color: var(--primary-color);
+    color: var(--primary-color-1);
     font-size: 1.25rem;
 }
 
@@ -179,7 +179,7 @@
     height: 4px;
     background: linear-gradient(
         90deg,
-        var(--primary-color),
+        var(--primary-color-1),
         var(--secondary-color-1)
     );
     border-radius: 2px;

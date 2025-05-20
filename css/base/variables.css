@@ -6,22 +6,24 @@
 */
 
 :root {
-    /* Color principal - Púrpura dominante */
-    --primary-color: #4118ca; /* Púrpura profundo - color principal */
+    /* Colores principales */
+    --primary-color-1: #0624ae;
+    --primary-color-2: #061d83; /* Azul profundo */
+    --secondary-color-1: #19c223; /* Verde brillante */
+    --secondary-color-2: #0d8d14; /* Verde más oscuro para contraste */
 
-    /* Colores secundarios complementarios */
-    --secondary-color-1: #8764ff; /* Púrpura más claro - para variación y contraste */
-    --secondary-color-2: #6030e8; /* Púrpura intermedio - para gradientes */
+    /* Colores con transparencia */
+    --primary-color-1-alpha1: rgba(6, 36, 174, 0.7);
+    --primary-color-1-alpha2: rgba(6, 36, 174, 0.4);
 
-    /* Acentos para detalles y elementos interactivos */
-    --accent-color-1: #1ae7e7; /* Turquesa - contraste vibrante */
-    --accent-color-2: #a9f818; /* Verde lima - para botones de acción */
-    --accent-color-3: #ffa11c; /* Naranja - para llamados a la acción urgentes */
+    /* Acentos */
+    --accent-color-1: #25d366; /* Verde WhatsApp - botones interactivos */
+    --accent-color-2: #17a5a5; /* Verde-azulado suave - hover o gradientes */
+    --accent-color-3: #ffa11c; /* Naranja cálido para llamados urgentes */
 
     /* Neutrales */
-    --dark-color: #2d1a6b; /* Púrpura oscuro - para fondos oscuros */
-    --text-color: #121212; /* Casi negro - texto principal */
-    --light-color: #ffffff; /* Blanco - para contraste */
-    --light-purple: #f5f2ff; /* Púrpura muy claro - fondos sutiles */
-
+    --dark-color: #1c1f2b; /* Azul grisáceo oscuro para texto y fondo */
+    --text-color: #121212; /* Negro suave para texto principal */
+    --light-color: #ffffff; /* Blanco puro */
+    --light-purple: #f1f9f1; /* Verde claro muy suave para fondos */
 }
