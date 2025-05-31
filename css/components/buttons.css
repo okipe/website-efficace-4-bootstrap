@@ -11,7 +11,7 @@
     box-shadow: 0 4px 8px rgba(65, 24, 202, 0.25);
 }
 
-/* Botón principal - púrpura */
+/* Botón principal */
 .btn-primary {
     background: var(--primary-color-1);
     color: var(--light-color);
@@ -48,6 +48,8 @@
 .btn-close:focus {
     box-shadow: none;
 }
+
+
 
 /* Custom Button */
 /* .btn-primary-custom {

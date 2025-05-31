@@ -1,6 +1,7 @@
 document.addEventListener("DOMContentLoaded", function () {
     // Filter buttons functionality
     const filterBtns = document.querySelectorAll(".job-filter");
+    const jobCards = document.querySelectorAll(".job-card");
 
     filterBtns.forEach((btn) => {
         btn.addEventListener("click", function () {
@@ -13,7 +14,23 @@ document.addEventListener("DOMContentLoaded", function () {
             // Get filter value
             const filterValue = this.getAttribute("data-filter");
 
-            // Filter logic would go here (to be implemented)
+            // Filter job cards
+            jobCards.forEach((card) => {
+                if (filterValue === "all") {
+                    card.style.display = "block";
+                    card.parentElement.style.display = "block";
+                } else {
+                    const cardCategory = card.getAttribute("data-category");
+                    if (cardCategory === filterValue) {
+                        card.style.display = "block";
+                        card.parentElement.style.display = "block";
+                    } else {
+                        card.style.display = "none";
+                        card.parentElement.style.display = "none";
+                    }
+                }
+            });
+
             console.log("Filter selected:", filterValue);
         });
     });
@@ -24,7 +41,30 @@ document.addEventListener("DOMContentLoaded", function () {
     searchInput.addEventListener("input", function () {
         const searchValue = this.value.toLowerCase();
 
-        // Search logic would go here (to be implemented)
+        jobCards.forEach((card) => {
+            const jobTitle = card
+                .querySelector(".job-card-header h3")
+                .textContent.toLowerCase();
+            const jobCompany = card
+                .querySelector(".job-company")
+                .textContent.toLowerCase();
+            const jobRubro = card
+                .querySelector(".job-type-badge")
+                .textContent.toLowerCase();
+
+            if (
+                jobTitle.includes(searchValue) ||
+                jobCompany.includes(searchValue) ||
+                jobRubro.includes(searchValue)
+            ) {
+                card.style.display = "block";
+                card.parentElement.style.display = "block";
+            } else {
+                card.style.display = "none";
+                card.parentElement.style.display = "none";
+            }
+        });
+
         console.log("Search input:", searchValue);
     });
 
@@ -33,19 +73,21 @@ document.addEventListener("DOMContentLoaded", function () {
     const whatsAppPopup = document.getElementById("whatsAppPopup");
     const closePopup = document.getElementById("closePopup");
 
-    whatsAppBtn.addEventListener("click", function () {
-        whatsAppPopup.style.display =
-            whatsAppPopup.style.display === "block" ? "none" : "block";
-    });
+    if (whatsAppBtn && whatsAppPopup && closePopup) {
+        whatsAppBtn.addEventListener("click", function () {
+            whatsAppPopup.style.display =
+                whatsAppPopup.style.display === "block" ? "none" : "block";
+        });
 
-    closePopup.addEventListener("click", function () {
-        whatsAppPopup.style.display = "none";
-    });
-
-    // Close popup when clicking outside
-    document.addEventListener("click", function (event) {
-        if (!event.target.closest(".whatsapp-float")) {
+        closePopup.addEventListener("click", function () {
             whatsAppPopup.style.display = "none";
-        }
-    });
+        });
+
+        // Close popup when clicking outside
+        document.addEventListener("click", function (event) {
+            if (!event.target.closest(".whatsapp-float")) {
+                whatsAppPopup.style.display = "none";
+            }
+        });
+    }
 });
