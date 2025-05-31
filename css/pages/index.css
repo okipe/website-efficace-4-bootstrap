@@ -6,7 +6,7 @@
                 var(--primary-color-1-alpha2)
                 /* Color púrpura secundario con 50% de opacidad */
         ),
-        url("../../assets/img/students-sitting.webp");
+        url("../../assets/img/students.webp");
     background-size: cover;
     background-position: center;
     padding: 8rem 0;
@@ -179,4 +179,3 @@
     font-weight: 400;
     margin-top: 0.5rem;
 }
-
