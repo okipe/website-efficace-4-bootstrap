@@ -61,34 +61,11 @@
 }
 
 .job-link {
-    display: inline-flex;
-    align-items: center;
-    justify-content: center;
-    background: linear-gradient(
-        135deg,
-        var(--primary-color-1),
-        var(--secondary-color-2)
-    );
-    color: white;
-    text-decoration: none;
-    padding: 0.6rem 1.25rem;
-    border-radius: 30px;
-    font-weight: 500;
-    transition: all 0.3s ease;
-    width: 100%;
+    /* Usar la clase base común */
     margin-top: 1rem;
-    box-shadow: 0 4px 8px rgba(65, 24, 202, 0.15);
 }
 
-.job-link:hover {
-    transform: translateY(-2px);
-    box-shadow: 0 6px 12px rgba(65, 24, 202, 0.25);
-    color: white;
-}
-
-.job-link i {
-    margin-left: 0.5rem;
-}
+/* Aplicar la clase base .btn-action-primary */
 
 .job-info {
     display: flex;
@@ -183,6 +160,83 @@
         var(--secondary-color-1)
     );
     border-radius: 2px;
+}
+
+/* Colores específicos por rubro */
+.job-card[data-category="servicios"] .job-card-header {
+    background: linear-gradient(135deg, #2E8B57, #3CB371);
+}
+
+.job-card[data-category="banca"] .job-card-header {
+    background: linear-gradient(135deg, #1E40AF, #3B82F6);
+}
+
+.job-card[data-category="telecomunicaciones"] .job-card-header {
+    background: linear-gradient(135deg, #7C3AED, #A855F7);
+}
+
+.job-card[data-category="mineria"] .job-card-header {
+    background: linear-gradient(135deg, #D97706, #F59E0B);
+}
+
+.job-card[data-category="seguros"] .job-card-header {
+    background: linear-gradient(135deg, #0891B2, #06B6D4);
+}
+
+/* Botones específicos por rubro */
+.job-card[data-category="servicios"] .job-link {
+    background: linear-gradient(135deg, #2E8B57, #3CB371);
+    border: none;
+}
+
+.job-card[data-category="servicios"] .job-link:hover {
+    background: linear-gradient(135deg, #1e5f3a, #2d8f5f);
+    transform: translateY(-2px);
+    box-shadow: 0 6px 20px rgba(46, 139, 87, 0.3);
+}
+
+.job-card[data-category="banca"] .job-link {
+    background: linear-gradient(135deg, #1E40AF, #3B82F6);
+    border: none;
+}
+
+.job-card[data-category="banca"] .job-link:hover {
+    background: linear-gradient(135deg, #1e3a8a, #2563eb);
+    transform: translateY(-2px);
+    box-shadow: 0 6px 20px rgba(30, 64, 175, 0.3);
+}
+
+.job-card[data-category="telecomunicaciones"] .job-link {
+    background: linear-gradient(135deg, #7C3AED, #A855F7);
+    border: none;
+}
+
+.job-card[data-category="telecomunicaciones"] .job-link:hover {
+    background: linear-gradient(135deg, #5b21b6, #7c2d12);
+    transform: translateY(-2px);
+    box-shadow: 0 6px 20px rgba(124, 58, 237, 0.3);
+}
+
+.job-card[data-category="mineria"] .job-link {
+    background: linear-gradient(135deg, #D97706, #F59E0B);
+    border: none;
+}
+
+.job-card[data-category="mineria"] .job-link:hover {
+    background: linear-gradient(135deg, #92400e, #d97706);
+    transform: translateY(-2px);
+    box-shadow: 0 6px 20px rgba(217, 119, 6, 0.3);
+}
+
+.job-card[data-category="seguros"] .job-link {
+    background: linear-gradient(135deg, #0891B2, #06B6D4);
+    border: none;
+}
+
+.job-card[data-category="seguros"] .job-link:hover {
+    background: linear-gradient(135deg, #0e7490, #0891b2);
+    transform: translateY(-2px);
+    box-shadow: 0 6px 20px rgba(8, 145, 178, 0.3);
 }
 
 @media (max-width: 767.98px) {

@@ -49,7 +49,40 @@
     box-shadow: none;
 }
 
+/* Botón base para acciones principales - Estilo común para job-link y ai-tool */
+.btn-action-primary {
+    background: var(--primary-color-1);
+    color: white;
+    border: none;
+    padding: 0.75rem 1.5rem;
+    border-radius: 30px;
+    font-weight: 600;
+    transition: all 0.3s ease;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-decoration: none;
+    font-size: 0.95rem;
+    box-shadow: 0 4px 12px rgba(6, 36, 174, 0.2);
+    cursor: pointer;
+}
 
+.btn-action-primary:hover {
+    background: var(--primary-color-2);
+    color: white;
+    text-decoration: none;
+    transform: translateY(-2px);
+    box-shadow: 0 6px 20px rgba(6, 36, 174, 0.3);
+}
+
+.btn-action-primary i {
+    transition: transform 0.3s ease;
+}
+
+.btn-action-primary:hover i {
+    transform: translateX(3px);
+}
 
 /* Custom Button */
 /* .btn-primary-custom {

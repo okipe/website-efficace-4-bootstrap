@@ -205,7 +205,11 @@
     left: 0;
     right: 0;
     height: 4px;
-    background: linear-gradient(90deg, var(--primary-color-1), var(--secondary-color-1));
+    background: linear-gradient(
+        90deg,
+        var(--primary-color-1),
+        var(--secondary-color-1)
+    );
     transition: all 0.3s ease;
 }
 
@@ -234,7 +238,11 @@
     align-items: center;
     justify-content: center;
     margin-bottom: 1rem;
-    background: linear-gradient(135deg, var(--light-purple), rgba(25, 194, 35, 0.1));
+    background: linear-gradient(
+        135deg,
+        var(--light-purple),
+        rgba(25, 194, 35, 0.1)
+    );
     border: 2px solid rgba(6, 36, 174, 0.1);
     transition: all 0.3s ease;
 }
@@ -289,22 +297,10 @@
     margin-top: auto;
 }
 
-.btn-ai-tool {
-    background: var(--primary-color-1);
-    color: white;
-    border: none;
-    padding: 0.75rem 1.5rem;
-    border-radius: 30px;
-    font-weight: 600;
-    transition: all 0.3s ease;
-    width: 100%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    text-decoration: none;
-    font-size: 0.95rem;
-    box-shadow: 0 4px 12px rgba(6, 36, 174, 0.2);
-}
+/* .btn-ai-tool {
+    Usar la clase base común .btn-action-primary
+    Estilos específicos si necesita alguna variación
+} */
 
 .btn-ai-tool:hover {
     transform: translateY(-2px);
@@ -354,23 +350,23 @@
     .ai-tool-card {
         padding: 1.5rem;
     }
-    
+
     .ai-tool-logo {
         width: 140px;
         height: 140px;
     }
-    
+
     .tool-logo-img {
         width: 80px;
         height: 80px;
     }
-    
+
     .placeholder-logo {
         width: 80px;
         height: 80px;
         font-size: 2rem;
     }
-    
+
     .ai-tool-title {
         font-size: 1.2rem;
     }
@@ -380,7 +376,7 @@
     .ai-tools-directory .row.align-items-center {
         text-align: center;
     }
-    
+
     .ai-tools-cta .col-md-8 {
         margin-bottom: 1rem;
     }
@@ -391,14 +387,30 @@
     animation: fadeInUp 0.6s ease backwards;
 }
 
-.ai-tool-card:nth-child(1) { animation-delay: 0.1s; }
-.ai-tool-card:nth-child(2) { animation-delay: 0.2s; }
-.ai-tool-card:nth-child(3) { animation-delay: 0.3s; }
-.ai-tool-card:nth-child(4) { animation-delay: 0.4s; }
-.ai-tool-card:nth-child(5) { animation-delay: 0.5s; }
-.ai-tool-card:nth-child(6) { animation-delay: 0.6s; }
-.ai-tool-card:nth-child(7) { animation-delay: 0.7s; }
-.ai-tool-card:nth-child(8) { animation-delay: 0.8s; }
+.ai-tool-card:nth-child(1) {
+    animation-delay: 0.1s;
+}
+.ai-tool-card:nth-child(2) {
+    animation-delay: 0.2s;
+}
+.ai-tool-card:nth-child(3) {
+    animation-delay: 0.3s;
+}
+.ai-tool-card:nth-child(4) {
+    animation-delay: 0.4s;
+}
+.ai-tool-card:nth-child(5) {
+    animation-delay: 0.5s;
+}
+.ai-tool-card:nth-child(6) {
+    animation-delay: 0.6s;
+}
+.ai-tool-card:nth-child(7) {
+    animation-delay: 0.7s;
+}
+.ai-tool-card:nth-child(8) {
+    animation-delay: 0.8s;
+}
 
 /* Loading effect for images */
 .tool-logo-img {
