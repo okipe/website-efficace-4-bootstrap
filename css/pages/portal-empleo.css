@@ -6,13 +6,13 @@
 
 .subscription-form .form-control:focus {
     border-color: var(--primary-color-1);
-    box-shadow: 0 0 0 0.25rem rgba(6, 36, 174, 0.25);
+    box-shadow: 0 0 0 0.25rem rgba(7, 38, 203, 0.25);
 }
 
 /* Custom styles for job listings */
 .job-card {
     border-radius: 16px;
-    border: 1px solid rgba(65, 24, 202, 0.1);
+    border: 1px solid rgba(7, 38, 203, 0.1);
     transition: all 0.3s ease;
     height: 100%;
     background-color: white;
@@ -21,8 +21,8 @@
 
 .job-card:hover {
     transform: translateY(-5px);
-    border-color: rgba(65, 24, 202, 0.3);
-    box-shadow: 0 15px 30px rgba(65, 24, 202, 0.08);
+    border-color: rgba(7, 38, 203, 0.3);
+    box-shadow: 0 15px 30px rgba(7, 38, 203, 0.08);
 }
 
 .job-card-header {
@@ -51,7 +51,7 @@
 
 .job-type-badge {
     display: inline-block;
-    background-color: var(--light-purple);
+    background-color: var(--light-blue);
     color: var(--primary-color-1);
     padding: 0.25rem 0.75rem;
     border-radius: 20px;
@@ -61,11 +61,8 @@
 }
 
 .job-link {
-    /* Usar la clase base común */
     margin-top: 1rem;
 }
-
-/* Aplicar la clase base .btn-action-primary */
 
 .job-info {
     display: flex;
@@ -107,7 +104,7 @@
 .search-container input {
     padding: 0.75rem 1rem 0.75rem 3rem;
     border-radius: 30px;
-    border: 1px solid rgba(65, 24, 202, 0.2);
+    border: 1px solid rgba(7, 38, 203, 0.2);
     font-size: 1rem;
     width: 100%;
     transition: all 0.3s ease;
@@ -116,7 +113,7 @@
 .search-container input:focus {
     outline: none;
     border-color: var(--primary-color-1);
-    box-shadow: 0 0 0 0.2rem rgba(65, 24, 202, 0.1);
+    box-shadow: 0 0 0 0.2rem rgba(7, 38, 203, 0.1);
 }
 
 .search-icon {
@@ -133,7 +130,7 @@
     top: 1rem;
     right: 1rem;
     background-color: var(--accent-color-2);
-    color: var(--dark-color);
+    color: white;
     padding: 0.25rem 0.75rem;
     border-radius: 20px;
     font-size: 0.75rem;
@@ -162,13 +159,13 @@
     border-radius: 2px;
 }
 
-/* Colores específicos por rubro */
+/* Colores específicos por rubro - con los nuevos colores primarios */
 .job-card[data-category="servicios"] .job-card-header {
     background: linear-gradient(135deg, #2E8B57, #3CB371);
 }
 
 .job-card[data-category="banca"] .job-card-header {
-    background: linear-gradient(135deg, #1E40AF, #3B82F6);
+    background: linear-gradient(135deg, var(--primary-color-1), var(--primary-color-2));
 }
 
 .job-card[data-category="telecomunicaciones"] .job-card-header {
@@ -196,14 +193,14 @@
 }
 
 .job-card[data-category="banca"] .job-link {
-    background: linear-gradient(135deg, #1E40AF, #3B82F6);
+    background: linear-gradient(135deg, var(--primary-color-1), var(--primary-color-2));
     border: none;
 }
 
 .job-card[data-category="banca"] .job-link:hover {
-    background: linear-gradient(135deg, #1e3a8a, #2563eb);
+    background: linear-gradient(135deg, var(--primary-color-2), #0520a8);
     transform: translateY(-2px);
-    box-shadow: 0 6px 20px rgba(30, 64, 175, 0.3);
+    box-shadow: 0 6px 20px rgba(7, 38, 203, 0.3);
 }
 
 .job-card[data-category="telecomunicaciones"] .job-link {

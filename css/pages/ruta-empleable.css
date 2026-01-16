@@ -5,14 +5,11 @@ Employment route visualization
 Timeline components
 */
 
-/*  */
 /* Hero Section */
 .hero[data-page="ruta-empleable"] {
     background: linear-gradient(
             var(--primary-color-1-alpha1),
-            /* Color púrpura principal con 70% de opacidad */
-                var(--primary-color-1-alpha2)
-                /* Color púrpura secundario con 50% de opacidad */
+            var(--primary-color-1-alpha2)
         ),
         url("./../../assets/img/students_meeting.webp");
     background-size: cover;
@@ -139,7 +136,7 @@ Timeline components
     font-family: "League Spartan", sans-serif;
     text-transform: uppercase;
     font-weight: 700;
-    color: #0624ae;
+    color: var(--primary-color-1);
     position: relative;
     margin-bottom: 1.5rem;
 }
@@ -152,7 +149,7 @@ Timeline components
     transform: translateX(-50%);
     width: 80px;
     height: 4px;
-    background: linear-gradient(90deg, #0624ae, #19c223);
+    background: linear-gradient(90deg, var(--primary-color-1), var(--secondary-color-1));
     border-radius: 2px;
 }
 
@@ -166,9 +163,7 @@ Timeline components
 .ruta-flow {
     position: relative;
     margin-top: 50px;
-    --timeline-height: calc(
-        100% - 265px
-    ); /* Añadimos variable CSS para la altura dinámica */
+    --timeline-height: calc(100% - 265px);
 }
 
 /* Línea de conexión para escritorio */
@@ -178,14 +173,11 @@ Timeline components
     top: 40px;
     left: 110px;
     width: 6px;
-    height: var(
-        --timeline-height
-    ); /* Usamos la variable en lugar del cálculo fijo */
-    background: linear-gradient(180deg, #0624ae, #0d8d14);
+    height: var(--timeline-height);
+    background: linear-gradient(180deg, var(--primary-color-1), var(--secondary-color-1));
     transform: translateX(-50%);
     z-index: 1;
     border-radius: 3px;
-    /* margin-top: 30px; */
 }
 
 /* Tarjetas de etapas */
@@ -199,10 +191,9 @@ Timeline components
 
 .ruta-step-card {
     width: calc(100% - 220px);
-    /* max-width: 900px; */
     background: white;
     border-radius: 20px;
-    box-shadow: 0 10px 25px rgba(6, 36, 174, 0.15);
+    box-shadow: 0 10px 25px rgba(7, 38, 203, 0.15);
     overflow: hidden;
     transition: all 0.3s ease;
     animation: fadeInUp 0.6s ease backwards;
@@ -211,7 +202,7 @@ Timeline components
 
 .ruta-step-card:hover {
     transform: translateY(-10px);
-    box-shadow: 0 15px 35px rgba(6, 36, 174, 0.25);
+    box-shadow: 0 15px 35px rgba(7, 38, 203, 0.25);
 }
 
 .ruta-step:nth-child(1) .ruta-step-card {
@@ -230,7 +221,7 @@ Timeline components
 /* Tarjetas flotantes del infográfico */
 .modal-body.text-start h4 {
     font-size: 1.1rem;
-    color: #0624ae;
+    color: var(--primary-color-1);
     margin-bottom: 15px;
     font-weight: 600;
 }
@@ -244,23 +235,9 @@ Timeline components
     margin-top: -75px;
 }
 
-/* Tarjetas con orientación alternante para pantallas grandes */
-/* @media (min-width: 992px) {
-    .ruta-flow::before {
-        left: 50%;
-        width: 6px;
-        height: calc(100% - 200px);
-        top: 100px;
-    }
-
-    .ruta-step {
-        margin-bottom: 100px;
-    }
-} */
-
 /* Encabezado de tarjeta */
 .ruta-card-header {
-    background: linear-gradient(135deg, #0624ae, #19c223);
+    background: linear-gradient(135deg, var(--primary-color-1), var(--secondary-color-1));
     color: white;
     padding: 20px 25px;
     position: relative;
@@ -270,7 +247,7 @@ Timeline components
 }
 
 .ruta-numero {
-    background: #17a5a5;
+    background: var(--accent-color-2);
     color: white;
     width: 60px;
     height: 60px;
@@ -314,7 +291,7 @@ Timeline components
 
 .ruta-key-points h4 {
     font-size: 1.1rem;
-    color: #0624ae;
+    color: var(--primary-color-1);
     margin-bottom: 15px;
     font-weight: 600;
 }
@@ -338,7 +315,7 @@ Timeline components
     content: "";
     position: absolute;
     left: 0;
-    color: #0624ae;
+    color: var(--primary-color-1);
 }
 
 /* Nodos indicadores */
@@ -346,7 +323,7 @@ Timeline components
     width: 30px;
     height: 30px;
     background: white;
-    border: 4px solid #0624ae;
+    border: 4px solid var(--primary-color-1);
     border-radius: 50%;
     position: absolute;
     left: 110px;
@@ -358,7 +335,7 @@ Timeline components
 
 /* Boton */
 .btn-ver-mas {
-    background: linear-gradient(135deg, #0624ae, #0d8d14);
+    background: linear-gradient(135deg, var(--primary-color-1), var(--secondary-color-1));
     color: white;
     font-weight: 600;
     border-radius: 30px;
@@ -366,14 +343,14 @@ Timeline components
     transition: all 0.3s ease;
     border: none;
     display: inline-block;
-    box-shadow: 0 4px 12px rgba(6, 36, 174, 0.2);
+    box-shadow: 0 4px 12px rgba(7, 38, 203, 0.2);
     text-decoration: none;
     font-size: 0.95rem;
 }
 
 .btn-ver-mas:hover {
     transform: translateY(-3px);
-    box-shadow: 0 6px 15px rgba(6, 36, 174, 0.3);
+    box-shadow: 0 6px 15px rgba(7, 38, 203, 0.3);
     color: white;
 }
 
@@ -384,8 +361,8 @@ Timeline components
     padding: 40px 20px;
     background: linear-gradient(
         135deg,
-        rgba(6, 36, 174, 0.05),
-        rgba(25, 194, 35, 0.05)
+        rgba(7, 38, 203, 0.05),
+        rgba(212, 253, 101, 0.05)
     );
     border-radius: 20px;
 }
@@ -393,11 +370,11 @@ Timeline components
 .ruta-cta-final h3 {
     font-weight: 700;
     margin-bottom: 20px;
-    color: #0624ae;
+    color: var(--primary-color-1);
 }
 
 .btn-ruta-completa {
-    background: linear-gradient(135deg, #0624ae, #19c223);
+    background: linear-gradient(135deg, var(--primary-color-1), var(--secondary-color-1));
     padding: 12px 30px;
     font-size: 1.1rem;
 }
@@ -417,30 +394,24 @@ Timeline components
 @keyframes pulse {
     0% {
         transform: translateX(-50%) scale(1);
-        box-shadow: 0 0 0 0 rgba(6, 36, 174, 0.7);
+        box-shadow: 0 0 0 0 rgba(7, 38, 203, 0.7);
     }
 
     70% {
         transform: translateX(-50%) scale(1.1);
-        box-shadow: 0 0 0 10px rgba(6, 36, 174, 0);
+        box-shadow: 0 0 0 10px rgba(7, 38, 203, 0);
     }
 
     100% {
         transform: translateX(-50%) scale(1);
-        box-shadow: 0 0 0 0 rgba(6, 36, 174, 0);
+        box-shadow: 0 0 0 0 rgba(7, 38, 203, 0);
     }
 }
-/* @media (max-width: 996px) {
-    .ruta-flow::before {
-        height: calc(100% - 420px);
-    }
-} */
 
 /* Responsive */
 @media (max-width: 991px) {
     .ruta-flow::before {
         left: 35px;
-        /* height: calc(100% - 400px); */
         top: 40px;
     }
 
@@ -509,4 +480,3 @@ Timeline components
         font-size: 1.3rem;
     }
 }
-

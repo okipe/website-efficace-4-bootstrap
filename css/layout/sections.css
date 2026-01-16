@@ -8,11 +8,7 @@
 
 /* Hero color sólido */
 .hero {
-    /* background: linear-gradient(
-      135deg,
-      ); */
-    border-bottom: 4px solid var(--accent-color-1);
-    /* top: var(--notification-height, 48px); Height of notification bar */
+    border-bottom: 4px solid var(--secondary-color-1);
     background-size: cover;
     background-position: center top;
     padding: 8rem 0;
@@ -87,25 +83,25 @@
     background: linear-gradient(
         90deg,
         var(--secondary-color-1),
-        var(--accent-color-1)
+        var(--secondary-color-2)
     );
     border-radius: 0;
 }
 
-/* Nueva sección de testimonio con fondo púrpura */
+/* Nueva sección de testimonio con fondo suave */
 .testimonials {
-    background-color: var(--light-purple);
+    background-color: var(--light-blue);
     padding: 4rem 0;
 }
 
 .testimonial-card {
-    border-left: 4px solid var(--primary-color-1-1);
+    border-left: 4px solid var(--primary-color-1);
     transition: transform 0.3s ease;
 }
 
 .testimonial-card:hover {
     transform: translateY(-5px);
-    box-shadow: 0 10px 25px rgba(65, 24, 202, 0.15);
+    box-shadow: 0 10px 25px rgba(7, 38, 203, 0.15);
 }
 
 /* PROMOTIONAL BANNER */
@@ -114,7 +110,7 @@
     background: linear-gradient(
         135deg,
         var(--secondary-color-1),
-        var(--accent-color-1)
+        var(--secondary-color-2)
     );
     color: var(--dark-color);
     padding: 1.5rem 0;
@@ -123,7 +119,7 @@
 }
 
 .promo-banner .icon-secondary {
-    color: var(--secondary-color-1);
+    color: var(--primary-color-1);
     font-size: 1.2rem;
 }
 
@@ -207,7 +203,6 @@
     color: white;
     border-top-left-radius: 1rem;
     border-top-right-radius: 1rem;
-    /* box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15); */
 }
 
 .modal-content {
@@ -217,9 +212,9 @@
 }
 
 .modal-body .display-4 {
-    font-size: 2.25rem; /* Tamaño más pequeño que display-4 (~2.5rem) */
-    font-weight: 700; /* Negrita */
-    color: var(--text-color); /* Negro suave definido en variables.css */
+    font-size: 2.25rem;
+    font-weight: 700;
+    color: var(--text-color);
     margin-bottom: 1rem;
 }
 

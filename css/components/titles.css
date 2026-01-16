@@ -17,7 +17,7 @@
     background: linear-gradient(
         90deg,
         var(--primary-color-1),
-        var(--primary-color-2)
+        var(--secondary-color-1)
     );
     border-radius: 2px;
 }

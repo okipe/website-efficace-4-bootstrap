@@ -6,24 +6,27 @@
 */
 
 :root {
-    /* Colores principales */
-    --primary-color-1: #0624ae;
-    --primary-color-2: #061d83; /* Azul profundo */
-    --secondary-color-1: #19c223; /* Verde brillante */
-    --secondary-color-2: #0d8d14; /* Verde más oscuro para contraste */
+    /* Colores principales - Basados en el logotipo */
+    --primary-color-1: #0726cb; /* Azul vibrante del logo */
+    --primary-color-2: #0520a8; /* Azul más oscuro para contraste */
+    --secondary-color-1: #d4fd65; /* Verde lima brillante del logo */
+    --secondary-color-2: #b8e04b; /* Verde lima más oscuro para contraste */
 
     /* Colores con transparencia */
-    --primary-color-1-alpha1: rgba(6, 36, 174, 0.7);
-    --primary-color-1-alpha2: rgba(6, 36, 174, 0.4);
+    --primary-color-1-alpha1: rgba(7, 38, 203, 0.75);
+    --primary-color-1-alpha2: rgba(7, 38, 203, 0.45);
+    --secondary-color-1-alpha1: rgba(212, 253, 101, 0.75);
+    --secondary-color-1-alpha2: rgba(212, 253, 101, 0.45);
 
-    /* Acentos */
-    --accent-color-1: #25d366; /* Verde WhatsApp - botones interactivos */
-    --accent-color-2: #17a5a5; /* Verde-azulado suave - hover o gradientes */
-    --accent-color-3: #ffa11c; /* Naranja cálido para llamados urgentes */
+    /* Acentos complementarios */
+    --accent-color-1: #25d366; /* Verde WhatsApp - mantener para botones WA */
+    --accent-color-2: #5bbad5; /* Azul suave - hover o gradientes */
+    --accent-color-3: #ff9d1c; /* Naranja para CTAs urgentes */
 
     /* Neutrales */
-    --dark-color: #1c1f2b; /* Azul grisáceo oscuro para texto y fondo */
-    --text-color: #121212; /* Negro suave para texto principal */
+    --dark-color: #1a1d2e; /* Azul grisáceo oscuro para texto y fondo */
+    --text-color: #0f1419; /* Negro azulado para texto principal */
     --light-color: #ffffff; /* Blanco puro */
-    --light-purple: #f1f9f1; /* Verde claro muy suave para fondos */
+    --light-lime: #f7fef0; /* Verde lima muy suave para fondos */
+    --light-blue: #f0f3ff; /* Azul muy suave para fondos alternos */
 }

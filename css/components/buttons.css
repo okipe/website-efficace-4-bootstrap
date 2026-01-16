@@ -8,7 +8,7 @@
 .btn-primary-custom:hover {
     background-color: var(--accent-color-2);
     transform: translateY(-2px);
-    box-shadow: 0 4px 8px rgba(65, 24, 202, 0.25);
+    box-shadow: 0 4px 8px rgba(7, 38, 203, 0.25);
 }
 
 /* Botón principal */
@@ -17,19 +17,20 @@
     color: var(--light-color);
     border: none;
     padding: 0.7rem 1.8rem;
-    border-radius: 30px; /* Aumentados para un look más moderno */
+    border-radius: 30px;
     font-weight: 600;
     letter-spacing: 0.02em;
     transition: all 0.3s ease;
-    box-shadow: 0 4px 12px rgba(65, 24, 202, 0.2);
+    box-shadow: 0 4px 12px rgba(7, 38, 203, 0.2);
 }
 
 .btn-primary:hover {
+    background: var(--primary-color-2);
     transform: translateY(-3px);
-    box-shadow: 0 6px 15px rgba(65, 24, 202, 0.3);
+    box-shadow: 0 6px 15px rgba(7, 38, 203, 0.3);
 }
 
-/* Botón secundario - turquesa */
+/* Botón secundario - verde lima */
 .btn-success {
     background-color: var(--secondary-color-1);
     border: none;
@@ -40,9 +41,10 @@
 }
 
 .btn-success:hover {
-    background-color: #98e00a; /* Versión ligeramente más clara */
+    background-color: var(--secondary-color-2);
+    color: var(--dark-color);
     transform: translateY(-3px);
-    box-shadow: 0 6px 15px rgba(169, 248, 24, 0.8);
+    box-shadow: 0 6px 15px rgba(212, 253, 101, 0.4);
 }
 
 .btn-close:focus {
@@ -64,7 +66,7 @@
     justify-content: center;
     text-decoration: none;
     font-size: 0.95rem;
-    box-shadow: 0 4px 12px rgba(6, 36, 174, 0.2);
+    box-shadow: 0 4px 12px rgba(7, 38, 203, 0.2);
     cursor: pointer;
 }
 
@@ -73,7 +75,7 @@
     color: white;
     text-decoration: none;
     transform: translateY(-2px);
-    box-shadow: 0 6px 20px rgba(6, 36, 174, 0.3);
+    box-shadow: 0 6px 20px rgba(7, 38, 203, 0.3);
 }
 
 .btn-action-primary i {
@@ -83,13 +85,3 @@
 .btn-action-primary:hover i {
     transform: translateX(3px);
 }
-
-/* Custom Button */
-/* .btn-primary-custom {
-    background-color: var(--primary-color-1);
-    color: var(--light-color);
-    border: none;
-    padding: 0.6rem 1.5rem;
-    border-radius: 20px;
-    transition: all 0.3s ease;
-} */
