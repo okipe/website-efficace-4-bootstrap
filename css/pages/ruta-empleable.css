@@ -18,24 +18,27 @@ Timeline components
     position: relative;
 }
 
-/* SPECIALIST SECTION */
+/* SPECIALIST SECTION - SINGLE SPECIALIST LAYOUT */
 
 .specialists {
-    background-color: var(--light-color);
+    background-color: var(--light-blue);
 }
 
-.specialist-card {
-    transition: transform 0.3s ease;
+.specialist-card-single {
+    transition: all 0.3s ease;
+    border: 1px solid rgba(7, 38, 203, 0.1);
 }
 
-.specialist-card:hover {
+.specialist-card-single:hover {
+    box-shadow: 0 15px 35px rgba(7, 38, 203, 0.15) !important;
     transform: translateY(-5px);
 }
 
 .specialist-name {
-    font-size: 1.75rem;
+    font-size: 2rem;
     font-weight: 700;
-    color: var(--dark-color);
+    color: var(--primary-color-1);
+    margin-bottom: 1.5rem;
 }
 
 .tiktok-container {
@@ -43,28 +46,105 @@ Timeline components
     width: 100%;
     border-radius: 12px;
     overflow: hidden;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
 }
 
-.specialist-info {
+.tiktok-container blockquote {
+    margin: 0;
+}
+
+/* Specialist Description Styling */
+.specialist-description {
+    padding: 0;
+}
+
+.specialist-header .specialist-icon {
+    width: 48px;
+    height: 48px;
+    background: linear-gradient(135deg, var(--primary-color-1), var(--secondary-color-1));
+    border-radius: 12px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    font-size: 1.5rem;
+}
+
+.specialist-header h4 {
+    font-size: 1.3rem;
+    font-weight: 700;
+    color: var(--dark-color);
+}
+
+.specialist-title {
+    font-size: 0.95rem;
+    line-height: 1.8;
+    margin-bottom: 0;
+}
+
+/* New Info List Styling */
+.specialist-info-new {
     list-style: none;
     padding-left: 0;
     margin-bottom: 0;
 }
 
-.specialist-info li {
-    position: relative;
-    padding-left: 1.5rem;
-    margin-bottom: 0.75rem;
-    font-size: 1rem;
-    line-height: 1.5;
+.specialist-info-new li {
+    display: flex;
+    align-items: flex-start;
+    margin-bottom: 1.25rem;
+    padding: 0.75rem;
+    background-color: rgba(7, 38, 203, 0.03);
+    border-radius: 8px;
+    transition: all 0.3s ease;
 }
 
-.specialist-info li:before {
-    content: "•";
+.specialist-info-new li:hover {
+    background-color: rgba(7, 38, 203, 0.06);
+    transform: translateX(5px);
+}
+
+.specialist-info-new li:last-child {
+    margin-bottom: 0;
+}
+
+.specialist-info-new li i {
     color: var(--primary-color-1);
-    font-weight: bold;
-    position: absolute;
-    left: 0;
+    font-size: 1.25rem;
+    margin-right: 0.75rem;
+    margin-top: 0.15rem;
+    flex-shrink: 0;
+}
+
+.specialist-info-new li span {
+    font-size: 0.95rem;
+    line-height: 1.6;
+    color: var(--dark-color);
+}
+
+/* Responsive Design for Specialist Section */
+@media (max-width: 991.98px) {
+    .specialist-name {
+        font-size: 1.75rem;
+        text-align: center !important;
+    }
+
+    .specialist-header {
+        text-align: center;
+    }
+
+    .specialist-header .d-flex {
+        justify-content: center;
+    }
+
+    .tiktok-container {
+        max-width: 500px;
+        margin: 0 auto;
+    }
+
+    .specialist-description {
+        margin-top: 2rem;
+    }
 }
 
 /* FAQ SECTION */
@@ -102,13 +182,29 @@ Timeline components
     line-height: 1.6;
 }
 
-@media (max-width: 768px) {
-    .specialist-card {
+@media (max-width: 767.98px) {
+    .specialist-card-single {
         padding: 1.5rem !important;
     }
 
     .specialist-name {
         font-size: 1.5rem;
+    }
+
+    .specialist-header h4 {
+        font-size: 1.15rem;
+    }
+
+    .specialist-info-new li {
+        padding: 0.6rem;
+    }
+
+    .specialist-info-new li i {
+        font-size: 1.1rem;
+    }
+
+    .specialist-info-new li span {
+        font-size: 0.9rem;
     }
 }
 
@@ -479,4 +575,9 @@ Timeline components
     .ruta-header-content h3 {
         font-size: 1.3rem;
     }
+}
+
+/* Animation for specialist card */
+.specialist-card-single {
+    animation: fadeInUp 0.6s ease backwards;
 }
