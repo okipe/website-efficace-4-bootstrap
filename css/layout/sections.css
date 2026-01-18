@@ -55,7 +55,7 @@
 
 .parallax-container {
     position: relative;
-    min-height: 400px; /* Altura fija más pequeña */
+    min-height: 578px; /* Altura fija más pequeña */
     display: flex;
     align-items: center;
     overflow: hidden;
@@ -222,7 +222,6 @@
     --bs-text-opacity: 1;
     color: var(--text-color) !important;
 }
-
 
 /* Script para añadir al final del body */
 @media (max-width: 991.98px) {
