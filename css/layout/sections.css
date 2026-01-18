@@ -55,22 +55,21 @@
 
 .parallax-container {
     position: relative;
-    min-height: 578px; /* Altura fija más pequeña */
+    min-height: 100vh; /* 🎯 Una pantalla completa! */
     display: flex;
     align-items: center;
     overflow: hidden;
     background-color: var(--primary-color-2); /* Color de respaldo */
 }
 
-.parallax-background {
+.parallax-background { /* Se desactivó el parallax*/
     position: absolute;
-    top: -200px; /* Posición inicial más arriba */
+    top: 0;
     left: 0;
     width: 100%;
-    height: 200%; /* Mayor altura para mostrar más imagen */
+    height: 100%; /* Mayor altura para mostrar más imagen */
     background-size: cover;
-    background-position: center 30%; /* Ajuste vertical para centrar mejor */
-    will-change: transform;
+    background-position: center;
     z-index: 0;
 }
 

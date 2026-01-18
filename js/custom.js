@@ -163,38 +163,6 @@ document.addEventListener("DOMContentLoaded", function () {
     });
 });
 
-// Parallax section
-
-document.addEventListener("DOMContentLoaded", function () {
-    window.addEventListener("scroll", function () {
-        const parallaxElements = document.querySelectorAll(
-            ".parallax-background"
-        );
-
-        parallaxElements.forEach(function (element) {
-            const container = element.closest(".parallax-container");
-            const containerRect = container.getBoundingClientRect();
-
-            if (
-                containerRect.top < window.innerHeight &&
-                containerRect.bottom > 0
-            ) {
-                const scrollPosition = window.pageYOffset;
-                const speed = 0.1;
-
-                // Calcular el offset con el desplazamiento
-                let offset = containerRect.top * speed;
-
-                // Limitar el desplazamiento máximo (ajusta estos valores según necesites)
-                const maxOffset = 120; // Valor máximo de desplazamiento
-                offset = Math.max(Math.min(offset, maxOffset), -maxOffset);
-
-                element.style.transform = `translateY(${offset}px)`;
-            }
-        });
-    });
-});
-
 // WhatsApp widget
 
 document.addEventListener("DOMContentLoaded", function () {
