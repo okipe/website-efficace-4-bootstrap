@@ -7,7 +7,8 @@ Timeline components
 
 /* Hero Section */
 .hero[data-page="ruta-empleable"] {
-    background: linear-gradient(
+    background:
+        linear-gradient(
             var(--primary-color-1-alpha1),
             var(--primary-color-1-alpha2)
         ),
@@ -61,7 +62,11 @@ Timeline components
 .specialist-header .specialist-icon {
     width: 48px;
     height: 48px;
-    background: linear-gradient(135deg, var(--primary-color-1), var(--secondary-color-1));
+    background: linear-gradient(
+        135deg,
+        var(--primary-color-1),
+        var(--secondary-color-1)
+    );
     border-radius: 12px;
     display: flex;
     align-items: center;
@@ -245,7 +250,11 @@ Timeline components
     transform: translateX(-50%);
     width: 80px;
     height: 4px;
-    background: linear-gradient(90deg, var(--primary-color-1), var(--secondary-color-1));
+    background: linear-gradient(
+        90deg,
+        var(--primary-color-1),
+        var(--secondary-color-1)
+    );
     border-radius: 2px;
 }
 
@@ -270,7 +279,11 @@ Timeline components
     left: 110px;
     width: 6px;
     height: var(--timeline-height);
-    background: linear-gradient(180deg, var(--primary-color-1), var(--secondary-color-1));
+    background: linear-gradient(
+        180deg,
+        var(--primary-color-1),
+        var(--secondary-color-1)
+    );
     transform: translateX(-50%);
     z-index: 1;
     border-radius: 3px;
@@ -333,7 +346,11 @@ Timeline components
 
 /* Encabezado de tarjeta */
 .ruta-card-header {
-    background: linear-gradient(135deg, var(--primary-color-1), var(--secondary-color-1));
+    background: linear-gradient(
+        135deg,
+        var(--primary-color-1),
+        var(--secondary-color-1)
+    );
     color: white;
     padding: 20px 25px;
     position: relative;
@@ -431,7 +448,11 @@ Timeline components
 
 /* Boton */
 .btn-ver-mas {
-    background: linear-gradient(135deg, var(--primary-color-1), var(--secondary-color-1));
+    background: linear-gradient(
+        135deg,
+        var(--primary-color-1),
+        var(--secondary-color-1)
+    );
     color: white;
     font-weight: 600;
     border-radius: 30px;
@@ -470,7 +491,11 @@ Timeline components
 }
 
 .btn-ruta-completa {
-    background: linear-gradient(135deg, var(--primary-color-1), var(--secondary-color-1));
+    background: linear-gradient(
+        135deg,
+        var(--primary-color-1),
+        var(--secondary-color-1)
+    );
     padding: 12px 30px;
     font-size: 1.1rem;
 }
@@ -580,4 +605,172 @@ Timeline components
 /* Animation for specialist card */
 .specialist-card-single {
     animation: fadeInUp 0.6s ease backwards;
+}
+
+/* ===================================
+   RESPONSIVE INFOGRAPHIC SECTION
+   =================================== */
+
+.ruta-infographic-section {
+    background-color: #0726cb;
+    padding: 5rem 0; /* Espacio superior e inferior aumentado */
+}
+
+/* Title styling */
+.ruta-infographic-section .ruta-title {
+    text-transform: uppercase;
+    font-weight: 700;
+    color: #ffffff; /* Letras blancas para contraste */
+    margin-bottom: 3rem;
+    position: relative;
+}
+
+.ruta-infographic-section .ruta-title:after {
+    content: "";
+    position: absolute;
+    bottom: -12px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 80px;
+    height: 4px;
+    background: linear-gradient(
+        90deg,
+        rgba(255, 255, 255, 0.8),
+        rgba(255, 255, 255, 0.5)
+    ); /* Línea blanca con transparencia */
+    border-radius: 2px;
+}
+
+/* Desktop: Horizontal Infographic (show on large screens) */
+.ruta-infographic-desktop {
+    display: block;
+}
+
+.ruta-infographic-mobile {
+    display: none;
+}
+
+.infographic-container-horizontal {
+    max-width: 100%;
+    margin: 0 auto;
+    padding: 0 15px;
+}
+
+.infographic-container-horizontal img {
+    width: 100%;
+    height: auto;
+    display: block;
+    box-shadow: 0 10px 30px rgba(65, 24, 202, 0.15);
+    border-radius: 12px;
+    transition: transform 0.3s ease;
+}
+
+.infographic-container-horizontal img:hover {
+    transform: scale(1.02);
+}
+
+/* Tablet & Mobile: Vertical Infographic */
+.infographic-container-vertical {
+    max-width: 100%;
+    margin: 0; /* Sin márgenes */
+    padding: 0; /* Sin padding para imagen de extremo a extremo */
+}
+
+.infographic-container-vertical img {
+    width: 100%;
+    height: auto;
+    display: block;
+    box-shadow: none; /* Sin sombra para look más limpio de extremo a extremo */
+    border-radius: 0; /* Sin bordes redondeados para ir de borde a borde */
+}
+
+/* Tablet breakpoint (768px - 991px) */
+@media (max-width: 991.98px) {
+    .ruta-infographic-desktop {
+        display: none;
+    }
+
+    .ruta-infographic-mobile {
+        display: block;
+    }
+
+    /* Padding lateral para tablets - evita que se vea muy grande */
+    .infographic-container-vertical {
+        padding: 0 60px; /* Padding lateral en tablets */
+        max-width: 100%;
+    }
+}
+
+/* Mobile breakpoint (below 768px) */
+@media (max-width: 767.98px) {
+    .infographic-container-vertical {
+        padding: 0; /* Sin padding - extremo a extremo */
+        max-width: 100%;
+    }
+
+    .ruta-infographic-section {
+        padding: 4rem 0; /* Mantiene espacio vertical */
+    }
+
+    .ruta-infographic-section .ruta-title {
+        font-size: 1.75rem;
+        margin-bottom: 2rem;
+    }
+}
+
+/* Small mobile (below 576px) */
+@media (max-width: 575.98px) {
+    .infographic-container-vertical {
+        padding: 0; /* Sin padding - extremo a extremo */
+    }
+
+    .ruta-infographic-section {
+        padding: 3.5rem 0; /* Espacio vertical ajustado para pantallas pequeñas */
+    }
+
+    .ruta-infographic-section .ruta-title {
+        font-size: 1.5rem;
+    }
+}
+
+/* CTA Button styling */
+.btn-ruta {
+    background: linear-gradient(
+        135deg,
+        var(--primary-color),
+        var(--secondary-color-2)
+    );
+    color: white;
+    font-weight: 600;
+    border-radius: 30px;
+    padding: 0.7rem 1.8rem;
+    transition: all 0.3s ease;
+    border: none;
+    display: inline-block;
+    box-shadow: 0 4px 12px rgba(65, 24, 202, 0.2);
+}
+
+.btn-ruta:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 6px 15px rgba(65, 24, 202, 0.3);
+    color: white;
+}
+
+/* Text color adjustments for blue background */
+.ruta-infographic-section h3,
+.ruta-infographic-section p {
+    color: #ffffff; /* Texto blanco para contraste */
+}
+
+.ruta-infographic-section .btn-ruta {
+    background: linear-gradient(135deg, #ffffff, #f0f0f0);
+    color: #0726cb; /* Botón blanco con texto azul */
+    box-shadow: 0 4px 12px rgba(255, 255, 255, 0.3);
+}
+
+.ruta-infographic-section .btn-ruta:hover {
+    background: linear-gradient(135deg, #f0f0f0, #e0e0e0);
+    color: #0726cb;
+    transform: translateY(-3px);
+    box-shadow: 0 6px 15px rgba(255, 255, 255, 0.5);
 }
