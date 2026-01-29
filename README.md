@@ -82,11 +82,11 @@ The site is designed for young professionals like Carolina (22 years old), a fin
 ## Team:
 
 -   **Web development**: Oscar Román.
--   **Brand design**: Diana Torres.
--   **Content creation**: Oscar Román, Lesly Suárez.
+-   **Brand design**: Leslye Suárez, Diana Torres, Oscar Román.
+-   **Content creation**: Oscar Román, Leslye Suárez.
 -   **Marketing research**: Janeth Guillén, Laura Merino, Melody Soto.
 
-Developed with ❤️ in Lima - Peru | © 2025 Efficace Laboral
+Developed with ❤️ in Lima - Peru | © 2025 - 2026 Efficace Laboral
 
 ---
 
