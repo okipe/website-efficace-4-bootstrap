@@ -14,11 +14,9 @@
     transform: translateX(-50%);
     width: 80px;
     height: 4px;
-    background: linear-gradient(
-        90deg,
-        var(--primary-color-1),
-        var(--secondary-color-1)
-    );
+    background: var(
+        --primary-color-1
+    ); /* ✨ Color sólido en lugar de degradado */
     border-radius: 2px;
 }
 
