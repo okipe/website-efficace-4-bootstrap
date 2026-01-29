@@ -2,7 +2,7 @@
 
 ![Efficace Logo](./readme-files/logo_efficace.png)
 
-**Demo**: https://preeminent-buttercream-7d8880.netlify.app/
+**Demo**: https://efficace.netlify.app/
 
 ## 📋 Description
 
