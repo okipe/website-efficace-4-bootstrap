@@ -18,17 +18,17 @@ Card animations/interactions
     box-shadow: 0 15px 30px rgba(65, 24, 202, 0.08);
 }
 
-/* Iconos con estilo actualizado */
+/* Iconos con estilo actualizado - VERSIÓN CORREGIDA ✨ */
 .icon-primary {
+    /* Fallback: Color sólido para navegadores que no soportan background-clip */
     color: var(--primary-color-1);
-    background: linear-gradient(
-        135deg,
-        var(--primary-color-1),
-        var(--primary-color-2)
-    );
-    background-clip: text;
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
+}
+
+/* Gradiente solo si el navegador lo soporta */
+@supports (background-clip: text) or (-webkit-background-clip: text) {
+    .icon-primary {
+        color: var(--primary-color-1);
+    }
 }
 
 .template-card {

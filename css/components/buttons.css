@@ -85,3 +85,21 @@
 .btn-action-primary:hover i {
     transform: translateX(3px);
 }
+
+.btn-verde {
+    background-color: var(--secondary-color-2); /* #b8e04b */
+    border: none;
+    color: var(--dark-color); /* Texto negro */
+    font-weight: 600;
+    padding: 0.7rem 1.8rem;
+    border-radius: 30px;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 12px rgba(184, 224, 75, 0.3);
+}
+
+.btn-verde:hover {
+    background-color: #a0c741;
+    color: var(--dark-color);
+    transform: translateY(-3px);
+    box-shadow: 0 6px 15px rgba(184, 224, 75, 0.5);
+}
