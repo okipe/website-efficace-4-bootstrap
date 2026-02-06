@@ -45,17 +45,87 @@ body.notification-visible html {
     font-size: 18px !important;
 }
 
+/* ✨ EFECTOS MODERNOS PARA ENLACES DEL NAVBAR ✨ */
 .navbar .nav-link {
     color: var(--light-color);
     font-weight: 500;
     opacity: 0.9;
-    transition: all 0.3s ease;
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    position: relative;
+    padding: 0.5rem 1rem !important;
+    overflow: hidden;
+}
+
+/* Efecto de underline animado */
+.navbar .nav-link::before {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    width: 0;
+    height: 3px;
+    background: linear-gradient(
+        90deg,
+        var(--secondary-color-1),
+        var(--secondary-color-2)
+    );
+    transform: translateX(-50%);
+    transition: width 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+    border-radius: 2px;
 }
 
 .navbar .nav-link:hover {
     opacity: 1;
+    color: var(--secondary-color-1);
     transform: translateY(-2px);
 }
+
+.navbar .nav-link:hover::before {
+    width: 80%;
+}
+
+/* Efecto de clic/active */
+.navbar .nav-link:active {
+    transform: translateY(0) scale(0.98);
+}
+
+.navbar .nav-link.active {
+    opacity: 1;
+    color: var(--secondary-color-1);
+}
+
+.navbar .nav-link.active::before {
+    width: 80%;
+    background: var(--secondary-color-1);
+}
+
+/* Efecto ripple al hacer clic */
+@keyframes ripple {
+    0% {
+        transform: scale(0);
+        opacity: 1;
+    }
+    100% {
+        transform: scale(2);
+        opacity: 0;
+    }
+}
+
+.navbar .nav-link.ripple-effect::after {
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 10px;
+    height: 10px;
+    background: var(--secondary-color-1);
+    border-radius: 50%;
+    transform: translate(-50%, -50%) scale(0);
+    animation: ripple 0.6s ease-out;
+    pointer-events: none;
+}
+
+/* ✨ FIN DE EFECTOS MODERNOS ✨ */
 
 .navbar .btn-primary {
     background: var(--secondary-color-1);
@@ -66,6 +136,29 @@ body.notification-visible html {
     border-radius: 30px;
     box-shadow: 0 4px 10px rgba(212, 253, 101, 0.2);
     transition: all 0.3s ease;
+    position: relative;
+    overflow: hidden;
+}
+
+/* Efecto de onda para el botón */
+.navbar .btn-primary::before {
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 0;
+    height: 0;
+    border-radius: 50%;
+    background: rgba(255, 255, 255, 0.3);
+    transform: translate(-50%, -50%);
+    transition:
+        width 0.6s,
+        height 0.6s;
+}
+
+.navbar .btn-primary:hover::before {
+    width: 300px;
+    height: 300px;
 }
 
 .navbar .btn-primary:hover {
@@ -73,6 +166,10 @@ body.notification-visible html {
     color: var(--dark-color);
     transform: translateY(-2px);
     box-shadow: 0 6px 15px rgba(212, 253, 101, 0.3);
+}
+
+.navbar .btn-primary:active {
+    transform: translateY(0) scale(0.98);
 }
 
 /* Make hamburger icon white */
@@ -222,6 +319,17 @@ body.notification-visible html {
         padding: 0.75rem 1rem;
         border-radius: 8px;
         transition: all 0.3s ease;
+    }
+
+    /* Efectos mobile optimizados */
+    .navbar-collapse .nav-link::before {
+        left: 0;
+        transform: none;
+        height: 2px;
+    }
+
+    .navbar-collapse .nav-link:hover::before {
+        width: 100%;
     }
 
     /* Add hover effect for better UX */

@@ -57,7 +57,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
     // Update notification state when it changes
     const notificationCloseBtn = document.querySelector(
-        ".notification-bar .btn-close"
+        ".notification-bar .btn-close",
     );
     if (notificationCloseBtn) {
         notificationCloseBtn.addEventListener("click", function () {
@@ -96,7 +96,7 @@ document.addEventListener("DOMContentLoaded", function () {
                 "--notification-height",
                 notificationBar.classList.contains("show")
                     ? `${notificationHeight}px`
-                    : "0px"
+                    : "0px",
             );
         }
     }
@@ -225,7 +225,7 @@ document.addEventListener("DOMContentLoaded", function () {
 Cognito.on("afterSubmit", (event) => {
     // Cerrar el modal
     const modal = bootstrap.Modal.getInstance(
-        document.getElementById("downloadModal")
+        document.getElementById("downloadModal"),
     );
     modal.hide();
 
@@ -234,4 +234,39 @@ Cognito.on("afterSubmit", (event) => {
     if (guideUrl) {
         window.open(guideUrl, "_blank");
     }
+});
+
+// Efecto ripple en los enlaces del navbar
+document.addEventListener("DOMContentLoaded", function () {
+    const navLinks = document.querySelectorAll(".navbar .nav-link");
+
+    navLinks.forEach((link) => {
+        link.addEventListener("click", function (e) {
+            // Agregar clase para efecto ripple
+            this.classList.add("ripple-effect");
+
+            // Remover la clase después de la animación
+            setTimeout(() => {
+                this.classList.remove("ripple-effect");
+            }, 600);
+
+            // Agregar clase active al enlace clickeado
+            navLinks.forEach((l) => l.classList.remove("active"));
+            this.classList.add("active");
+        });
+    });
+
+    // Detectar página actual y agregar clase active
+    const currentPage =
+        window.location.pathname.split("/").pop() || "index.html";
+    navLinks.forEach((link) => {
+        const linkPage = link
+            .getAttribute("href")
+            .split("#")[0]
+            .split("/")
+            .pop();
+        if (linkPage === currentPage) {
+            link.classList.add("active");
+        }
+    });
 });

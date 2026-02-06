@@ -8,7 +8,6 @@
 
 /* Hero color sólido */
 .hero {
-    border-bottom: 4px solid var(--secondary-color-1);
     background-size: cover;
     background-position: center top;
     padding: 8rem 0;
