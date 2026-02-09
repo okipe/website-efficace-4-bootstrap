@@ -208,7 +208,7 @@ function showQuestion() {
           >
               ${option.text}
           </button>
-      `
+      `,
           )
           .join("")}
   </div>
@@ -240,7 +240,7 @@ function updateProgressBar() {
 function calculateScore() {
     const totalWeight = quizData.questions.reduce(
         (sum, q) => sum + q.weight,
-        0
+        0,
     );
     const weightedScore = userAnswers.reduce((sum, answer) => {
         return sum + answer.score * answer.weight;
@@ -295,7 +295,7 @@ function showResults() {
                   .map(
                       (rec) => `
                   <li class="list-group-item">✨ ${rec}</li>
-              `
+              `,
                   )
                   .join("")}
           </ul>
@@ -313,7 +313,7 @@ function showResults() {
                           </div>
                       </div>
                   </div>
-              `
+              `,
                   )
                   .join("")}
           </div> -->
@@ -324,7 +324,7 @@ function showResults() {
 
 function showContactForm() {
     // Redirigir a la ruta empleable
-    window.location.href = "./ruta-empleable.html";
+    window.open("https://wa.me/+51994348408", "_blank");
     $("#quizModal").modal("hide");
 }
 
