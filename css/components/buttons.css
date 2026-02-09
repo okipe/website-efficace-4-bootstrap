@@ -87,7 +87,7 @@
 }
 
 .btn-verde {
-    background-color: var(--secondary-color-2); /* #b8e04b */
+    background-color: var(--secondary-color-1);
     border: none;
     color: var(--dark-color); /* Texto negro */
     font-weight: 600;
