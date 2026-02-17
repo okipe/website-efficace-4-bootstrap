@@ -1,0 +1,122 @@
+# Netlify Configuration File
+# https://docs.netlify.com/configure-builds/file-based-configuration/
+
+[build]
+  # Directorio desde donde se publica el sitio
+  publish = "dist"
+  
+  # Comando que se ejecuta antes del deploy
+  command = "npm run build"
+
+# Configuración de headers para mejorar seguridad y rendimiento
+[[headers]]
+  for = "/*"
+  [headers.values]
+    # Security headers
+    X-Frame-Options = "DENY"
+    X-Content-Type-Options = "nosniff"
+    X-XSS-Protection = "1; mode=block"
+    Referrer-Policy = "strict-origin-when-cross-origin"
+    
+    # Cache control para assets estáticos
+    Cache-Control = "public, max-age=31536000"
+
+[[headers]]
+  for = "/*.html"
+  [headers.values]
+    Cache-Control = "public, max-age=0, must-revalidate"
+
+[[headers]]
+  for = "/sw.js"
+  [headers.values]
+    Cache-Control = "public, max-age=0, must-revalidate"
+
+# Redirects y rewrites
+[[redirects]]
+  # Página de error 404 personalizada
+  from = "/*"
+  to = "/404.html"
+  status = 404
+
+# Redirects para URLs mal escritas o antiguas
+[[redirects]]
+  from = "/eficace/*"
+  to = "/:splat"
+  status = 301
+
+[[redirects]]
+  from = "/efficase/*"
+  to = "/:splat"
+  status = 301
+
+[[redirects]]
+  from = "/eficasse/*"
+  to = "/:splat"
+  status = 301
+
+# Redirect de www a non-www (opcional)
+[[redirects]]
+  from = "https://www.efficace.netlify.app/*"
+  to = "https://efficace.netlify.app/:splat"
+  status = 301
+  force = true
+
+# Limpieza de URLs - remover .html
+[[redirects]]
+  from = "/*.html"
+  to = "/:splat"
+  status = 301
+
+# Pretty URLs
+[[redirects]]
+  from = "/index"
+  to = "/"
+  status = 301
+
+[[redirects]]
+  from = "/recursos-ia"
+  to = "/recursos-ia.html"
+  status = 200
+
+[[redirects]]
+  from = "/ruta-empleable"
+  to = "/ruta-empleable.html"
+  status = 200
+
+[[redirects]]
+  from = "/galeria-cv"
+  to = "/galeria-cv.html"
+  status = 200
+
+[[redirects]]
+  from = "/guias-rapidas"
+  to = "/guias-rapidas.html"
+  status = 200
+
+[[redirects]]
+  from = "/contenido-inspiracion"
+  to = "/contenido-inspiracion.html"
+  status = 200
+
+[[redirects]]
+  from = "/portal-empleo"
+  to = "/portal-empleo.html"
+  status = 200
+
+# Configuración para formularios (si usas Netlify Forms)
+[build.processing]
+  skip_processing = false
+
+[build.processing.css]
+  bundle = true
+  minify = true
+
+[build.processing.js]
+  bundle = true
+  minify = true
+
+[build.processing.html]
+  pretty_urls = true
+
+[build.processing.images]
+  compress = true

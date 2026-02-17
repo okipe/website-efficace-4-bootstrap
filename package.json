@@ -1,0 +1,34 @@
+{
+    "name": "efficace-laboral-website",
+    "version": "1.0.0",
+    "description": "Sitio web de Efficace Laboral - Consultoría de empleabilidad",
+    "scripts": {
+        "clean": "rimraf dist",
+        "copy:files": "cpy '**/*' '!node_modules/**' '!package*.json' '!build-scripts/**' '!dist/**' '!.git/**' 'dist/' --cwd=. --parents",
+        "remove:comments:html": "node build-scripts/remove-html-comments.js",
+        "remove:comments:css": "node build-scripts/remove-css-comments.js",
+        "remove:comments:js": "node build-scripts/remove-js-comments.js",
+        "minify:html": "html-minifier-terser --input-dir dist --output-dir dist --file-ext html --collapse-whitespace --remove-comments --minify-css true --minify-js true",
+        "optimize:images": "echo 'Image optimization skipped - run manually if needed'",
+        "build": "npm run clean && npm run copy:files && npm run remove:comments:html && npm run remove:comments:css && npm run remove:comments:js",
+        "build:prod": "npm run build && npm run minify:html",
+        "dev": "browser-sync start --server --files '**/*.html, **/*.css, **/*.js' --no-notify",
+        "netlify": "npm run build:prod"
+    },
+    "devDependencies": {
+        "browser-sync": "^2.29.3",
+        "cpy-cli": "^5.0.0",
+        "html-minifier-terser": "^7.2.0",
+        "rimraf": "^5.0.5",
+        "strip-comments": "^2.0.1"
+    },
+    "keywords": [
+        "empleabilidad",
+        "consultoria",
+        "desarrollo-profesional",
+        "recursos-humanos"
+    ],
+    "author": "Efficace Laboral",
+    "license": "UNLICENSED",
+    "private": true
+}
