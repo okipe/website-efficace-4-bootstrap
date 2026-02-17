@@ -4,7 +4,7 @@
     "description": "Sitio web de Efficace Laboral - Consultoría de empleabilidad",
     "scripts": {
         "clean": "rimraf dist",
-        "copy:files": "cpy '**/*' '!node_modules/**' '!package*.json' '!build-scripts/**' '!dist/**' '!.git/**' 'dist/' --cwd=. --parents",
+        "copy:files": "node build-scripts/copy-files.js",
         "remove:comments:html": "node build-scripts/remove-html-comments.js",
         "remove:comments:css": "node build-scripts/remove-css-comments.js",
         "remove:comments:js": "node build-scripts/remove-js-comments.js",
@@ -18,6 +18,7 @@
     "devDependencies": {
         "browser-sync": "^2.29.3",
         "cpy-cli": "^5.0.0",
+        "fs-extra": "^11.2.0",
         "html-minifier-terser": "^7.2.0",
         "rimraf": "^5.0.5",
         "strip-comments": "^2.0.1"
