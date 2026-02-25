@@ -1,13 +1,13 @@
 /* Hero Section */
 .hero[data-page="index"] {
-    background: linear-gradient(
+    background:
+        linear-gradient(
             var(--primary-color-1-alpha1),
             var(--primary-color-1-alpha2)
         ),
         url("../../assets/img/students.webp");
     background-size: cover;
     background-position: center;
-    padding: 8rem 0;
     position: relative;
 }
 
