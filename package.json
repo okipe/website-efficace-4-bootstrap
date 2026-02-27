@@ -5,11 +5,10 @@
     "scripts": {
         "clean": "rimraf dist",
         "copy:files": "node build-scripts/copy-files.js",
-        "remove:comments:html": "node build-scripts/remove-html-comments.js",
         "remove:comments:css": "node build-scripts/remove-css-comments.js",
         "minify:html": "html-minifier-terser --input-dir dist --output-dir dist --file-ext html --collapse-whitespace --remove-comments --minify-css true --minify-js true",
         "optimize:images": "echo 'Image optimization skipped - run manually if needed'",
-        "build": "npm run clean && npm run copy:files && npm run remove:comments:html && npm run remove:comments:css",
+        "build": "npm run clean && npm run copy:files && npm run remove:comments:css",
         "build:prod": "npm run build && npm run minify:html",
         "dev": "browser-sync start --server --files '**/*.html, **/*.css, **/*.js' --no-notify",
         "netlify": "npm run build:prod"
