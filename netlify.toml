@@ -2,30 +2,56 @@
 # https://docs.netlify.com/configure-builds/file-based-configuration/
 
 [build]
-  # Directorio desde donde se publica el sitio
   publish = "dist"
-  
-  # Comando que se ejecuta antes del deploy
   command = "npm run build"
 
-# Configuración de headers para mejorar seguridad y rendimiento
+# ✅ Regla general: 1 día de cache (antes era 1 año ❌)
 [[headers]]
   for = "/*"
   [headers.values]
-    # Security headers
+    Cache-Control = "public, max-age=86400"
     X-Frame-Options = "DENY"
     X-Content-Type-Options = "nosniff"
     X-XSS-Protection = "1; mode=block"
     Referrer-Policy = "strict-origin-when-cross-origin"
-    
-    # Cache control para assets estáticos
-    Cache-Control = "public, max-age=1"
 
+# ✅ HTML: Sin cache — siempre fresco tras cada deploy
 [[headers]]
   for = "/*.html"
   [headers.values]
     Cache-Control = "public, max-age=0, must-revalidate"
 
+# ✅ JS: Sin cache — el quiz y la lógica deben actualizarse siempre
+[[headers]]
+  for = "/js/*.js"
+  [headers.values]
+    Cache-Control = "public, max-age=0, must-revalidate"
+
+# ✅ CSS: Sin cache — los estilos deben actualizarse siempre
+[[headers]]
+  for = "/css/*.css"
+  [headers.values]
+    Cache-Control = "public, max-age=0, must-revalidate"
+
+# ✅ Imágenes: 30 días (no cambian frecuentemente)
+[[headers]]
+  for = "/assets/img/*"
+  [headers.values]
+    Cache-Control = "public, max-age=2592000"
+
+# ✅ Documentos PDF: 1 día (pueden actualizarse)
+[[headers]]
+  for = "/assets/documents/*"
+  [headers.values]
+    Cache-Control = "public, max-age=86400"
+
+# ✅ Favicon e íconos: 1 año (prácticamente nunca cambian)
+[[headers]]
+  for = "/assets/icons/*"
+  [headers.values]
+    Cache-Control = "public, max-age=31536000"
+
+# ✅ Service Worker: Sin cache
 [[headers]]
   for = "/sw.js"
   [headers.values]
@@ -33,12 +59,10 @@
 
 # Redirects y rewrites
 [[redirects]]
-  # Página de error 404 personalizada
   from = "/*"
   to = "/404.html"
   status = 404
 
-# Redirects para URLs mal escritas o antiguas
 [[redirects]]
   from = "/eficace/*"
   to = "/:splat"
@@ -54,20 +78,17 @@
   to = "/:splat"
   status = 301
 
-# Redirect de www a non-www (opcional)
 [[redirects]]
   from = "https://www.efficace.netlify.app/*"
   to = "https://efficace.netlify.app/:splat"
   status = 301
   force = true
 
-# Limpieza de URLs - remover .html
 [[redirects]]
   from = "/*.html"
   to = "/:splat"
   status = 301
 
-# Pretty URLs
 [[redirects]]
   from = "/index"
   to = "/"
@@ -103,7 +124,6 @@
   to = "/portal-empleo.html"
   status = 200
 
-# Configuración para formularios (si usas Netlify Forms)
 [build.processing]
   skip_processing = false
 
